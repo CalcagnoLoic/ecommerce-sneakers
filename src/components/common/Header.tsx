@@ -5,7 +5,7 @@ import CUSTOMER_PROFILE from "../../../public/assets/img/customer-profile.png";
 
 export const Header: React.FC = () => {
   return (
-    <div className="my-5 flex items-center lg:my-12">
+    <div className="my-5 flex items-center lg:my-15">
       <div className="flex flex-grow items-center justify-start">
         <img
           src={MENU_ICON}
