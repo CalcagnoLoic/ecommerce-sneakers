@@ -6,7 +6,7 @@ import PRODUCT_2_THUMBNAIL from "../../public/assets/img/product-2-thumbnail.jpg
 import PRODUCT_3_THUMBNAIL from "../../public/assets/img/product-3-thumbnail.jpg";
 import PRODUCT_4_THUMBNAIL from "../../public/assets/img/product-4-thumbnail.jpg";
 
-export const LeftSide: React.FC = () => {
+export const ProductOverview: React.FC = () => {
   return (
     <>
       <div className="relative md:w-[450px]">
