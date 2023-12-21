@@ -1,7 +1,12 @@
 export const Footer: React.FC = () => {
   return (
     <>
-      <p className="text-center py-5">Coded with love by <a href="https://github.com/CalcagnoLoic">@CalcagnoLoic</a></p>
+      <p className="py-5 text-center">
+        Coded with love by{" "}
+        <a href="https://github.com/CalcagnoLoic" target="_blank">
+          @CalcagnoLoic
+        </a>
+      </p>
     </>
   );
 };
