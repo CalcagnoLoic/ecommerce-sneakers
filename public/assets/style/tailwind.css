@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: kumbhSans;
+  src: url(../../assets/font/Kumbh_Sans/static/KumbhSans-Regular.ttf);
+}
+
+@layer base {
+  html {
+    font-family: kumbhSans;
+  }
+}
+
+@layer components {
+  .link-nav {
+    @apply font-semibold text-shark lg:font-normal lg:text-paleSky;
+  }
+  .link-nav:not(:last-child) {
+    @apply mr-8;
+  }
+  .link-nav:hover {
+    @apply cursor-pointer lg:text-shark;
+  }
+  header:hover .link-nav:hover {
+    @apply lg:border-b-4 lg:border-b-pumpkin;
+  }
+}
