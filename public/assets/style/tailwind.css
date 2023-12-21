@@ -38,4 +38,8 @@
   .thumbnail:hover {
     @apply opacity-60;
   }
+
+  .icon-to-cart {
+    @apply cursor-pointer self-center;
+  }
 }
