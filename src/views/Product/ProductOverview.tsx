@@ -1,10 +1,10 @@
-import ARROW_LEFT from "../../public/assets/img/icon-previous.svg";
-import ARROW_RIGHT from "../../public/assets/img/icon-next.svg";
-import MAIN_PRODUCT from "../../public/assets/img/product-1.jpg";
-import PRODUCT_1_THUMBNAIL from "../../public/assets/img/product-1-thumbnail.jpg";
-import PRODUCT_2_THUMBNAIL from "../../public/assets/img/product-2-thumbnail.jpg";
-import PRODUCT_3_THUMBNAIL from "../../public/assets/img/product-3-thumbnail.jpg";
-import PRODUCT_4_THUMBNAIL from "../../public/assets/img/product-4-thumbnail.jpg";
+import ARROW_LEFT from "../../../public/assets/img/icon-previous.svg";
+import ARROW_RIGHT from "../../../public/assets/img/icon-next.svg";
+import MAIN_PRODUCT from "../../../public/assets/img/product-1.jpg";
+import PRODUCT_1_THUMBNAIL from "../../../public/assets/img/product-1-thumbnail.jpg";
+import PRODUCT_2_THUMBNAIL from "../../../public/assets/img/product-2-thumbnail.jpg";
+import PRODUCT_3_THUMBNAIL from "../../../public/assets/img/product-3-thumbnail.jpg";
+import PRODUCT_4_THUMBNAIL from "../../../public/assets/img/product-4-thumbnail.jpg";
 
 export const ProductOverview: React.FC = () => {
   return (
