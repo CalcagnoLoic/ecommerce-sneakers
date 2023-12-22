@@ -1,6 +1,5 @@
-import MINUS_ICON from "../../public/assets/img/icon-minus.svg";
-import PLUS_ICON from "../../public/assets/img/icon-plus.svg";
-import CART_ICON from "../../public/assets/img/icon-cart-button.svg";
+import { Counter } from "../Counter/Counter.tsx";
+import CART_ICON from "../../../public/assets/img/icon-cart-button.svg";
 
 export const ProductDescription: React.FC = () => {
   return (
@@ -31,20 +30,10 @@ export const ProductDescription: React.FC = () => {
 
       <div className="mt-8 flex flex-col lg:flex-row">
         <div className="flex justify-between rounded-xl bg-linkWater p-3 px-5 lg:w-[200px]">
-          <img
-            src={MINUS_ICON}
-            alt="minus icon to drop into cart"
-            className="icon-to-cart"
-          />
-          <p className="self-center px-3">0</p>
-          <img
-            src={PLUS_ICON}
-            alt="plus icon to add into cart"
-            className="icon-to-cart"
-          />
+          <Counter />
         </div>
 
-        <div className="mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 shadow-2xl md:shadow-none shadow-pumpkin lg:ml-2 lg:mt-0 lg:w-full">
+        <div className="mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 shadow-2xl shadow-pumpkin md:shadow-none lg:ml-2 lg:mt-0 lg:w-full">
           <img
             src={CART_ICON}
             alt="icon to add to cart"
