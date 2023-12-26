@@ -1,37 +1,15 @@
-import MENU_ICON from "../../../public/assets/img/icon-menu.svg";
-import LOGO from "../../../public/assets/img/logo.svg";
-import CART_ICON from "../../../public/assets/img/icon-cart.svg";
-import CUSTOMER_PROFILE from "../../../public/assets/img/customer-profile.png";
+import { MenuContent } from "../../views/Menu/MenuContent/MenuContent.js";
+import { DropdownMenu } from "../../views/Menu/DropdownMenu/DropdownMenu.js";
+
+import CART_ICON from "/assets/img/icon-cart.svg"
+import CUSTOMER_PROFILE from "/assets/img/customer-profile.png";
 
 export const Header: React.FC = () => {
   return (
-    <div className="my-5 flex items-center lg:my-15">
-      <div className="flex flex-grow items-center justify-start">
-        <img
-          src={MENU_ICON}
-          alt="Menu"
-          className="mr-4 cursor-pointer md:mr-6 lg:hidden"
-        />
-        <img src={LOGO} alt="E-commerce sneakers" />
-      </div>
+    <nav className="lg:my-15 my-5 flex items-center">
+      <DropdownMenu />
 
-      <div className="hidden flex-grow self-center lg:flex">
-        <a href="#" className="link-nav">
-          Collection
-        </a>
-        <a href="#" className="link-nav">
-          Men
-        </a>
-        <a href="#" className="link-nav">
-          Women
-        </a>
-        <a href="#" className="link-nav">
-          About
-        </a>
-        <a href="#" className="link-nav">
-          Contact
-        </a>
-      </div>
+      <MenuContent />
 
       <div className="flex items-center justify-end">
         <img
@@ -45,6 +23,6 @@ export const Header: React.FC = () => {
           className="h-[24px] w-[24px] cursor-pointer border-white md:h-[50px] md:w-[50px] lg:rounded-full lg:border-2 lg:hover:border-pumpkin"
         />
       </div>
-    </div>
+    </nav>
   );
 };

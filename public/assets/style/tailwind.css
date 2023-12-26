@@ -15,7 +15,7 @@
 
 @layer components {
   .link-nav {
-    @apply font-semibold text-shark lg:font-normal lg:text-paleSky;
+    @apply text-xl font-semibold text-shark lg:text-base lg:font-normal lg:text-paleSky;
   }
   .link-nav:not(:last-child) {
     @apply mr-8;
@@ -41,5 +41,9 @@
 
   .icon-to-cart {
     @apply cursor-pointer self-center;
+  }
+
+  .wrapper-navbar {
+    @apply absolute z-20 mt-[-45px] h-[120vh];
   }
 }

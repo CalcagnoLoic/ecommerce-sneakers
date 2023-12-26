@@ -11,7 +11,7 @@ export default {
         cadetBlue: "#B6BCC8",
         linkWater: "#F7F8FD",
         white: "#FFFFFF",
-        dark: "#000000"
+        dark: "#000000",
       },
     },
   },

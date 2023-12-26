@@ -1,5 +1,5 @@
 import { Counter } from "../Counter/Counter.tsx";
-import CART_ICON from "../../../public/assets/img/icon-cart-button.svg";
+import CART_ICON from "/assets/img/icon-cart-button.svg";
 
 export const ProductDescription: React.FC = () => {
   return (
