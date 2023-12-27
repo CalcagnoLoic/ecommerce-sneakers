@@ -1,32 +1,23 @@
-import ARROW_LEFT from "/assets/img/icon-previous.svg";
-import ARROW_RIGHT from "/assets/img/icon-next.svg";
-import MAIN_PRODUCT from "/assets/img/product-1.jpg";
+import { ProductCarrousel } from "./ProductCarrousel";
+import { CarrouselImage } from "../../types/types";
 import PRODUCT_1_THUMBNAIL from "/assets/img/product-1-thumbnail.jpg";
 import PRODUCT_2_THUMBNAIL from "/assets/img/product-2-thumbnail.jpg";
 import PRODUCT_3_THUMBNAIL from "/assets/img/product-3-thumbnail.jpg";
 import PRODUCT_4_THUMBNAIL from "/assets/img/product-4-thumbnail.jpg";
 
 export const ProductOverview: React.FC = () => {
+  const images: CarrouselImage[] = [
+    {id: 1, value: "/assets/img/product-1.jpg"}, 
+    {id: 2, value: "/assets/img/product-2.jpg"}, 
+    {id: 3, value: "/assets/img/product-3.jpg"}, 
+    {id: 4, value: "/assets/img/product-4.jpg"}, 
+  ];
+
   return (
     <>
-      <div className="relative md:w-[450px]">
-        <img src={MAIN_PRODUCT} alt="" className="md:h-[450px] md:rounded-xl" />
-        <div className=" arrow left-4">
-          <img
-            src={ARROW_LEFT}
-            alt="Arrow left for previous product"
-            className="h-4 w-2"
-          />
-        </div>
-        <div className="arrow right-4">
-          <img
-            src={ARROW_RIGHT}
-            alt="Arrow right for next product"
-            className="h-4 w-2"
-          />
-        </div>
-      </div>
-      <div className="relative hidden md:mt-8 md:flex md:w-[450px] md:justify-between">
+      <ProductCarrousel images={images} />
+
+      <div className="relative hidden lg:mt-8 lg:flex lg:w-[450px] lg:justify-between">
         <img
           src={PRODUCT_1_THUMBNAIL}
           alt="PRODUCT_1_THUMBNAIL"

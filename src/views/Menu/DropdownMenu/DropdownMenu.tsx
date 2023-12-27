@@ -1,19 +1,29 @@
 import { useState, useEffect, useRef } from "react";
-import { names_navbar, NavBar } from "../../../data/data.js";
+import { NavBar } from "../../../types/types";
 
 import MENU_ICON from "/assets/img/icon-menu.svg";
 import MENU_ICON_CLOSE from "/assets/img/icon-close.svg";
 import LOGO from "/assets/img/logo.svg";
+
+const names_navbar: NavBar[] = [
+  { id: 1, value: "Collection" },
+  { id: 2, value: "Men" },
+  { id: 3, value: "Women" },
+  { id: 4, value: "About" },
+  { id: 5, value: "Contact" },
+];
 
 export const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
   const handleClickClose = (): void => {
-    setIsOpen(true);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   useEffect(() => {
+    let timeOut = 0;
+
     const handleBodyOverflow = (shouldOverflow: boolean): void => {
       document.body.classList.toggle("no-scroll", shouldOverflow);
     };
@@ -24,18 +34,30 @@ export const DropdownMenu = () => {
         sidebarRef.current &&
         !sidebarRef.current.contains(event.target as Node)
       ) {
-        setIsOpen(false);
+        timeOut = setTimeout(() => {
+          setIsOpen(false);
+        }, 500);
       }
     };
 
-    isOpen ? handleBodyOverflow(true) : handleBodyOverflow(false);
-    isOpen
-      ? document.body.addEventListener("mousedown", handleClickOutside)
-      : document.body.removeEventListener("mousedown", handleClickOutside);
+    if (isOpen) {
+      handleBodyOverflow(true);
+    } else {
+      handleBodyOverflow(false);
+      clearTimeout(timeOut);
+    }
+
+    if (isOpen) {
+      document.body.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.body.removeEventListener("mousedown", handleClickOutside);
+      clearTimeout(timeOut);
+    }
 
     return (): void => {
       handleBodyOverflow(false);
       document.body.removeEventListener("mousedown", handleClickOutside);
+      clearTimeout(timeOut);
     };
   }, [isOpen]);
 
