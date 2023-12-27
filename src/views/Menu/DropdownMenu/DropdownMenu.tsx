@@ -1,9 +1,17 @@
 import { useState, useEffect, useRef } from "react";
-import { names_navbar, NavBar } from "../../../data/data.js";
+import { NavBar } from "../../../types/types";
 
 import MENU_ICON from "/assets/img/icon-menu.svg";
 import MENU_ICON_CLOSE from "/assets/img/icon-close.svg";
 import LOGO from "/assets/img/logo.svg";
+
+const names_navbar: NavBar[] = [
+  { id: 1, value: "Collection" },
+  { id: 2, value: "Men" },
+  { id: 3, value: "Women" },
+  { id: 4, value: "About" },
+  { id: 5, value: "Contact" },
+];
 
 export const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
