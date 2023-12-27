@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { NavBar } from "../../../types/types";
+import { NavBar } from "../../types/types";
 
 import MENU_ICON from "/assets/img/icon-menu.svg";
 import MENU_ICON_CLOSE from "/assets/img/icon-close.svg";

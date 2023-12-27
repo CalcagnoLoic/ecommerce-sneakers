@@ -1,4 +1,4 @@
-import { NavBar } from "../../../types/types";
+import { NavBar } from "../../types/types";
 
 const names_navbar: NavBar[] = [
   { id: 1, value: "Collection" },
