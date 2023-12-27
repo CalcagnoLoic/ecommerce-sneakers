@@ -1,5 +1,5 @@
 import { Header } from "./components/common/Header";
-import { MainContainer } from "./components/MainContainer";
+import { MainContent } from "./components/MainContent";
 import { Footer } from "./components/common/Footer";
 
 export const App: React.FC = () => {
@@ -10,7 +10,7 @@ export const App: React.FC = () => {
       </header>
 
       <main className="flex justify-center md:mx-6 md:py-20 lg:mx-auto">
-        <MainContainer />
+        <MainContent />
       </main>
 
       <footer className="mt-3 lg:mt-0">
