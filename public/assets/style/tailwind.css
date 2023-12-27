@@ -46,4 +46,8 @@
   .wrapper-navbar {
     @apply absolute z-20 mt-[-45px] h-[120vh];
   }
+
+  .no-scroll {
+    @apply overflow-hidden;
+  }
 }
