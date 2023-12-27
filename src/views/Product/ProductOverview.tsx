@@ -17,7 +17,7 @@ export const ProductOverview: React.FC = () => {
     <>
       <ProductCarrousel images={images} />
 
-      <div className="relative hidden md:mt-8 md:flex md:w-[450px] md:justify-between">
+      <div className="relative hidden lg:mt-8 lg:flex lg:w-[450px] lg:justify-between">
         <img
           src={PRODUCT_1_THUMBNAIL}
           alt="PRODUCT_1_THUMBNAIL"
