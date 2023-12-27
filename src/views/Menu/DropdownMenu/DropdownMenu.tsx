@@ -10,10 +10,12 @@ export const DropdownMenu = () => {
   const sidebarRef = useRef<HTMLDivElement>(null);
 
   const handleClickClose = (): void => {
-    setIsOpen(true);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   useEffect(() => {
+    let timeOut = 0;
+
     const handleBodyOverflow = (shouldOverflow: boolean): void => {
       document.body.classList.toggle("no-scroll", shouldOverflow);
     };
@@ -24,18 +26,30 @@ export const DropdownMenu = () => {
         sidebarRef.current &&
         !sidebarRef.current.contains(event.target as Node)
       ) {
-        setIsOpen(false);
+        timeOut = setTimeout(() => {
+          setIsOpen(false);
+        }, 500);
       }
     };
 
-    isOpen ? handleBodyOverflow(true) : handleBodyOverflow(false);
-    isOpen
-      ? document.body.addEventListener("mousedown", handleClickOutside)
-      : document.body.removeEventListener("mousedown", handleClickOutside);
+    if (isOpen) {
+      handleBodyOverflow(true);
+    } else {
+      handleBodyOverflow(false);
+      clearTimeout(timeOut);
+    }
+
+    if (isOpen) {
+      document.body.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.body.removeEventListener("mousedown", handleClickOutside);
+      clearTimeout(timeOut);
+    }
 
     return (): void => {
       handleBodyOverflow(false);
       document.body.removeEventListener("mousedown", handleClickOutside);
+      clearTimeout(timeOut);
     };
   }, [isOpen]);
 
