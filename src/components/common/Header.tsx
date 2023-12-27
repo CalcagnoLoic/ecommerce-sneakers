@@ -1,7 +1,7 @@
 import { MenuContent } from "../../views/Menu/MenuContent/MenuContent.js";
 import { DropdownMenu } from "../../views/Menu/DropdownMenu/DropdownMenu.js";
+import { Basket } from "../Basket.js";
 
-import CART_ICON from "/assets/img/icon-cart.svg"
 import CUSTOMER_PROFILE from "/assets/img/customer-profile.png";
 
 export const Header: React.FC = () => {
@@ -12,11 +12,7 @@ export const Header: React.FC = () => {
       <MenuContent />
 
       <div className="flex items-center justify-end">
-        <img
-          src={CART_ICON}
-          alt="Cart"
-          className="mr-5 h-[20px] w-[20px] cursor-pointer md:mr-11"
-        />
+        <Basket />
         <img
           src={CUSTOMER_PROFILE}
           alt="Customer profile"
