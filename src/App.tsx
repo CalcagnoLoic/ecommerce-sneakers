@@ -1,5 +1,5 @@
 import { Header } from "./components/common/Header";
-import { MainContainer } from "./views/MainContainer";
+import { MainContainer } from "./components/MainContainer";
 import { Footer } from "./components/common/Footer";
 
 export const App: React.FC = () => {

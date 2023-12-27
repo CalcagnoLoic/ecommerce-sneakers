@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import MINUS_ICON from "../../../public/assets/img/icon-minus.svg";
-import PLUS_ICON from "../../../public/assets/img/icon-plus.svg";
+import MINUS_ICON from "/assets/img/icon-minus.svg";
+import PLUS_ICON from "/assets/img/icon-plus.svg";
 
 export const Counter: React.FC = () => {
   const [counter, setCounter] = useState<number>(0);
