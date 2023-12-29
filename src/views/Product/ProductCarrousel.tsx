@@ -1,10 +1,21 @@
 import { useState } from "react";
-import { CarrouselProps } from "../../types/types";
+import { CarrouselModal } from "../Modals/CarrouselModal/CarrouselModal";
+import { createPortal } from "react-dom";
+import { images } from "../../data/data";
 import ARROW_LEFT from "/assets/img/icon-previous.svg";
 import ARROW_RIGHT from "/assets/img/icon-next.svg";
 
-export const ProductCarrousel: React.FC<CarrouselProps> = ({ images }) => {
+export const ProductCarrousel: React.FC = () => {
   const [index, setIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
 
   const goToNextProduct = (): void => {
     const newIndex = index + 1 < images.length ? index + 1 : 0;
@@ -23,12 +34,22 @@ export const ProductCarrousel: React.FC<CarrouselProps> = ({ images }) => {
           <img
             src={image.value}
             alt="Product slider"
-            className={`md:h-[450px] md:rounded-xl ${
+            className={`cursor-pointer md:h-[450px] md:rounded-xl ${
               i === index ? "" : "hidden"
             }`}
             key={image.id}
+            onClick={openModal}
           />
         ))}
+        {showModal &&
+          createPortal(
+            <CarrouselModal
+              onClose={closeModal}
+              showModal={showModal}
+              setShowModal={setShowModal}
+            />,
+            document.body,
+          )}
 
         <div
           className={`arrow left-4 ${index === 0 ? "hidden" : ""}`}

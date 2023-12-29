@@ -3,10 +3,6 @@ export type CarrouselImage = {
   value: string;
 };
 
-export type CarrouselProps = {
-  images: CarrouselImage[];
-};
-
 export type NavBar = {
   id: number;
   value: string;
@@ -15,4 +11,10 @@ export type NavBar = {
 export type stateProps = {
   isOpen: boolean;
   setIsOpen: (newValue: boolean) => void;
+};
+
+export type modalProps = {
+  onClose: () => void;
+  showModal: boolean;
+  setShowModal: (newValue: boolean) => void;
 };

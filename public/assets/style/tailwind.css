@@ -30,8 +30,11 @@
   .arrow {
     @apply absolute top-[50%] flex h-10 w-10 -translate-y-[50%] cursor-pointer items-center justify-center rounded-full bg-white lg:hidden;
   }
+  .arrow-carrousel {
+    @apply absolute top-[50%] lg:flex h-10 w-10 -translate-y-[50%] cursor-pointer items-center justify-center rounded-full bg-white hidden;
+  }
 
-  .thumbnail {
+  .thumbnail { 
     @apply h-20 w-20 cursor-pointer rounded-xl;
   }
 
