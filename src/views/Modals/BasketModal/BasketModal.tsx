@@ -4,15 +4,18 @@ import { stateProps } from "../../../types/types";
 export const BasketModal: React.FC<stateProps> = (props) => {
   const { isOpen, setIsOpen } = props;
   const basketRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
+    let timeOut = 0;
     const handleClickOutside = (event: MouseEvent): void => {
       if (
         isOpen &&
         basketRef.current &&
         !basketRef.current.contains(event.target as Node)
       ) {
-        setIsOpen(false);
+        timeOut = setTimeout(() => {
+          setIsOpen(false);
+        }, 100);
       }
     };
 
@@ -22,6 +25,7 @@ export const BasketModal: React.FC<stateProps> = (props) => {
 
     return (): void => {
       document.body.removeEventListener("mousedown", handleClickOutside);
+      clearTimeout(timeOut);
     };
   });
 
