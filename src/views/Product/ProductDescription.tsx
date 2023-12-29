@@ -33,7 +33,7 @@ export const ProductDescription: React.FC = () => {
           <Counter />
         </div>
 
-        <div className="mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 shadow-2xl shadow-pumpkin md:shadow-none lg:ml-2 lg:mt-0 lg:w-full">
+        <div className="mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin hover:bg-atomicTangerine p-3 px-5 shadow-2xl shadow-pumpkin md:shadow-none lg:ml-2 lg:mt-0 lg:w-full">
           <img
             src={CART_ICON}
             alt="icon to add to cart"

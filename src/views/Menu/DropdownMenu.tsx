@@ -44,14 +44,12 @@ export const DropdownMenu = () => {
       handleBodyOverflow(true);
     } else {
       handleBodyOverflow(false);
-      clearTimeout(timeOut);
     }
 
     if (isOpen) {
       document.body.addEventListener("mousedown", handleClickOutside);
     } else {
       document.body.removeEventListener("mousedown", handleClickOutside);
-      clearTimeout(timeOut);
     }
 
     return (): void => {
