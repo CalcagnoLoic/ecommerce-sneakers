@@ -19,7 +19,7 @@ export const Basket: React.FC = () => {
         />
       </div>
 
-      {isOpen && <BasketModal />}
+      {isOpen && <BasketModal isOpen={isOpen} setIsOpen={setIsOpen} />}
     </>
   );
 };

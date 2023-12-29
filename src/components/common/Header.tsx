@@ -1,5 +1,5 @@
-import { MenuContent } from "../../views/Menu/MenuContent/MenuContent.js";
-import { DropdownMenu } from "../../views/Menu/DropdownMenu/DropdownMenu.js";
+import { MenuContent } from "../../views/Menu/MenuContent.js";
+import { DropdownMenu } from "../../views/Menu/DropdownMenu.js";
 import { Basket } from "../Basket.js";
 
 import CUSTOMER_PROFILE from "/assets/img/customer-profile.png";
