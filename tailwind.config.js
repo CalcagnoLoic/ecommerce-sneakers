@@ -12,6 +12,7 @@ export default {
         linkWater: "#F7F8FD",
         white: "#FFFFFF",
         dark: "#000000",
+        atomicTangerine: "#FFAB6A",
       },
     },
   },
