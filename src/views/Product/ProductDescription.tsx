@@ -1,15 +1,14 @@
 import { Counter } from "../Counter/Counter.tsx";
 import CART_ICON from "/assets/img/icon-cart-button.svg";
 
+import CompanyName from "../../components/CompanyName"
+import ProductName from "../../components/ProductName"
+
 export const ProductDescription: React.FC = () => {
   return (
     <div className="mx-6 mt-6 md:mx-0 lg:ml-24 lg:mt-14">
-      <h2 className="text-xs font-bold uppercase tracking-widest text-pumpkin">
-        sneaker company
-      </h2>
-      <h1 className="mt-7 text-4xl capitalize">
-        fall limited edition sneakers
-      </h1>
+      <CompanyName name="sneaker company" size="xs" />
+      <ProductName name="fall limited edition sneakers" />
       <p className="mt-8 break-words text-base text-paleSky md:w-[445px]">
         These low-profile sneakers are your perfect casual wear companion.
         Featuring a durable rubber outer sole, they'll withstand everything the

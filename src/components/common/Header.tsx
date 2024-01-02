@@ -2,6 +2,24 @@ import { MenuContent } from "../../views/Menu/MenuContent.js";
 import { DropdownMenu } from "../../views/Menu/DropdownMenu.js";
 import { Basket } from "../Basket.js";
 
+import NavItem from "../NavItem"
+import Navigation from "../../layouts/Navigation"
+
+type NavItem = {
+  content: string;
+  href: string;
+  id: number;
+};
+
+const navItems: NavItem[] = [
+  { id: 1, content: "Collection", href: "#" },
+  { id: 2, content: "Men", href: "#" },
+  { id: 3, content: "Women", href: "#" },
+  { id: 4, content: "About", href: "#" },
+  { id: 5, content: "Contact", href: "#" },
+];
+
+
 import CUSTOMER_PROFILE from "/assets/img/customer-profile.png";
 
 export const Header: React.FC = () => {
@@ -9,7 +27,13 @@ export const Header: React.FC = () => {
     <nav className="lg:my-15 my-5 flex items-center">
       <DropdownMenu />
 
-      <MenuContent />
+      <Navigation isChrimas={true}>
+        {
+          navItems.map(item => (
+            <NavItem isActive={false} content={item.content} key={item.id} href={item.href}  />
+          ))
+        }
+      </Navigation>
 
       <div className="flex items-center justify-end">
         <Basket />
