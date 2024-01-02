@@ -1,5 +1,5 @@
 import { ProductOverview } from "../views/Product/ProductOverview";
-import { ProductDescription } from "../views/Product/ProductDescription";
+import { ProductDescription } from "./ProductDescriptionWrapper";
 
 export const MainContent: React.FC = () => {
   return (
