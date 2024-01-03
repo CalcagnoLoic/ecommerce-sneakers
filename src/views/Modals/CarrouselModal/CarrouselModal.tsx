@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { modalProps } from "../../../types/types";
-import { ProductThumbnails } from "../../Product/ProductThumbnails";
+import ProductThumbnails from "../../../components/ProductThumbnailsWrapper";
 import { images } from "../../../data/data";
 import CLOSE_MODAL from "/assets/img/icon-close-modal.svg";
 import ARROW_LEFT from "/assets/img/icon-previous.svg";
@@ -61,15 +61,12 @@ export const CarrouselModal: React.FC<modalProps> = ({
   return (
     <>
       <div className="absolute left-0 top-0 h-full w-full bg-black opacity-80"></div>
-      <div
-        className="absolute left-1/2 top-20 -translate-x-1/2"
-        ref={modalRef}
-      >
+      <div className="absolute left-1/2 top-20 -translate-x-1/2" ref={modalRef}>
         <img
           src={CLOSE_MODAL}
           alt="Close modal"
           onClick={onClose}
-          className="cursor-pointer pb-6 ml-[435px]"
+          className="ml-[435px] cursor-pointer pb-6"
         />
 
         <div className="relative flex overflow-hidden md:w-[450px]">

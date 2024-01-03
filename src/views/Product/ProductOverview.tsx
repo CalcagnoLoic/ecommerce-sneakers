@@ -1,5 +1,5 @@
 import { ProductCarrousel } from "./ProductCarrousel";
-import { ProductThumbnails } from "./ProductThumbnails";
+import ProductThumbnails from "../../components/ProductThumbnailsWrapper";
 
 export const ProductOverview: React.FC = () => {
   return (
