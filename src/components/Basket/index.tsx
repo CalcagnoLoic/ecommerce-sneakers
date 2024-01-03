@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { BasketModal } from "../views/Modals/BasketModal/BasketModal";
+import BasketModal from "../BasketModal";
+import IconCart from "../IconContent";
 import CART_ICON from "/assets/img/icon-cart.svg";
 
-export const Basket: React.FC = () => {
+const Component = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleClick = (): void => {
@@ -12,10 +13,9 @@ export const Basket: React.FC = () => {
   return (
     <>
       <div onClick={handleClick}>
-        <img
-          src={CART_ICON}
-          alt="Cart"
-          className="mr-5 h-[20px] w-[20px] cursor-pointer md:mr-11"
+        <IconCart
+          img={CART_ICON}
+          classname="mr-5 h-[20px] w-[20px] cursor-pointer md:mr-11"
         />
       </div>
 
@@ -23,3 +23,5 @@ export const Basket: React.FC = () => {
     </>
   );
 };
+
+export default Component;

@@ -3,10 +3,7 @@ export type CarrouselImage = {
   value: string;
 };
 
-export type stateProps = {
-  isOpen: boolean;
-  setIsOpen: (newValue: boolean) => void;
-};
+
 
 export type modalProps = {
   onClose: () => void;

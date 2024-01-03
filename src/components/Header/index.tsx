@@ -1,6 +1,4 @@
-
-import { Basket } from "../Basket.js";
-
+import Basket from "../Basket/index.js";
 import CustomerProfile from "../IconContent/index.js";
 import MenuContent from "../MenuContent/index.js";
 import DropdownMenu from "../DropdownMenu/index.js";
