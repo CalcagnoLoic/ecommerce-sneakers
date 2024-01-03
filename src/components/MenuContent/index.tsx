@@ -1,4 +1,4 @@
-import Layout from "../../Layout/NavItemWrapper";
+import NavItemWrapper from "../../Layout/NavItemWrapper";
 import NavItem from "../NavItem";
 
 type NavBar = {
@@ -16,11 +16,11 @@ const namesItems: NavBar[] = [
 ];
 
 const Component = () => (
-  <Layout>
+  <NavItemWrapper isDropdown={false}>
     {namesItems.map((item) => (
       <NavItem content={item.value} href={item.href} id={item.id} />
     ))}
-  </Layout>
+  </NavItemWrapper>
 );
 
 export default Component;

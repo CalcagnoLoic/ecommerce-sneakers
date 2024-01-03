@@ -64,4 +64,12 @@
   .soldout-price {
     @apply self-center text-base text-cadetBlue line-through md:self-start lg:mt-3;
   }
+
+  .nav-item--dropdown {
+    @apply wrapper-navbar ml-[-24px] flex flex-col gap-5 bg-white pl-7 pr-24 pt-28
+  }
+
+  .icon-menu {
+    @apply mr-4 cursor-pointer md:mr-6 lg:hidden
+  }
 }
