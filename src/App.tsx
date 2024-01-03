@@ -1,6 +1,6 @@
 import { Header } from "./components/Header/Header";
 import { MainContent } from "./components/MainContent";
-import { Footer } from "./components/Footer/Footer";
+import Footer from "./components/Footer";
 
 export const App: React.FC = () => {
   return (
@@ -13,9 +13,7 @@ export const App: React.FC = () => {
         <MainContent />
       </main>
 
-      <footer className="mt-3 lg:mt-0">
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 };

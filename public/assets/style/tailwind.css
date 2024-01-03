@@ -53,4 +53,11 @@
   .no-scroll {
     @apply overflow-hidden;
   }
+
+  .price {
+    @apply mr-4 self-center text-3xl font-bold
+  }
+  .soldout-price {
+    @apply self-center text-base text-cadetBlue line-through md:self-start lg:mt-3
+  }
 }

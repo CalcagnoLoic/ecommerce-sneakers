@@ -6,7 +6,7 @@ export const BasketModal: React.FC<stateProps> = (props) => {
   const basketRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let timeOut = 0;
+    let timeOut: NodeJS.Timeout | number = 0;
     const handleClickOutside = (event: MouseEvent): void => {
       if (
         isOpen &&
