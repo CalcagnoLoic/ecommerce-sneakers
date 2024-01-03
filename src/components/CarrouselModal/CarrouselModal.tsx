@@ -1,7 +1,17 @@
 import { useState, useEffect, useRef } from "react";
-import { modalProps } from "../../../types/types";
-import ProductThumbnails from "../../../components/ProductThumbnailsWrapper";
-import { images } from "../../../data/data";
+import { modalProps } from "../../types/types";
+import ProductThumbnails from "../ProductThumbnailsWrapper";
+type CarrouselImage = {
+  id: number;
+  value: string;
+};
+
+const images: CarrouselImage[] = [
+  { id: 1, value: "/assets/img/product-1.jpg" },
+  { id: 2, value: "/assets/img/product-2.jpg" },
+  { id: 3, value: "/assets/img/product-3.jpg" },
+  { id: 4, value: "/assets/img/product-4.jpg" },
+];
 import CLOSE_MODAL from "/assets/img/icon-close-modal.svg";
 import ARROW_LEFT from "/assets/img/icon-previous.svg";
 import ARROW_RIGHT from "/assets/img/icon-next.svg";

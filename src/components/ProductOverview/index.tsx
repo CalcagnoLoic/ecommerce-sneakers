@@ -1,7 +1,7 @@
-import { ProductCarrousel } from "./ProductCarrousel";
+import ProductCarrousel from "../ProductCarrousel";
 import ProductThumbnails from "../../components/ProductThumbnailsWrapper";
 
-export const ProductOverview: React.FC = () => {
+const Component = () => {
   return (
     <>
       <ProductCarrousel />
@@ -10,3 +10,5 @@ export const ProductOverview: React.FC = () => {
     </>
   );
 };
+
+export default Component;

@@ -1,7 +1,3 @@
-export type CarrouselImage = {
-  id: number;
-  value: string;
-};
 
 
 
