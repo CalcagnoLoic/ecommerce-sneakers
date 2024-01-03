@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import ProductOverview from "./index";
+import ProductCarrousel from "./index";
 
 const meta = {
-  title: "Pages/ProductOverview",
-  component: ProductOverview,
-} satisfies Meta<typeof ProductOverview>;
+  title: "Components/ProductCarrousel",
+  component: ProductCarrousel,
+} satisfies Meta<typeof ProductCarrousel>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

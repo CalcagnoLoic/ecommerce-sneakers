@@ -1,8 +1,9 @@
 import ProductOverview from "../ProductOverview";
 import ProductDescription from "../ProductDescriptionWrapper";
+import MainContentWrapper from "../../Layout/MainContentWrapper";
 
-const Component = () => {
-  return (
+const Component = () => (
+  <MainContentWrapper>
     <div className="flex flex-col md:items-center md:justify-center lg:flex-row lg:items-start">
       <div className="flex-col">
         <ProductOverview />
@@ -10,7 +11,7 @@ const Component = () => {
 
       <ProductDescription />
     </div>
-  );
-};
+  </MainContentWrapper>
+);
 
-export default Component
+export default Component;

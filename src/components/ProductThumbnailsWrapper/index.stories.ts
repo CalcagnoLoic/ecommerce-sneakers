@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import ProductThumbnailsWrapper from "./index";
 
 const meta = {
-  title: "Pages/ProductThumbnailsWrapper",
+  title: "Components/ProductThumbnailsWrapper",
   component: ProductThumbnailsWrapper,
 } satisfies Meta<typeof ProductThumbnailsWrapper>;
 
