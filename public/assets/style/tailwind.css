@@ -31,10 +31,10 @@
     @apply absolute top-[50%] flex h-10 w-10 -translate-y-[50%] cursor-pointer items-center justify-center rounded-full bg-white lg:hidden;
   }
   .arrow-carrousel {
-    @apply absolute top-[50%] lg:flex h-10 w-10 -translate-y-[50%] cursor-pointer items-center justify-center rounded-full bg-white hidden;
+    @apply absolute top-[50%] hidden h-10 w-10 -translate-y-[50%] cursor-pointer items-center justify-center rounded-full bg-white lg:flex;
   }
 
-  .thumbnail { 
+  .thumbnail {
     @apply h-20 w-20 cursor-pointer rounded-xl;
   }
 
@@ -46,6 +46,10 @@
     @apply cursor-pointer self-center;
   }
 
+  .icon-username {
+    @apply h-[24px] w-[24px] cursor-pointer border-white md:h-[50px] md:w-[50px] lg:rounded-full lg:border-2 lg:hover:border-pumpkin;
+  }
+
   .wrapper-navbar {
     @apply absolute z-20 mt-[-45px] h-[120vh];
   }
@@ -55,9 +59,9 @@
   }
 
   .price {
-    @apply mr-4 self-center text-3xl font-bold
+    @apply mr-4 self-center text-3xl font-bold;
   }
   .soldout-price {
-    @apply self-center text-base text-cadetBlue line-through md:self-start lg:mt-3
+    @apply self-center text-base text-cadetBlue line-through md:self-start lg:mt-3;
   }
 }
