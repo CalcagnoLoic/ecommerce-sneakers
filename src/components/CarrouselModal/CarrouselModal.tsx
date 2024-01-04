@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { modalProps } from "../../types/types";
-import ProductThumbnails from "../ProductThumbnailsWrapper";
+import ProductThumbnails from "../ProductThumbnailsContainer";
 type CarrouselImage = {
   id: number;
   value: string;

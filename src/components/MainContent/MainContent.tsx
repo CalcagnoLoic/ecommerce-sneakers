@@ -1,5 +1,5 @@
 import ProductOverview from "../ProductOverview";
-import ProductDescription from "../ProductDescriptionWrapper";
+import ProductDescription from "../ProductDescriptionContainer";
 import MainContentWrapper from "../../Layout/MainContentWrapper";
 
 const Component = () => (

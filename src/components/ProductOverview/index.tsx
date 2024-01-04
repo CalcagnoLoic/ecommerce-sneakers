@@ -1,5 +1,5 @@
 import ProductCarrousel from "../ProductCarrousel";
-import ProductThumbnails from "../../components/ProductThumbnailsWrapper";
+import ProductThumbnails from "../ProductThumbnailsContainer";
 
 const Component = () => {
   return (
