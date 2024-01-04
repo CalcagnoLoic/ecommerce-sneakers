@@ -9,7 +9,7 @@ import PRODUCT_4_THUMBNAIL from "/assets/img/product-4-thumbnail.jpg";
 const Component: React.FC = () => (
   <ProductThumbnailsWrapper>
     <div>
-      <div className="absolute h-20 w-20 rounded-xl border-2 border-pumpkin"></div>
+      <div className="frame"></div>
       <ProductThumbnails
         src={PRODUCT_1_THUMBNAIL}
         additionnalClass="opacity-50"

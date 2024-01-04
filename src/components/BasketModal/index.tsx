@@ -3,6 +3,7 @@ import { stateProps } from "../../types/types";
 
 import BasketWrapper from "../../Layout/BasketModalWrapper";
 import BasketContent from "../BasketModalContent";
+import Line from "../Line";
 
 const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
   const basketRef = useRef<HTMLDivElement>(null);
@@ -34,7 +35,7 @@ const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
   return (
     <BasketWrapper ref={basketRef}>
       <p className="font-bold">Cart</p>
-      <div className="absolute left-0 top-16 w-full border-b-[1px]"></div>
+      <Line />
       <BasketContent name="Your cart is empty." />
     </BasketWrapper>
   );

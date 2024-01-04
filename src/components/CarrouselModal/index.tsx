@@ -76,43 +76,40 @@ const Component: React.FC<modalProps> = ({
   return (
     <>
       <OpacityWrapper></OpacityWrapper>
-        <div
-          className="absolute left-1/2 top-20 -translate-x-1/2"
-          ref={modalRef}
-        >
-          <CloseIcon
-            img={CLOSE_MODAL}
-            classname="ml-[435px] cursor-pointer pb-6"
-            handleClick={handleModalClose}
+      <div className="absolute left-1/2 top-20 -translate-x-1/2" ref={modalRef}>
+        <CloseIcon
+          img={CLOSE_MODAL}
+          classname="icon-close"
+          handleClick={handleModalClose}
+        />
+
+        <div className="relative flex overflow-hidden md:w-[450px]">
+          {images.map((image, i) => (
+            <CarrouselItem
+              content={image.value}
+              id={image.id}
+              additionnalClass={i === index ? "" : "hidden"}
+            />
+          ))}
+
+          <ArrowLeft
+            index={index}
+            handleClick={goToPreviousProduct}
+            arrowClass="arrow-carrousel"
           />
 
-          <div className="relative flex overflow-hidden md:w-[450px]">
-            {images.map((image, i) => (
-              <CarrouselItem
-                content={image.value}
-                id={image.id}
-                additionnalClass={i === index ? "" : "hidden"}
-              />
-            ))}
-
-            <ArrowLeft
-              index={index}
-              handleClick={goToPreviousProduct}
-              arrowClass="arrow-carrousel"
-            />
-
-            <ArrowRigth
-              index={index}
-              handleClick={goToNextProduct}
-              images={images}
-              arrowClass="arrow-carrousel"
-            />
-          </div>
-
-          <div>
-            <ProductThumbnails />
-          </div>
+          <ArrowRigth
+            index={index}
+            handleClick={goToNextProduct}
+            images={images}
+            arrowClass="arrow-carrousel"
+          />
         </div>
+
+        <div>
+          <ProductThumbnails />
+        </div>
+      </div>
     </>
   );
 };

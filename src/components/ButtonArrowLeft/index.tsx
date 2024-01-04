@@ -21,7 +21,7 @@ const Component: React.FC<arrowLeftProps> = ({
       additionnalClass={`left-4 ${arrowClass} ${previousConditionnal}`}
       handleClick={handleClick}
     >
-      <ArrowIcon img={ARROW_LEFT} classname="h-4 w-2" />
+      <ArrowIcon img={ARROW_LEFT} classname="arrow-position " />
     </ButtonWrapper>
   );
 };

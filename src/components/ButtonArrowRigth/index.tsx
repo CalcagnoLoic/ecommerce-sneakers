@@ -24,7 +24,7 @@ const Component: React.FC<arrowRigthProps> = ({
       additionnalClass={`right-4 ${arrowClass} ${nextConditionnal}`}
       handleClick={handleClick}
     >
-      <ArrowIcon img={ARROW_RIGHT} classname="h-4 w-2" />
+      <ArrowIcon img={ARROW_RIGHT} classname="arrow-position " />
     </ButtonWrapper>
   );
 };

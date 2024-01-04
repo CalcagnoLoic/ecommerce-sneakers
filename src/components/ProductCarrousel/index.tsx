@@ -15,8 +15,8 @@ const images: carrouselImage[] = [
 ];
 
 const Component: React.FC = () => {
-  const [index, setIndex] = useState(0);
-  const [showModal, setShowModal] = useState(false);
+  const [index, setIndex] = useState<number>(0);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   const openModal = () => {
     setShowModal(true);
@@ -59,7 +59,11 @@ const Component: React.FC = () => {
             document.body,
           )}
 
-        <ArrowLeft index={index} handleClick={goToPreviousProduct} arrowClass="arrow" />
+        <ArrowLeft
+          index={index}
+          handleClick={goToPreviousProduct}
+          arrowClass="arrow"
+        />
 
         <ArrowRigth
           index={index}

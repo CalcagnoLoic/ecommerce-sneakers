@@ -23,8 +23,21 @@
   .link-nav:hover {
     @apply cursor-pointer lg:text-shark;
   }
+  .nav-item--dropdown {
+    @apply wrapper-navbar ml-[-24px] flex flex-col gap-5 bg-white pl-7 pr-24 pt-28;
+  }
   header:hover .link-nav:hover {
     @apply lg:border-b-4 lg:border-b-pumpkin;
+  }
+  .no-scroll {
+    @apply overflow-hidden;
+  }
+
+  .wrapper-navbar {
+    @apply absolute z-20 mt-[-45px] h-[120vh];
+  }
+  .wrapper-product {
+    @apply flex flex-col md:items-center md:justify-center lg:flex-row lg:items-start;
   }
 
   .arrow {
@@ -33,29 +46,18 @@
   .arrow-carrousel {
     @apply absolute top-[50%] hidden h-10 w-10 -translate-y-[50%] cursor-pointer items-center justify-center rounded-full bg-white lg:flex;
   }
+  .arrow-position {
+    @apply h-4 w-2;
+  }
 
   .thumbnail {
     @apply h-20 w-20 cursor-pointer rounded-xl;
   }
-
   .thumbnail:hover {
     @apply opacity-60;
   }
-
-  .icon-to-cart {
-    @apply cursor-pointer self-center;
-  }
-
-  .icon-username {
-    @apply h-[24px] w-[24px] cursor-pointer border-white md:h-[50px] md:w-[50px] lg:rounded-full lg:border-2 lg:hover:border-pumpkin;
-  }
-
-  .wrapper-navbar {
-    @apply absolute z-20 mt-[-45px] h-[120vh];
-  }
-
-  .no-scroll {
-    @apply overflow-hidden;
+  .frame {
+    @apply absolute h-20 w-20 rounded-xl border-2 border-pumpkin;
   }
 
   .price {
@@ -65,11 +67,30 @@
     @apply self-center text-base text-cadetBlue line-through md:self-start lg:mt-3;
   }
 
-  .nav-item--dropdown {
-    @apply wrapper-navbar ml-[-24px] flex flex-col gap-5 bg-white pl-7 pr-24 pt-28
+  .basket-message {
+    @apply absolute left-1/2 top-36 translate-x-[-50%] text-center font-bold text-paleSky;
   }
 
+  .icon-to-cart {
+    @apply cursor-pointer self-center;
+  }
+  .icon-username {
+    @apply h-[24px] w-[24px] cursor-pointer border-white md:h-[50px] md:w-[50px] lg:rounded-full lg:border-2 lg:hover:border-pumpkin;
+  }
   .icon-menu {
-    @apply mr-4 cursor-pointer md:mr-6 lg:hidden
+    @apply mr-4 cursor-pointer md:mr-6 lg:hidden;
+  }
+  .icon-basket {
+    @apply mr-5 h-[20px] w-[20px] cursor-pointer md:mr-11;
+  }
+  .icon-close {
+    @apply ml-[435px] cursor-pointer pb-6;
+  }
+
+  .basket-modal-wrapper {
+    @apply absolute left-1/2 top-28 z-20 h-64 w-[360px] translate-x-[-50%] rounded-lg bg-white p-6 shadow-2xl md:left-auto md:top-20 md:translate-x-0;
+  }
+  .button-wrapper {
+    @apply mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 shadow-2xl shadow-pumpkin hover:bg-atomicTangerine md:shadow-none lg:ml-2 lg:mt-0 lg:w-full;
   }
 }

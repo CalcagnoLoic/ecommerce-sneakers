@@ -4,7 +4,7 @@ import ProductDescription from "../ProductDescriptionContainer";
 
 const Component: React.FC = () => (
   <MainContentWrapper>
-    <div className="flex flex-col md:items-center md:justify-center lg:flex-row lg:items-start">
+    <div className="wrapper-product">
       <div className="flex-col">
         <ProductOverview />
       </div>

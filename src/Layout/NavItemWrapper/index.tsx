@@ -3,11 +3,11 @@ import { ReactNode } from "react";
 const Layout = ({
   children,
   isDropdown,
-  ref
+  ref,
 }: {
   children: ReactNode;
   isDropdown: boolean;
-  ref?: React.LegacyRef<HTMLDivElement>
+  ref?: React.LegacyRef<HTMLDivElement>;
 }) => (
   <div
     className={`${
