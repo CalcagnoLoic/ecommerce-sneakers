@@ -1,11 +1,18 @@
-export type CarrouselImage = {
+export type carrouselItem = {
+  content: string;
+  id: number;
+  additionnalClass?: string;
+};
+
+export type carrouselImage = {
   id: number;
   value: string;
 };
 
-export type NavBar = {
-  id: number;
-  value: string;
+export type modalProps = {
+  onClose: () => void;
+  showModal: boolean;
+  setShowModal: (newValue: boolean) => void;
 };
 
 export type stateProps = {
@@ -13,8 +20,51 @@ export type stateProps = {
   setIsOpen: (newValue: boolean) => void;
 };
 
-export type modalProps = {
-  onClose: () => void;
-  showModal: boolean;
-  setShowModal: (newValue: boolean) => void;
+export type arrowLeftProps = {
+  index: number;
+  handleClick: () => void;
+  arrowClass: string;
+}
+
+export type arrowRigthProps = {
+  index: number;
+  handleClick: () => void;
+  images: carrouselImage[];
+  arrowClass: string;
+};
+
+export type NavBar = {
+  id: number;
+  content: string;
+  href: string;
+};
+
+export type dropdownProps = {
+  isOpen: boolean;
+  ref: React.RefObject<HTMLDivElement>;
+};
+
+export type dropdownPropsIcon = {
+  isOpen: boolean;
+  handleClick: () => void;
+};
+
+export type Icon = {
+  img: string;
+  classname?: string;
+  handleClick?: () => void;
+};
+
+export type Message = {
+  name: string;
+};
+
+export type Price = {
+  isOnSale: boolean;
+  price: string;
+};
+
+export type thumbnailsProps = {
+  src: string;
+  additionnalClass?: string;
 };
