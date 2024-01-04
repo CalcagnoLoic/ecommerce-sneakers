@@ -51,7 +51,7 @@ const Component: React.FC = () => {
 
   return (
     <>
-      <DropdownMenuContent isOpen={isOpen} ref={sidebarRef} />
+      <DropdownMenuContent isOpen={isOpen} forwardedRef={sidebarRef} />
 
       <DropdownMenuIcon isOpen={isOpen} handleClick={handleClickClose} />
     </>

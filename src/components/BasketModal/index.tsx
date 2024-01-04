@@ -33,7 +33,7 @@ const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
   });
 
   return (
-    <BasketWrapper ref={basketRef}>
+    <BasketWrapper forwardedRef={basketRef}>
       <p className="font-bold">Cart</p>
       <Line />
       <BasketContent name="Your cart is empty." />

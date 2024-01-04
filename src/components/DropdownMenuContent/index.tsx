@@ -14,15 +14,14 @@ const namesItems: NavBar[] = [
 
 const Component: React.FC<dropdownProps> = ({
   isOpen,
-  ref,
+  forwardedRef,
 }: {
   isOpen: boolean;
-  ref: React.RefObject<HTMLDivElement>;
+  forwardedRef: React.RefObject<HTMLDivElement>;
 }) => (
   <DropdownMenuContentWrapper isOpen={isOpen}>
     <div className="wrapper-navbar w-screen bg-black opacity-80"></div>
-    <NavItemWrapper isDropdown={true} ref={ref}>
-      {/* react.forwarded ?? creuser pour le passage de props */}
+    <NavItemWrapper isDropdown={true} forwardedRef={forwardedRef}>
       {namesItems.map((item: NavBar) => (
         <NavItem content={item.content} href={item.href} id={item.id} />
       ))}
