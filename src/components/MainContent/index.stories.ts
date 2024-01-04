@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import MainContent from "./MainContent";
+import MainContent from ".";
 
 const meta = {
   title: "Pages/MainContent",

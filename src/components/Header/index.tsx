@@ -7,7 +7,7 @@ import DropdownMenu from "../DropdownMenu/index.js";
 
 import CUSTOMER_PROFILE from "/assets/img/customer-profile.png";
 
-const Component = () => (
+const Component: React.FC = () => (
   <HeaderWrapper>
     <nav className="lg:my-15 my-5 flex items-center">
       <DropdownMenu />

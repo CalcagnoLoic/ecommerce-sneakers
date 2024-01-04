@@ -1,4 +1,6 @@
-const Component = ({
+import { NavBar } from "../../types/types";
+
+const Component: React.FC<NavBar> = ({
   content,
   href,
   id,

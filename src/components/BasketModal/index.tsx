@@ -1,11 +1,8 @@
 import { useRef, useEffect } from "react";
-import BasketContent from "../BasketModalContent";
-import BasketWrapper from "../../Layout/BasketModalWrapper";
+import { stateProps } from "../../types/types";
 
-type stateProps = {
-  isOpen: boolean;
-  setIsOpen: (newValue: boolean) => void;
-};
+import BasketWrapper from "../../Layout/BasketModalWrapper";
+import BasketContent from "../BasketModalContent";
 
 const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
   const basketRef = useRef<HTMLDivElement>(null);

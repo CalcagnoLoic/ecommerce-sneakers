@@ -1,8 +1,8 @@
+import MainContentWrapper from "../../Layout/MainContentWrapper";
 import ProductOverview from "../ProductOverview";
 import ProductDescription from "../ProductDescriptionContainer";
-import MainContentWrapper from "../../Layout/MainContentWrapper";
 
-const Component = () => (
+const Component: React.FC = () => (
   <MainContentWrapper>
     <div className="flex flex-col md:items-center md:justify-center lg:flex-row lg:items-start">
       <div className="flex-col">

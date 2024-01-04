@@ -1,9 +1,11 @@
-import ArrowIcon from "../IconContent";
+import { arrowLeftProps } from "../../types/types";
+
 import ButtonWrapper from "../../Layout/ButtonArrowWrapper";
+import ArrowIcon from "../IconContent";
 
 import ARROW_LEFT from "/assets/img/icon-previous.svg";
 
-const Component = ({
+const Component: React.FC<arrowLeftProps> = ({
   index,
   handleClick,
   arrowClass,
@@ -12,7 +14,7 @@ const Component = ({
   handleClick: () => void;
   arrowClass: string;
 }) => {
-  const previousConditionnal = index === 0 ? "hidden" : "";
+  const previousConditionnal: string = index === 0 ? "hidden" : "";
 
   return (
     <ButtonWrapper

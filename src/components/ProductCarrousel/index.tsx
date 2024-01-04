@@ -1,24 +1,20 @@
 import { useState } from "react";
-import { CarrouselModal } from "../CarrouselModal/CarrouselModal";
 import { createPortal } from "react-dom";
+import { carrouselImage } from "../../types/types";
 
+import CarrouselModal from "../CarrouselModal";
 import CarrouselItem from "../CarrouselItem";
 import ArrowLeft from "../ButtonArrowLeft";
 import ArrowRigth from "../ButtonArrowRigth";
 
-type CarrouselImage = {
-  id: number;
-  value: string;
-};
-
-const images: CarrouselImage[] = [
+const images: carrouselImage[] = [
   { id: 1, value: "/assets/img/product-1.jpg" },
   { id: 2, value: "/assets/img/product-2.jpg" },
   { id: 3, value: "/assets/img/product-3.jpg" },
   { id: 4, value: "/assets/img/product-4.jpg" },
 ];
 
-const Component = () => {
+const Component: React.FC = () => {
   const [index, setIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
 

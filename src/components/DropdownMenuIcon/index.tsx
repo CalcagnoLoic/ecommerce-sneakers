@@ -1,12 +1,14 @@
+import { dropdownPropsIcon } from "../../types/types";
+
+import DropdownMenuIconWrapper from "../../Layout/DropdownMenuIconWrapper";
 import IconLogo from "../IconContent";
 import IconMenuDropdown from "../IconContent";
-import DropdownMenuIconWrapper from "../../Layout/DropdownMenuIconWrapper";
 
 import MENU_ICON from "/assets/img/icon-menu.svg";
 import MENU_ICON_CLOSE from "/assets/img/icon-close.svg";
 import LOGO from "/assets/img/logo.svg";
 
-const Component = ({
+const Component: React.FC<dropdownPropsIcon> = ({
   isOpen,
   handleClick,
 }: {

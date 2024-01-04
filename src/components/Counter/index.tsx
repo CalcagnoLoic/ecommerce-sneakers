@@ -1,10 +1,11 @@
 import { useState } from "react";
 
+import CounterWrapper from "../../Layout/CounterWrapper";
+import IconToCart from "../IconContent";
+
 import MINUS_ICON from "/assets/img/icon-minus.svg";
 import PLUS_ICON from "/assets/img/icon-plus.svg";
 
-import IconToCart from "../IconContent";
-import CounterWrapper from "../../Layout/CounterWrapper";
 
 const Component: React.FC = () => {
   const [counter, setCounter] = useState<number>(0);

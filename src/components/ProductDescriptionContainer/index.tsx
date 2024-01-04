@@ -17,7 +17,7 @@ const Component: React.FC = () => {
     <Wrapper>
       <CompanyName name={"sneaker company"} />
       <ProductTitle name={"fall limited edition sneakers"} />
-      <ProductDescription description={description} />
+      <ProductDescription name={description} />
 
       <PriceWrapper>
         <div className="flex">

@@ -1,14 +1,12 @@
-import ArrowIcon from "../IconContent";
+import { carrouselImage, arrowRigthProps } from "../../types/types";
+
 import ButtonWrapper from "../../Layout/ButtonArrowWrapper";
+import ArrowIcon from "../IconContent";
 
 import ARROW_RIGHT from "/assets/img/icon-next.svg";
 
-type CarrouselImage = {
-  id: number;
-  value: string;
-};
 
-const Component = ({
+const Component: React.FC<arrowRigthProps> = ({
   index,
   handleClick,
   images,
@@ -16,10 +14,11 @@ const Component = ({
 }: {
   index: number;
   handleClick: () => void;
-  images: CarrouselImage[];
+  images: carrouselImage[];
   arrowClass: string;
 }) => {
-  const nextConditionnal = index === images.length - 1 ? "hidden" : "";
+  const nextConditionnal: string = index === images.length - 1 ? "hidden" : "";
+
   return (
     <ButtonWrapper
       additionnalClass={`right-4 ${arrowClass} ${nextConditionnal}`}

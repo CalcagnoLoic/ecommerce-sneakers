@@ -1,24 +1,21 @@
+import { NavBar } from "../../types/types";
+
 import NavItemWrapper from "../../Layout/NavItemWrapper";
 import NavItem from "../NavItem";
 
-type NavBar = {
-  id: number;
-  value: string;
-  href: string;
-};
-
 const namesItems: NavBar[] = [
-  { id: 1, value: "Collection", href: "#" },
-  { id: 2, value: "Men", href: "#" },
-  { id: 3, value: "Women", href: "#" },
-  { id: 4, value: "About", href: "#" },
-  { id: 5, value: "Contact", href: "#" },
+  { content: "Collection", href: "#", id: 1  },
+  { content: "Men", href: "#", id: 2  },
+  { content: "Women", href: "#", id: 3  },
+  { content: "About", href: "#", id: 4  },
+  { content: "Contact", href: "#", id: 5  },
+
 ];
 
-const Component = () => (
+const Component: React.FC = () => (
   <NavItemWrapper isDropdown={false}>
     {namesItems.map((item) => (
-      <NavItem content={item.value} href={item.href} id={item.id} />
+      <NavItem content={item.content} href={item.href} id={item.id} />
     ))}
   </NavItemWrapper>
 );

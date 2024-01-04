@@ -1,4 +1,6 @@
-const Component = ({
+import { carrouselItem } from "../../types/types";
+
+const Component: React.FC<carrouselItem> = ({
   content,
   id,
   additionnalClass,

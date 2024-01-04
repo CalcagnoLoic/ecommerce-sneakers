@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import DropdownMenuIcon from "../DropdownMenuIcon";
 import DropdownMenuContent from "../DropdownMenuContent";
 
-const Component = () => {
+const Component: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
 

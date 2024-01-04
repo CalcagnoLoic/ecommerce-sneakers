@@ -1,14 +1,12 @@
 import ProductCarrousel from "../ProductCarrousel";
 import ProductThumbnails from "../ProductThumbnailsContainer";
 
-const Component = () => {
-  return (
-    <>
-      <ProductCarrousel />
+const Component: React.FC = () => (
+  <>
+    <ProductCarrousel />
 
-      <ProductThumbnails />
-    </>
-  );
-};
+    <ProductThumbnails />
+  </>
+);
 
 export default Component;

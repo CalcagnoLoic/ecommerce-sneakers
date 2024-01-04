@@ -3,7 +3,7 @@ import BasketModal from "../BasketModal";
 import IconCart from "../IconContent";
 import CART_ICON from "/assets/img/icon-cart.svg";
 
-const Component = () => {
+const Component: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleClick = (): void => {

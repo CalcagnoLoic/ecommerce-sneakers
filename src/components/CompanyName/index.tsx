@@ -1,6 +1,8 @@
-const Component = ({ name }: { name: string }) => (
+import { Message } from "../../types/types";
+
+const Component: React.FC<Message> = ({ name }: { name: string }) => (
   <h2 className="text-xs font-bold uppercase tracking-widest text-pumpkin">
-    { name }
+    {name}
   </h2>
 );
 

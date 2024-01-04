@@ -1,6 +1,7 @@
 import ButtonWrapper from "../../Layout/ButtonWrapper";
-import CART_ICON from "/assets/img/icon-cart-button.svg";
 import IconCart from "../IconContent/index.tsx";
+
+import CART_ICON from "/assets/img/icon-cart-button.svg";
 
 const Component = () => (
   <ButtonWrapper>

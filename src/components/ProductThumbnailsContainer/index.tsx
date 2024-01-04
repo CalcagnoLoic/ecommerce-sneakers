@@ -6,7 +6,7 @@ import PRODUCT_2_THUMBNAIL from "/assets/img/product-2-thumbnail.jpg";
 import PRODUCT_3_THUMBNAIL from "/assets/img/product-3-thumbnail.jpg";
 import PRODUCT_4_THUMBNAIL from "/assets/img/product-4-thumbnail.jpg";
 
-const Component = () => (
+const Component: React.FC = () => (
   <ProductThumbnailsWrapper>
     <div>
       <div className="absolute h-20 w-20 rounded-xl border-2 border-pumpkin"></div>

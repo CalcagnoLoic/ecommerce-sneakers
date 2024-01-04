@@ -1,4 +1,6 @@
-const Component = ({
+import { thumbnailsProps } from "../../types/types";
+
+const Component: React.FC<thumbnailsProps> = ({
   src,
   additionnalClass,
 }: {
