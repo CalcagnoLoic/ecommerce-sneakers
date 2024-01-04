@@ -1,11 +1,11 @@
 const Layout = ({
   children,
-  ref,
+  forwardedRef,
 }: {
   children: JSX.Element[];
-  ref: React.LegacyRef<HTMLDivElement>;
+  forwardedRef: React.LegacyRef<HTMLDivElement>;
 }) => (
-  <div className="basket-modal-wrapper" ref={ref}>
+  <div className="basket-modal-wrapper" ref={forwardedRef}>
     {children}
   </div>
 );

@@ -3,17 +3,17 @@ import { ReactNode } from "react";
 const Layout = ({
   children,
   isDropdown,
-  ref,
+  forwardedRef,
 }: {
   children: ReactNode;
   isDropdown: boolean;
-  ref?: React.LegacyRef<HTMLDivElement>;
+  forwardedRef?: React.RefObject<HTMLDivElement>;
 }) => (
   <div
     className={`${
       isDropdown ? "nav-item--dropdown" : "hidden flex-grow self-center lg:flex"
     }`}
-    ref={ref}
+    ref={forwardedRef}
   >
     {children}
   </div>

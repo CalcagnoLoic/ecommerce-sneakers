@@ -41,7 +41,7 @@ export type NavBar = {
 
 export type dropdownProps = {
   isOpen: boolean;
-  ref: React.RefObject<HTMLDivElement>;
+  forwardedRef: React.RefObject<HTMLDivElement>;
 };
 
 export type dropdownPropsIcon = {
