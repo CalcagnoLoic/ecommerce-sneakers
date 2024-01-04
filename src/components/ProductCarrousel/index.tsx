@@ -63,12 +63,13 @@ const Component = () => {
             document.body,
           )}
 
-        <ArrowLeft index={index} handleClick={goToPreviousProduct} />
+        <ArrowLeft index={index} handleClick={goToPreviousProduct} arrowClass="arrow" />
 
         <ArrowRigth
           index={index}
           handleClick={goToNextProduct}
           images={images}
+          arrowClass="arrow"
         />
       </div>
     </>

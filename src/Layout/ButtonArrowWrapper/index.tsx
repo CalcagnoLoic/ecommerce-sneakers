@@ -7,7 +7,7 @@ const Layout = ({
   handleClick: () => void;
   children: JSX.Element;
 }) => (
-  <div className={`arrow ${additionnalClass}`} onClick={handleClick}>
+  <div className={`${additionnalClass}`} onClick={handleClick}>
     {children}
   </div>
 );
