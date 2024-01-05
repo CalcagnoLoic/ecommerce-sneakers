@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
+import { v4 as uuidv4 } from "uuid";
 import { carrouselImage } from "../../types/types";
 
 import CarrouselModal from "../CarrouselModal";
@@ -8,10 +9,10 @@ import ArrowLeft from "../ButtonArrowLeft";
 import ArrowRigth from "../ButtonArrowRigth";
 
 const images: carrouselImage[] = [
-  { id: 1, value: "/assets/img/product-1.jpg" },
-  { id: 2, value: "/assets/img/product-2.jpg" },
-  { id: 3, value: "/assets/img/product-3.jpg" },
-  { id: 4, value: "/assets/img/product-4.jpg" },
+  { id: 1, value: "/assets/img/product-1.jpg", key: uuidv4() },
+  { id: 2, value: "/assets/img/product-2.jpg", key: uuidv4() },
+  { id: 3, value: "/assets/img/product-3.jpg", key: uuidv4() },
+  { id: 4, value: "/assets/img/product-4.jpg", key: uuidv4() },
 ];
 
 const Component: React.FC = () => {
@@ -47,6 +48,7 @@ const Component: React.FC = () => {
             content={image.value}
             id={image.id}
             additionnalClass={i === index ? "" : "hidden"}
+            key={image.key}
           />
         ))}
         {showModal &&
