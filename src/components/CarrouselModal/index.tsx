@@ -27,8 +27,6 @@ const Component: React.FC<modalProps> = ({
   const [index, setIndex] = useState<number>(0);
   const modalRef = useRef<HTMLDivElement>(null);
 
-  const handleModalClose = () => onClose();
-
   const goToNextProduct = (): void => {
     const newIndex = index + 1 < images.length ? index + 1 : 0;
     setIndex(newIndex);
@@ -78,11 +76,11 @@ const Component: React.FC<modalProps> = ({
     <>
       <OpacityWrapper></OpacityWrapper>
       <CarrouselWrapper forwardedRef={modalRef}>
-        <div className="absolute left-1/2 top-20 -translate-x-1/2">
+        <div className="absolute left-1/2 top-20 -translate-x-1/2 -mt-16">
           <CloseIcon
             img={CLOSE_MODAL}
             classname="icon-close"
-            handleClick={handleModalClose}
+            handleClick={onClose}
           />
 
           <div className="relative flex overflow-hidden md:w-[450px]">
