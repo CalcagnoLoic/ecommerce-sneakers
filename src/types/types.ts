@@ -7,6 +7,7 @@ export type carrouselItem = {
 export type carrouselImage = {
   id: number;
   value: string;
+  key: string
 };
 
 export type modalProps = {
@@ -34,6 +35,7 @@ export type arrowRigthProps = {
 };
 
 export type NavBar = {
+  key: string;
   id: number;
   content: string;
   href: string;
