@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { modalProps, carrouselImage } from "../../types/types";
 
 import OpacityWrapper from "../../Layout/OpacityWrapper";
+import CarrouselWrapper from "../../Layout/CarrouselModalWrapper";
 
 import ArrowLeft from "../ButtonArrowLeft";
 import ArrowRigth from "../ButtonArrowRigth";
@@ -76,40 +77,42 @@ const Component: React.FC<modalProps> = ({
   return (
     <>
       <OpacityWrapper></OpacityWrapper>
-      <div className="absolute left-1/2 top-20 -translate-x-1/2" ref={modalRef}>
-        <CloseIcon
-          img={CLOSE_MODAL}
-          classname="icon-close"
-          handleClick={handleModalClose}
-        />
+      <CarrouselWrapper forwardedRef={modalRef}>
+        <div className="absolute left-1/2 top-20 -translate-x-1/2">
+          <CloseIcon
+            img={CLOSE_MODAL}
+            classname="icon-close"
+            handleClick={handleModalClose}
+          />
 
-        <div className="relative flex overflow-hidden md:w-[450px]">
-          {images.map((image, i) => (
-            <CarrouselItem
-              content={image.value}
-              id={image.id}
-              additionnalClass={i === index ? "" : "hidden"}
+          <div className="relative flex overflow-hidden md:w-[450px]">
+            {images.map((image, i) => (
+              <CarrouselItem
+                content={image.value}
+                id={image.id}
+                additionnalClass={i === index ? "" : "hidden"}
+              />
+            ))}
+
+            <ArrowLeft
+              index={index}
+              handleClick={goToPreviousProduct}
+              arrowClass="arrow-carrousel"
             />
-          ))}
 
-          <ArrowLeft
-            index={index}
-            handleClick={goToPreviousProduct}
-            arrowClass="arrow-carrousel"
-          />
+            <ArrowRigth
+              index={index}
+              handleClick={goToNextProduct}
+              images={images}
+              arrowClass="arrow-carrousel"
+            />
+          </div>
 
-          <ArrowRigth
-            index={index}
-            handleClick={goToNextProduct}
-            images={images}
-            arrowClass="arrow-carrousel"
-          />
+          <div>
+            <ProductThumbnails />
+          </div>
         </div>
-
-        <div>
-          <ProductThumbnails />
-        </div>
-      </div>
+      </CarrouselWrapper>
     </>
   );
 };
