@@ -76,11 +76,14 @@ const Component: React.FC<modalProps> = ({
     <>
       <OpacityWrapper></OpacityWrapper>
       <CarrouselWrapper forwardedRef={modalRef}>
-        <div className="absolute left-1/2 top-20 -translate-x-1/2 -mt-16">
+        <div className="absolute left-1/2 top-20 -mt-16 -translate-x-1/2">
           <CloseIcon
             img={CLOSE_MODAL}
             classname="icon-close"
-            handleClick={onClose}
+            handleClick={() => {
+              console.log("Fermeture de la modale en cours...");
+              onClose();
+            }}
           />
 
           <div className="relative flex overflow-hidden md:w-[450px]">
