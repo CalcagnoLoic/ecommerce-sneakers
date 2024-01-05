@@ -32,13 +32,9 @@ const Component: React.FC = () => {
 
     if (isOpen) {
       handleBodyOverflow(true);
-    } else {
-      handleBodyOverflow(false);
-    }
-
-    if (isOpen) {
       document.body.addEventListener("mousedown", handleClickOutside);
     } else {
+      handleBodyOverflow(false);
       document.body.removeEventListener("mousedown", handleClickOutside);
     }
 
