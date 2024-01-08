@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import CounterWrapper from "../../Layout/CounterWrapper";
 import IconToCart from "../IconContent";
+import CounterValue from "../Text";
 
 import MINUS_ICON from "/assets/img/icon-minus.svg";
 import PLUS_ICON from "/assets/img/icon-plus.svg";
@@ -26,7 +27,7 @@ const Component: React.FC = () => {
         <IconToCart img={MINUS_ICON} classname="icon-to-cart" />
       </button>
 
-      <p className="self-center px-3">{counter}</p>
+      <CounterValue tag="p" text={counter} classname="self-center px-3" />
       <button onClick={increment}>
         <IconToCart img={PLUS_ICON} classname="icon-to-cart" />
       </button>

@@ -47,7 +47,7 @@ const Component: React.FC = () => {
 
   return (
     <>
-      <DropdownMenuContent isOpen={isOpen} forwardedRef={sidebarRef} />
+      <DropdownMenuContent isOpen={isOpen} setIsOpen={setIsOpen} />
 
       <DropdownMenuIcon isOpen={isOpen} handleClick={handleClickClose} />
     </>

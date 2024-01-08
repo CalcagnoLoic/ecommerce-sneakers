@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { modalProps, carrouselImage } from "../../types/types";
+import { v4 as uuidv4 } from "uuid";
 
 import OpacityWrapper from "../../Layout/OpacityWrapper";
 import CarrouselWrapper from "../../Layout/CarrouselModalWrapper";
@@ -13,10 +14,10 @@ import ProductThumbnails from "../ProductThumbnailsContainer";
 import CLOSE_MODAL from "/assets/img/icon-close-modal.svg";
 
 const images: carrouselImage[] = [
-  { id: 1, value: "/assets/img/product-1.jpg" },
-  { id: 2, value: "/assets/img/product-2.jpg" },
-  { id: 3, value: "/assets/img/product-3.jpg" },
-  { id: 4, value: "/assets/img/product-4.jpg" },
+  { id: 1, value: "/assets/img/product-1.jpg", key: uuidv4() },
+  { id: 2, value: "/assets/img/product-2.jpg", key: uuidv4() },
+  { id: 3, value: "/assets/img/product-3.jpg", key: uuidv4() },
+  { id: 4, value: "/assets/img/product-4.jpg", key: uuidv4() },
 ];
 
 const Component: React.FC<modalProps> = ({
@@ -92,6 +93,7 @@ const Component: React.FC<modalProps> = ({
                 content={image.value}
                 id={image.id}
                 additionnalClass={i === index ? "" : "hidden"}
+                key={image.key}
               />
             ))}
 

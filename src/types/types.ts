@@ -7,7 +7,7 @@ export type carrouselItem = {
 export type carrouselImage = {
   id: number;
   value: string;
-  key: string
+  key: string;
 };
 
 export type modalProps = {
@@ -25,7 +25,7 @@ export type arrowLeftProps = {
   index: number;
   handleClick: () => void;
   arrowClass: string;
-}
+};
 
 export type arrowRigthProps = {
   index: number;
@@ -70,3 +70,16 @@ export type thumbnailsProps = {
   src: string;
   additionnalClass?: string;
 };
+
+export type Text = {
+  tag?: string;
+  text: string | number;
+  classname: string;
+};
+
+export type Link = {
+  content: string;
+  classname?: string
+  href: string;
+  id?: number;
+}

@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 import { NavBar } from "../../types/types";
 
 import NavItemWrapper from "../../Layout/NavItemWrapper";
-import NavItem from "../NavItem";
+import NavItem from "../Link";
 
 const namesItems: NavBar[] = [
   { content: "Collection", href: "#", id: 1, key: uuidv4() },
@@ -18,6 +18,7 @@ const Component: React.FC = () => (
       <NavItem
         content={item.content}
         href={item.href}
+        classname="link-nav"
         key={item.key}
         id={item.id}
       />

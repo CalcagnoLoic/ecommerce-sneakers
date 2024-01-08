@@ -1,13 +1,13 @@
 import Wrapper from "../../Layout/ProductDescriptionWrapper/index.tsx";
 import PriceWrapper from "../../Layout/PriceWrapper/index.tsx";
 
-import CompanyName from "../CompanyName/index.tsx";
 import ProductTitle from "../ProductTitle/index.tsx";
 import ProductDescription from "../ProductDescription/index.tsx";
 import ProductPrice from "../ProductPrice/index.tsx";
 import PriceReduction from "../PriceReduction/index.tsx";
 import ButtonAddToCart from "../Button/index.tsx";
 import Counter from "../Counter/index.tsx";
+import CompanyName from "../Text/index.tsx";
 
 const Component: React.FC = () => {
   const description: string =
@@ -15,7 +15,11 @@ const Component: React.FC = () => {
 
   return (
     <Wrapper>
-      <CompanyName name={"sneaker company"} />
+      <CompanyName
+        tag="h2"
+        text="sneakers company"
+        classname="company-name-text"
+      />
       <ProductTitle name={"fall limited edition sneakers"} />
       <ProductDescription name={description} />
 
