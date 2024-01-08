@@ -81,7 +81,7 @@ const Component: React.FC<modalProps> = ({
           />
 
           <div className="relative flex overflow-hidden md:w-[450px]">
-            {images.map((image, i) => (
+            {images.map((image, i: number) => (
               <CarrouselItem
                 content={image.value}
                 id={image.id}
