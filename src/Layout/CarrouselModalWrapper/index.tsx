@@ -1,11 +1,7 @@
-const Layout = ({
-  forwardedRef,
-  children,
-}: {
-  forwardedRef: React.RefObject<HTMLDivElement>;
-  children: JSX.Element;
-}) => (
-  <div className="absolute left-1/2 top-20 -translate-x-1/2" ref={forwardedRef}>
+import { wrapperRefCarrousel } from "../../types/types";
+
+const Layout: React.FC<wrapperRefCarrousel> = ({ forwardedRef, children }) => (
+  <div className="carrousel-modal-wrapper" ref={forwardedRef}>
     {children}
   </div>
 );

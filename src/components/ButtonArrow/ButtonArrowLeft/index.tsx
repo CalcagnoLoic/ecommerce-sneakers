@@ -5,15 +5,7 @@ import ArrowIcon from "../../IconContent";
 
 import ARROW_LEFT from "/assets/img/icon-previous.svg";
 
-const Component: React.FC<Arrow> = ({
-  index,
-  handleClick,
-  arrowClass,
-}: {
-  index: number;
-  handleClick: () => void;
-  arrowClass: string;
-}) => {
+const Component: React.FC<Arrow> = ({ index, handleClick, arrowClass }) => {
   const previousConditionnal: string = index === 0 ? "hidden" : "";
 
   return (

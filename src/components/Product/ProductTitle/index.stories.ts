@@ -4,7 +4,7 @@ import ProductTitle from "./index";
 
 const meta = {
   title: "Components/ProductTitle",
-  component: ProductTitle
+  component: ProductTitle,
 } satisfies Meta<typeof ProductTitle>;
 
 export default meta;

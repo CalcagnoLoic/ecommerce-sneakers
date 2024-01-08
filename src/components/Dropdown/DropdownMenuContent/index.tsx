@@ -18,7 +18,7 @@ const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <DropdownMenuContentWrapper isOpen={isOpen}>
-      <div className="wrapper-navbar w-screen bg-black opacity-80"></div>
+      <div className="navbar-wrapper w-screen bg-black opacity-80"></div>
       <NavItemWrapper isDropdown={true} forwardedRef={sidebarRef}>
         {namesItems.map((item: NavBar) => (
           <NavItem

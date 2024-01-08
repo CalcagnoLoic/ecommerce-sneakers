@@ -68,7 +68,7 @@ export type carrouselImage = {
 };
 
 export type modalProps = {
-  onClose: (e:React.MouseEvent<HTMLImageElement>) => void;
+  onClose: (e: React.MouseEvent<HTMLImageElement>) => void;
   showModal: boolean;
   setShowModal: (newValue: boolean) => void;
 };
@@ -76,4 +76,39 @@ export type modalProps = {
 export type stateProps = {
   isOpen: boolean;
   setIsOpen: (newValue: boolean) => void;
+};
+
+export type wrapperUniqueChildren = {
+  children: JSX.Element;
+};
+
+export type Wrapper = {
+  children: JSX.Element[];
+};
+
+export type wrapperRef = {
+  children: JSX.Element[];
+  forwardedRef: React.LegacyRef<HTMLDivElement>;
+};
+
+export type wrapperRefCarrousel = {
+  forwardedRef: React.RefObject<HTMLDivElement>;
+  children: JSX.Element;
+};
+
+export type wrapperBtn = {
+  additionnalClass: string;
+  handleClick: () => void;
+  children: JSX.Element;
+};
+
+export type wrapperDropdownMenu = {
+  isOpen: boolean;
+  children: JSX.Element[];
+};
+
+export type wrapperNavItem = {
+  children: React.ReactNode;
+  isDropdown: boolean;
+  forwardedRef?: React.RefObject<HTMLDivElement>;
 };

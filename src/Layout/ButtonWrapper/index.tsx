@@ -1,4 +1,6 @@
-const Layout = ({ children }: { children: JSX.Element[] }) => (
+import { Wrapper } from "../../types/types";
+
+const Layout: React.FC<Wrapper> = ({ children }) => (
   <div className="button-wrapper">{children}</div>
 );
 

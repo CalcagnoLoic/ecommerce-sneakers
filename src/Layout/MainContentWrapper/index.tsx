@@ -1,7 +1,7 @@
-const Layout = ({ children }: { children: JSX.Element }) => (
-  <div className="flex justify-center md:mx-6 md:py-20 lg:mx-auto">
-    {children}
-  </div>
+import { wrapperUniqueChildren } from "../../types/types";
+
+const Layout: React.FC<wrapperUniqueChildren> = ({ children }) => (
+  <div className="main-content-wrapper">{children}</div>
 );
 
-export default Layout
+export default Layout;

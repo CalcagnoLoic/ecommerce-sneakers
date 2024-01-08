@@ -1,9 +1,9 @@
 import { Message } from "../../../types/types";
 
 import PriceReductionWrapper from "../../../Layout/PriceReductionWrapper";
-import PriceReductionText from "../../Texts";
+import PriceReductionText from "../../CustomText";
 
-const Component: React.FC<Message> = ({ name }: { name: string }) => (
+const Component: React.FC<Message> = ({ name }) => (
   <PriceReductionWrapper>
     <PriceReductionText tag="span" text={name} classname="text-pumpkin" />
   </PriceReductionWrapper>

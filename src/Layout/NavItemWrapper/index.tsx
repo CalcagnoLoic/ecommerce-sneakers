@@ -1,13 +1,9 @@
-import { ReactNode } from "react";
+import { wrapperNavItem } from "../../types/types";
 
-const Layout = ({
+const Layout: React.FC<wrapperNavItem> = ({
   children,
   isDropdown,
   forwardedRef,
-}: {
-  children: ReactNode;
-  isDropdown: boolean;
-  forwardedRef?: React.RefObject<HTMLDivElement>;
 }) => (
   <div
     className={`${

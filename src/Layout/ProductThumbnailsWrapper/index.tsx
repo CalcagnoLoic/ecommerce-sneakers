@@ -1,7 +1,7 @@
-const Layout = ({ children }: { children: JSX.Element[] }) => (
-  <div className="relative hidden lg:mt-8 lg:flex lg:w-[450px] lg:justify-between">
-    {children}
-  </div>
+import { Wrapper } from "../../types/types";
+
+const Layout: React.FC<Wrapper> = ({ children }) => (
+  <div className="product-thumbnails-wrapper">{children}</div>
 );
 
 export default Layout;

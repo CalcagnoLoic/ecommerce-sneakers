@@ -4,7 +4,7 @@ import PriceReduction from "./index";
 
 const meta = {
   title: "Components/PriceReduction",
-  component: PriceReduction
+  component: PriceReduction,
 } satisfies Meta<typeof PriceReduction>;
 
 export default meta;

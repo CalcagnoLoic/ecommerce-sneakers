@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import CounterWrapper from "../../Layout/CounterWrapper";
 import IconToCart from "../IconContent";
-import CounterValue from "../Texts";
+import CounterValue from "../CustomText";
 
 import MINUS_ICON from "/assets/img/icon-minus.svg";
 import PLUS_ICON from "/assets/img/icon-plus.svg";

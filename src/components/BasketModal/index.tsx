@@ -4,8 +4,8 @@ import { stateProps } from "../../types/types";
 
 import BasketWrapper from "../../Layout/BasketModalWrapper";
 import Line from "../Line";
-import BasketContent from "../Texts";
-import Text from "../Texts";
+import BasketContent from "../CustomText";
+import Text from "../CustomText";
 
 const Component: React.FC<stateProps> = ({ setIsOpen }) => {
   const basketRef = useRef<HTMLDivElement>(null);
