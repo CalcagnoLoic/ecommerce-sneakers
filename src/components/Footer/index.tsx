@@ -1,11 +1,23 @@
 import FooterWrapper from "../../Layout/FooterWrapper";
-import UserName from "../UserName";
+
+import FooterText from "../Text";
+import Username from "../Link";
 
 const Component: React.FC = () => (
   <FooterWrapper>
-    <p className="mt-16 py-5 text-center md:mt-0">
-      Coded with love by <UserName name="@CalcagnoLoic" />
-    </p>
+    <FooterText
+      tag="p"
+      text={
+        <>
+          Coded with love by{" "}
+          <Username
+            content="@CalcagnoLoic"
+            href="https://github.com/CalcagnoLoic"
+          />
+        </>
+      }
+      classname="mt-16 py-5 text-center md:mt-0"
+    />
   </FooterWrapper>
 );
 

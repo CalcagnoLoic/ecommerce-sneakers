@@ -2,8 +2,9 @@ import { useRef, useEffect } from "react";
 import { stateProps } from "../../types/types";
 
 import BasketWrapper from "../../Layout/BasketModalWrapper";
-import BasketContent from "../BasketModalContent";
 import Line from "../Line";
+import BasketContent from "../Text";
+import Text from "../Text";
 
 const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
   const basketRef = useRef<HTMLDivElement>(null);
@@ -34,9 +35,13 @@ const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
 
   return (
     <BasketWrapper forwardedRef={basketRef}>
-      <p className="font-bold">Cart</p>
+      <Text tag="p" text="Cart" classname="font-bold" />
       <Line />
-      <BasketContent name="Your cart is empty." />
+      <BasketContent
+        tag="h2"
+        text="Your cart is empty."
+        classname="basket-message"
+      />
     </BasketWrapper>
   );
 };

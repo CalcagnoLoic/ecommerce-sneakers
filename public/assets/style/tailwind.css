@@ -93,4 +93,11 @@
   .button-wrapper {
     @apply mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 shadow-2xl shadow-pumpkin hover:bg-atomicTangerine md:shadow-none lg:ml-2 lg:mt-0 lg:w-full;
   }
+
+  .button-text {
+    @apply self-center text-white
+  }
+  .company-name-text {
+    @apply text-xs font-bold uppercase tracking-widest text-pumpkin
+  }
 }
