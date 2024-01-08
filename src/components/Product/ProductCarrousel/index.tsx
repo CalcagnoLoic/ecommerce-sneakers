@@ -11,11 +11,13 @@ const Component: React.FC = () => {
   const [index, setIndex] = useState<number>(0);
   const [showModal, setShowModal] = useState<boolean>(false);
 
-  const openModal = () => {
+  const openModal = (e: React.MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
     setShowModal(true);
   };
 
-  const closeModal = () => {
+  const closeModal = (e: React.MouseEvent<HTMLImageElement>) => {
+    e.stopPropagation();
     setShowModal(false);
   };
 
@@ -35,7 +37,7 @@ const Component: React.FC = () => {
         className="relative flex overflow-hidden md:w-[450px]"
         onClick={openModal}
       >
-        {images.map((image, i) => (
+        {images.map((image, i: number) => (
           <CarrouselItem
             content={image.value}
             id={image.id}
