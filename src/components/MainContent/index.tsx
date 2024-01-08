@@ -1,6 +1,6 @@
 import MainContentWrapper from "../../Layout/MainContentWrapper";
-import ProductOverview from "../ProductOverview";
-import ProductDescription from "../ProductDescriptionContainer";
+import ProductOverview from "../Product/ProductOverview";
+import ProductDescription from "../Product/ProductDescriptionContainer";
 
 const Component: React.FC = () => (
   <MainContentWrapper>
