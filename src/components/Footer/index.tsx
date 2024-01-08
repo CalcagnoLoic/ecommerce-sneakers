@@ -1,6 +1,6 @@
 import FooterWrapper from "../../Layout/FooterWrapper";
 
-import FooterText from "../Text";
+import FooterText from "../Texts";
 import Username from "../Link";
 
 const Component: React.FC = () => (

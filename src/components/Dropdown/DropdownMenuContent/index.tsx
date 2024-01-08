@@ -16,29 +16,22 @@ const Component: React.FC<stateProps> = ({
   const sidebarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let timeOut: NodeJS.Timeout | number = 0;
-
     const handleClickOutside = (event: MouseEvent): void => {
       if (
         isOpen &&
         sidebarRef.current &&
         !sidebarRef.current.contains(event.target as Node)
       ) {
-        timeOut = setTimeout(() => {
-          setIsOpen(false);
-        }, 500);
+        setIsOpen(false);
       }
     };
 
-    if (isOpen) {
-      document.body.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.body.removeEventListener("mousedown", handleClickOutside);
-    }
+    isOpen
+      ? document.body.addEventListener("click", handleClickOutside)
+      : document.body.removeEventListener("click", handleClickOutside);
 
     return (): void => {
-      document.body.removeEventListener("mousedown", handleClickOutside);
-      clearTimeout(timeOut);
+      document.body.removeEventListener("click", handleClickOutside);
     };
   }, [isOpen, setIsOpen]);
 

@@ -8,7 +8,8 @@ import CART_ICON from "/assets/img/icon-cart.svg";
 const Component: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleClick = (): void => {
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>): void => {
+    e.stopPropagation();
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 

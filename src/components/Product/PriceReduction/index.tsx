@@ -1,7 +1,7 @@
 import { Message } from "../../../types/types";
 
 import PriceReductionWrapper from "../../../Layout/PriceReductionWrapper";
-import PriceReductionText from "../../Text";
+import PriceReductionText from "../../Texts";
 
 const Component: React.FC<Message> = ({ name }: { name: string }) => (
   <PriceReductionWrapper>

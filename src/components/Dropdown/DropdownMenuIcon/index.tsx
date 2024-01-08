@@ -13,7 +13,7 @@ const Component: React.FC<dropdownPropsIcon> = ({
   handleClick,
 }: {
   isOpen: boolean;
-  handleClick: () => void;
+  handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }) => (
   <DropdownMenuIconWrapper>
     <button onClick={handleClick}>

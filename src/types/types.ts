@@ -52,7 +52,7 @@ export type dropdownProps = {
 
 export type dropdownPropsIcon = {
   isOpen: boolean;
-  handleClick: () => void;
+  handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 export type carrouselItem = {
