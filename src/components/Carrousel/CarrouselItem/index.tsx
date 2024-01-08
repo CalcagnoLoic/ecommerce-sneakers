@@ -1,4 +1,4 @@
-import { carrouselItem } from "../../types/types";
+import { carrouselItem } from "../../../types/types";
 
 const Component: React.FC<carrouselItem> = ({
   content,

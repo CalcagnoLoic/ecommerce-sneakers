@@ -1,24 +1,17 @@
 import { useState, useEffect, useRef } from "react";
-import { modalProps, carrouselImage } from "../../types/types";
-import { v4 as uuidv4 } from "uuid";
+import { modalProps } from "../../../types/types";
+import { images } from "../../../data";
 
-import OpacityWrapper from "../../Layout/OpacityWrapper";
-import CarrouselWrapper from "../../Layout/CarrouselModalWrapper";
+import OpacityWrapper from "../../../Layout/OpacityWrapper";
+import CarrouselWrapper from "../../../Layout/CarrouselModalWrapper";
 
-import ArrowLeft from "../ButtonArrowLeft";
-import ArrowRigth from "../ButtonArrowRigth";
+import ArrowLeft from "../../ButtonArrow/ButtonArrowLeft";
+import ArrowRight from "../../ButtonArrow/ButtonArrowRight";
 import CarrouselItem from "../CarrouselItem";
-import CloseIcon from "../IconContent";
-import ProductThumbnails from "../ProductThumbnailsContainer";
+import CloseIcon from "../../IconContent";
+import ProductThumbnails from "../../Product/ProductThumbnailsContainer";
 
 import CLOSE_MODAL from "/assets/img/icon-close-modal.svg";
-
-const images: carrouselImage[] = [
-  { id: 1, value: "/assets/img/product-1.jpg", key: uuidv4() },
-  { id: 2, value: "/assets/img/product-2.jpg", key: uuidv4() },
-  { id: 3, value: "/assets/img/product-3.jpg", key: uuidv4() },
-  { id: 4, value: "/assets/img/product-4.jpg", key: uuidv4() },
-];
 
 const Component: React.FC<modalProps> = ({
   onClose,
@@ -103,7 +96,7 @@ const Component: React.FC<modalProps> = ({
               arrowClass="arrow-carrousel"
             />
 
-            <ArrowRigth
+            <ArrowRight
               index={index}
               handleClick={goToNextProduct}
               images={images}

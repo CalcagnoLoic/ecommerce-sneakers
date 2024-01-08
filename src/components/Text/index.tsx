@@ -6,7 +6,7 @@ const Component: React.FC<Text> = ({
   classname,
 }: {
   tag?: string;
-  text: string | number;
+  text: string | number | React.ReactNode;
   classname: string;
 }) => {
   const Tag = tag as keyof JSX.IntrinsicElements;

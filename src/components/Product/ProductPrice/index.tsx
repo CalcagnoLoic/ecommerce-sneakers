@@ -1,4 +1,4 @@
-import { Price } from "../../types/types";
+import { Price } from "../../../types/types";
 
 const Component: React.FC<Price> = ({
   isOnSale,

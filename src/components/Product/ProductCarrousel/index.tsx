@@ -1,19 +1,11 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
-import { v4 as uuidv4 } from "uuid";
-import { carrouselImage } from "../../types/types";
+import { images } from "../../../data";
 
-import CarrouselModal from "../CarrouselModal";
-import CarrouselItem from "../CarrouselItem";
-import ArrowLeft from "../ButtonArrowLeft";
-import ArrowRigth from "../ButtonArrowRigth";
-
-const images: carrouselImage[] = [
-  { id: 1, value: "/assets/img/product-1.jpg", key: uuidv4() },
-  { id: 2, value: "/assets/img/product-2.jpg", key: uuidv4() },
-  { id: 3, value: "/assets/img/product-3.jpg", key: uuidv4() },
-  { id: 4, value: "/assets/img/product-4.jpg", key: uuidv4() },
-];
+import CarrouselModal from "../../Carrousel/CarrouselModal";
+import CarrouselItem from "../../Carrousel/CarrouselItem";
+import ArrowLeft from "../../ButtonArrow/ButtonArrowLeft";
+import ArrowRigth from "../../ButtonArrow/ButtonArrowRight";
 
 const Component: React.FC = () => {
   const [index, setIndex] = useState<number>(0);

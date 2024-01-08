@@ -1,4 +1,4 @@
-import { thumbnailsProps } from "../../types/types";
+import { thumbnailsProps } from "../../../types/types";
 
 const Component: React.FC<thumbnailsProps> = ({
   src,

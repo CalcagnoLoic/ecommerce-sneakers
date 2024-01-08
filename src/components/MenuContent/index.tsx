@@ -1,16 +1,7 @@
-import { v4 as uuidv4 } from "uuid";
-import { NavBar } from "../../types/types";
+import { namesItems } from "../../data";
 
 import NavItemWrapper from "../../Layout/NavItemWrapper";
 import NavItem from "../Link";
-
-const namesItems: NavBar[] = [
-  { content: "Collection", href: "#", id: 1, key: uuidv4() },
-  { content: "Men", href: "#", id: 2, key: uuidv4() },
-  { content: "Women", href: "#", id: 3, key: uuidv4() },
-  { content: "About", href: "#", id: 4, key: uuidv4() },
-  { content: "Contact", href: "#", id: 5, key: uuidv4() },
-];
 
 const Component: React.FC = () => (
   <NavItemWrapper isDropdown={false}>

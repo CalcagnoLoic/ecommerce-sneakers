@@ -7,11 +7,11 @@ const Component: React.FC<Link> = ({
   id,
 }: {
   content: string;
-  classname?: string
+  classname?: string;
   href: string;
   id?: number;
 }) => (
-  <a href={href} className={classname} key={id}>
+  <a href={href} className={classname} key={id} target="_blank">
     {content}
   </a>
 );

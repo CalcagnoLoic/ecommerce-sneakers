@@ -1,18 +1,10 @@
-import { v4 as uuidv4 } from "uuid";
-import { NavBar, stateProps } from "../../types/types";
-
-import NavItemWrapper from "../../Layout/NavItemWrapper";
-import DropdownMenuContentWrapper from "../../Layout/DropdownMenuContent";
-import NavItem from "../Link";
 import { useRef, useEffect } from "react";
+import { NavBar, stateProps } from "../../../types/types";
+import { namesItems } from "../../../data";
 
-const namesItems: NavBar[] = [
-  { content: "Collection", href: "#", id: 1, key: uuidv4() },
-  { content: "Men", href: "#", id: 2, key: uuidv4() },
-  { content: "Women", href: "#", id: 3, key: uuidv4() },
-  { content: "About", href: "#", id: 4, key: uuidv4() },
-  { content: "Contact", href: "#", id: 5, key: uuidv4() },
-];
+import NavItemWrapper from "../../../Layout/NavItemWrapper";
+import DropdownMenuContentWrapper from "../../../Layout/DropdownMenuContent";
+import NavItem from "../../Link";
 
 const Component: React.FC<stateProps> = ({
   isOpen,

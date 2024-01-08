@@ -1,11 +1,11 @@
-import { arrowLeftProps } from "../../types/types";
+import { Arrow } from "../../../types/types";
 
-import ButtonWrapper from "../../Layout/ButtonArrowWrapper";
-import ArrowIcon from "../IconContent";
+import ButtonWrapper from "../../../Layout/ButtonArrowWrapper";
+import ArrowIcon from "../../IconContent";
 
 import ARROW_LEFT from "/assets/img/icon-previous.svg";
 
-const Component: React.FC<arrowLeftProps> = ({
+const Component: React.FC<Arrow> = ({
   index,
   handleClick,
   arrowClass,
