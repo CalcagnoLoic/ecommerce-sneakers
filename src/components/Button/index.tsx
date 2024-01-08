@@ -1,6 +1,6 @@
 import ButtonWrapper from "../../Layout/ButtonWrapper";
 import IconCart from "../IconContent/index.tsx";
-import ButtonText from "../Texts/index.tsx";
+import ButtonText from "../CustomText/index.tsx";
 
 import CART_ICON from "/assets/img/icon-cart-button.svg";
 

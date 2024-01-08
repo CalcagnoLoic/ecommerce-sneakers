@@ -1,7 +1,7 @@
-const Layout = ({ children }: { children: JSX.Element }) => (
-  <div className="self-center rounded-xl bg-peachCream px-3 py-2">
-    {children}
-  </div>
+import { wrapperUniqueChildren } from "../../types/types";
+
+const Layout: React.FC<wrapperUniqueChildren> = ({ children }) => (
+  <div className="price-reduction-wrapper">{children}</div>
 );
 
 export default Layout;

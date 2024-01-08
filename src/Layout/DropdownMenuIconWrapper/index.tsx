@@ -1,7 +1,7 @@
-const Layout = ({children}: {children: JSX.Element[]}) => (
-    <div className="z-30 flex flex-grow items-center justify-start">
-        {children}
-    </div>
-)
+import { Wrapper } from "../../types/types";
 
-export default Layout
+const Layout: React.FC<Wrapper> = ({ children }) => (
+  <div className="dropdown-icon-wrapper">{children}</div>
+);
+
+export default Layout;

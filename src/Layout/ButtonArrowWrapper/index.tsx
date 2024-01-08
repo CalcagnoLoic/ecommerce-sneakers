@@ -1,11 +1,9 @@
-const Layout = ({
+import { wrapperBtn } from "../../types/types";
+
+const Layout: React.FC<wrapperBtn> = ({
   additionnalClass,
   handleClick,
   children,
-}: {
-  additionnalClass: string;
-  handleClick: () => void;
-  children: JSX.Element;
 }) => (
   <div className={`${additionnalClass}`} onClick={handleClick}>
     {children}
@@ -13,4 +11,3 @@ const Layout = ({
 );
 
 export default Layout;
- 

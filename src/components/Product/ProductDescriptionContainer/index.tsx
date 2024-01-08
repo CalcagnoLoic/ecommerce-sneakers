@@ -9,7 +9,7 @@ import ProductPrice from "../ProductPrice/index.tsx";
 import PriceReduction from "../PriceReduction/index.tsx";
 import ButtonAddToCart from "../../Button/index.tsx";
 import Counter from "../../Counter/index.tsx";
-import CompanyName from "../../Texts/index.tsx";
+import CompanyName from "../../CustomText/index.tsx";
 
 const Component: React.FC = () => (
   <Wrapper>

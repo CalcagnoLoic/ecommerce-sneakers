@@ -1,4 +1,4 @@
-import { carrouselImage, Arrow } from "../../../types/types";
+import { Arrow } from "../../../types/types";
 
 import ButtonWrapper from "../../../Layout/ButtonArrowWrapper";
 import ArrowIcon from "../../IconContent";
@@ -10,11 +10,6 @@ const Component: React.FC<Arrow> = ({
   handleClick,
   images,
   arrowClass,
-}: {
-  index: number;
-  handleClick: () => void;
-  images?: carrouselImage[];
-  arrowClass: string;
 }) => {
   if (images) {
     const nextConditionnal: string =

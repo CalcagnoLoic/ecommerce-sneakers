@@ -1,5 +1,7 @@
-const Layout = ({ children }: { children: JSX.Element[] }) => (
-  <div className="mt-6 flex justify-between md:flex-col">{children}</div>
+import { Wrapper } from "../../types/types";
+
+const Layout: React.FC<Wrapper> = ({ children }) => (
+  <div className="price-wrapper">{children}</div>
 );
 
 export default Layout;

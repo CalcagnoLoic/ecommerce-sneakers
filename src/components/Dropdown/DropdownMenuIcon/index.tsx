@@ -8,13 +8,7 @@ import MENU_ICON from "/assets/img/icon-menu.svg";
 import MENU_ICON_CLOSE from "/assets/img/icon-close.svg";
 import LOGO from "/assets/img/logo.svg";
 
-const Component: React.FC<dropdownPropsIcon> = ({
-  isOpen,
-  handleClick,
-}: {
-  isOpen: boolean;
-  handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-}) => (
+const Component: React.FC<dropdownPropsIcon> = ({ isOpen, handleClick }) => (
   <DropdownMenuIconWrapper>
     <button onClick={handleClick}>
       <IconMenuDropdown
