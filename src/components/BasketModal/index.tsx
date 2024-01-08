@@ -1,4 +1,5 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
+import { useClickOutside } from "../../hooks/useClickOutside";
 import { stateProps } from "../../types/types";
 
 import BasketWrapper from "../../Layout/BasketModalWrapper";
@@ -6,27 +7,14 @@ import Line from "../Line";
 import BasketContent from "../Texts";
 import Text from "../Texts";
 
-const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
+const Component: React.FC<stateProps> = ({ setIsOpen }) => {
   const basketRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent): void => {
-      if (
-        isOpen &&
-        basketRef.current &&
-        !basketRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
-      }
-    };
-
-    isOpen
-      ? document.body.addEventListener("click", handleClickOutside)
-      : document.body.removeEventListener("click", handleClickOutside);
-
-    return (): void => {
-      document.body.removeEventListener("click", handleClickOutside);
-    };
+  useClickOutside({
+    ref: basketRef,
+    callback: () => {
+      setIsOpen(false);
+    },
   });
 
   return (

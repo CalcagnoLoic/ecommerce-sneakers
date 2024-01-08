@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useBodyOverflow } from "../../../hooks/useBodyOverflow";
 
 import DropdownMenuIcon from "../DropdownMenuIcon";
 import DropdownMenuContent from "../DropdownMenuContent";
@@ -11,17 +12,7 @@ const Component: React.FC = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
-  useEffect(() => {
-    const handleBodyOverflow = (shouldOverflow: boolean): void => {
-      document.body.classList.toggle("no-scroll", shouldOverflow);
-    };
-
-    isOpen ? handleBodyOverflow(true) : handleBodyOverflow(false);
-
-    return (): void => {
-      handleBodyOverflow(false);
-    };
-  }, [isOpen]);
+  useBodyOverflow(isOpen);
 
   return (
     <>

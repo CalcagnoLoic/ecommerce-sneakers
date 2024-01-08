@@ -1,6 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { modalProps } from "../../../types/types";
 import { images } from "../../../data";
+import { useBodyOverflow } from "../../../hooks/useBodyOverflow";
+import { useClickOutside } from "../../../hooks/useClickOutside";
 
 import OpacityWrapper from "../../../Layout/OpacityWrapper";
 import CarrouselWrapper from "../../../Layout/CarrouselModalWrapper";
@@ -31,38 +33,11 @@ const Component: React.FC<modalProps> = ({
     setIndex(newIndex);
   };
 
-  useEffect(() => {
-    const handleBodyOverflow = (shouldOverflow: boolean): void => {
-      document.body.classList.toggle("no-scroll", shouldOverflow);
-    };
-
-    const handleClickOutside = (event: MouseEvent): void => {
-      if (
-        showModal &&
-        modalRef.current &&
-        !modalRef.current.contains(event.target as Node)
-      ) {
-        setShowModal(false);
-      }
-    };
-
-    if (showModal) {
-      handleBodyOverflow(true);
-    } else {
-      handleBodyOverflow(false);
-    }
-
-    if (showModal) {
-      document.body.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.body.removeEventListener("mousedown", handleClickOutside);
-    }
-
-    return (): void => {
-      handleBodyOverflow(false);
-      document.body.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [showModal, setShowModal]);
+  useBodyOverflow(showModal);
+  useClickOutside({
+    ref: modalRef,
+    callback: () => setShowModal(false),
+  });
 
   if (window.innerWidth < 1024) return null;
 
@@ -74,10 +49,7 @@ const Component: React.FC<modalProps> = ({
           <CloseIcon
             img={CLOSE_MODAL}
             classname="icon-close"
-            handleClick={() => {
-              console.log("Fermeture de la modale en cours...");
-              onClose();
-            }}
+            handleClick={onClose}
           />
 
           <div className="relative flex overflow-hidden md:w-[450px]">

@@ -1,39 +1,20 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
+//import { useClickOutside } from "../../../hooks/useClickOutside";
 import { NavBar, stateProps } from "../../../types/types";
 import { namesItems } from "../../../data";
 
 import NavItemWrapper from "../../../Layout/NavItemWrapper";
 import DropdownMenuContentWrapper from "../../../Layout/DropdownMenuContent";
 import NavItem from "../../Link";
+import { useClickOutside } from "../../../hooks/useClickOutside";
 
-const Component: React.FC<stateProps> = ({
-  isOpen,
-  setIsOpen,
-}: {
-  isOpen: boolean;
-  setIsOpen: (newValue: boolean) => void;
-}) => {
+const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent): void => {
-      if (
-        isOpen &&
-        sidebarRef.current &&
-        !sidebarRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
-      }
-    };
-
-    isOpen
-      ? document.body.addEventListener("click", handleClickOutside)
-      : document.body.removeEventListener("click", handleClickOutside);
-
-    return (): void => {
-      document.body.removeEventListener("click", handleClickOutside);
-    };
-  }, [isOpen, setIsOpen]);
+  useClickOutside({
+    ref: sidebarRef,
+    callback: () => setIsOpen(false),
+  });
 
   return (
     <DropdownMenuContentWrapper isOpen={isOpen}>

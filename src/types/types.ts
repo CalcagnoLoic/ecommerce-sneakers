@@ -15,7 +15,7 @@ export type NavBar = {
 export type Icon = {
   img: string;
   classname?: string;
-  handleClick?: () => void;
+  handleClick?: (e: React.MouseEvent<HTMLImageElement>) => void;
 };
 
 export type Message = {
@@ -68,7 +68,7 @@ export type carrouselImage = {
 };
 
 export type modalProps = {
-  onClose: () => void;
+  onClose: (e:React.MouseEvent<HTMLImageElement>) => void;
   showModal: boolean;
   setShowModal: (newValue: boolean) => void;
 };
