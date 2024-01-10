@@ -1,0 +1,13 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as CounterStories from './index.stories';
+
+<Meta of={CounterStories} />
+
+# Counter
+
+A counter is the componant that can be clicked by a minus/plus button.
+
+Moreover, this component display the quantity of selected product. 
+
+<Canvas of={CounterStories.Default} />

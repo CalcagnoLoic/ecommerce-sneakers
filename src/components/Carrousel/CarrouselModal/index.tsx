@@ -1,8 +1,8 @@
 import { useState, useRef } from "react";
 import { modalProps } from "../../../types/types";
 import { images } from "../../../data";
-import { useBodyOverflow } from "../../../hooks/useBodyOverflow";
-import { useClickOutside } from "../../../hooks/useClickOutside";
+import { useModal } from "../../../hooks/useCloseModal";
+import { useModalType } from "../../../types/types";
 
 import OpacityWrapper from "../../../Layout/OpacityWrapper";
 import CarrouselWrapper from "../../../Layout/CarrouselModalWrapper";
@@ -33,11 +33,13 @@ const Component: React.FC<modalProps> = ({
     setIndex(newIndex);
   };
 
-  useBodyOverflow(showModal);
-  useClickOutside({
+  const modalParameters: useModalType = {
     ref: modalRef,
-    callback: () => setShowModal(false),
-  });
+    state: showModal,
+    callback: setShowModal,
+  };
+
+  useModal(modalParameters);
 
   if (window.innerWidth < 1024) return null;
 

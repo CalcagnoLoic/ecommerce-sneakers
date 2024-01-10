@@ -18,7 +18,7 @@ export const Default: Story = {
   },
 };
 
-export const ActiveLink: Story = {
+export const SoldOut: Story = {
   name: "sold-out price",
   args: {
     isOnSale: true,

@@ -1,12 +1,11 @@
 import { useRef } from "react";
-//import { useClickOutside } from "../../../hooks/useClickOutside";
+import { useClickOutside } from "../../../hooks/useClickOutside";
 import { NavBar, stateProps } from "../../../types/types";
 import { namesItems } from "../../../data";
 
 import NavItemWrapper from "../../../Layout/NavItemWrapper";
 import DropdownMenuContentWrapper from "../../../Layout/DropdownMenuContent";
 import NavItem from "../../Link";
-import { useClickOutside } from "../../../hooks/useClickOutside";
 
 const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
   const sidebarRef = useRef<HTMLDivElement>(null);
