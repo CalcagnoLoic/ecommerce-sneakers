@@ -1,0 +1,13 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as PriceStories from "./index.stories";
+
+<Meta of={PriceStories} />
+
+# Price 
+
+This component corresponds to the two states of price: a normal price and a sold-out price.
+
+<Canvas of={PriceStories.Default} />
+
+<Canvas of={PriceStories.SoldOut} />

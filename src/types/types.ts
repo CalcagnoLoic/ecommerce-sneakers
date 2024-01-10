@@ -112,3 +112,14 @@ export type wrapperNavItem = {
   isDropdown: boolean;
   forwardedRef?: React.RefObject<HTMLDivElement>;
 };
+
+export type useClickOutsideType = {
+  ref: React.RefObject<HTMLDivElement>;
+  callback: () => void;
+};
+
+export type useModalType = {
+  ref: React.RefObject<HTMLDivElement>;
+  state: boolean;
+  callback: (newValue: boolean) => void;
+};

@@ -1,12 +1,7 @@
 import { useEffect, useCallback } from "react";
+import { useClickOutsideType } from "../types/types";
 
-export const useClickOutside = ({
-  ref,
-  callback,
-}: {
-  ref: React.RefObject<HTMLDivElement>;
-  callback: () => void;
-}) => {
+export const useClickOutside = ({ ref, callback }: useClickOutsideType) => {
   const handleClickOutside = useCallback(
     (event: MouseEvent): void => {
       if (ref.current && !ref.current.contains(event.target as Node)) {
