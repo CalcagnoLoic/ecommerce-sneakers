@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { modalProps } from "../../../types/types";
 import { images } from "../../../data";
 import { useModal } from "../../../hooks/useCloseModal";
-import { useModalType } from "../../../types/types";
+import { useModalType } from "../../../types/interface";
 
 import OpacityWrapper from "../../../Layout/OpacityWrapper";
 import CarrouselWrapper from "../../../Layout/CarrouselModalWrapper";

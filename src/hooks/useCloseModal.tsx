@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useModalType } from "../types/types";
+import { useModalType } from "../types/interface";
 
 export const useModal = ({ref, state, callback}: useModalType) => {
   useEffect(() => {

@@ -1,7 +1,7 @@
-import { wrapperDropdownMenu } from "../../types/types";
+import { wrapperDropdownMenu } from "../../types/interface";
 
 const Layout: React.FC<wrapperDropdownMenu> = ({ isOpen, children }) => (
-  <div className={`${isOpen ? "sidebar relative lg:hidden" : "hidden"}`}>
+  <div className={`${isOpen ? "relative lg:hidden" : "hidden"}`}>
     {children}
   </div>
 );

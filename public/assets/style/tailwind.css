@@ -24,7 +24,7 @@
     @apply cursor-pointer lg:text-shark;
   }
   .nav-item--dropdown {
-    @apply navbar-wrapper ml-[-24px] flex flex-col gap-5 bg-white pl-7 pr-24 pt-28;
+    @apply navbar-wrapper ml-[-24px] flex flex-col gap-5 bg-white pl-7 pr-24 pt-28 transition-all duration-700;
   }
   header:hover .link-nav:hover {
     @apply lg:border-b-4 lg:border-b-pumpkin;
@@ -87,7 +87,7 @@
     @apply flex flex-col md:items-center md:justify-center lg:flex-row lg:items-start;
   }
   .basket-modal-wrapper {
-    @apply absolute left-1/2 top-28 z-20 h-64 w-[360px] translate-x-[-50%] rounded-lg bg-white p-6 shadow-2xl md:left-auto md:top-20 md:translate-x-0;
+    @apply absolute left-1/2 top-28 z-20 h-64 w-[360px] translate-x-[-50%] rounded-lg bg-white p-6 shadow-2xl md:left-auto md:top-20 md:translate-x-0 ;
   }
   .button-wrapper {
     @apply mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 shadow-2xl shadow-pumpkin hover:bg-atomicTangerine md:shadow-none lg:ml-2 lg:mt-0 lg:w-full;

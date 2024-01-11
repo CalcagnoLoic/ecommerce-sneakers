@@ -1,4 +1,4 @@
-import { wrapperBtn } from "../../types/types";
+import { wrapperBtn } from "../../types/interface";
 
 const Layout: React.FC<wrapperBtn> = ({
   additionnalClass,

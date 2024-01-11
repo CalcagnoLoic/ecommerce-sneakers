@@ -1,6 +1,6 @@
-import { wrapperRef } from "../../types/types";
+import { Wrapper } from "../../types/interface";
 
-const Layout: React.FC<wrapperRef> = ({ children, forwardedRef }) => (
+const Layout: React.FC<Wrapper> = ({ children, forwardedRef }) => (
   <div className="basket-modal-wrapper" ref={forwardedRef}>
     {children}
   </div>
