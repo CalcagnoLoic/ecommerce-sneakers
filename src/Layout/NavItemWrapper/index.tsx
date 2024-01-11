@@ -1,4 +1,4 @@
-import { wrapperNavItem } from "../../types/types";
+import { wrapperNavItem } from "../../types/interface";
 
 const Layout: React.FC<wrapperNavItem> = ({
   children,

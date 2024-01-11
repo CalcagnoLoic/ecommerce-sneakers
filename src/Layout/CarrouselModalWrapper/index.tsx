@@ -1,6 +1,6 @@
-import { wrapperRefCarrousel } from "../../types/types";
+import { Wrapper } from "../../types/interface";
 
-const Layout: React.FC<wrapperRefCarrousel> = ({ forwardedRef, children }) => (
+const Layout: React.FC<Wrapper> = ({ forwardedRef, children }) => (
   <div className="carrousel-modal-wrapper" ref={forwardedRef}>
     {children}
   </div>
