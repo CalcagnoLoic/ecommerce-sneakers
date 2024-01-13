@@ -22,11 +22,6 @@ export type Message = {
   name: string;
 };
 
-export type Price = {
-  isOnSale: boolean;
-  price: string;
-};
-
 export type Text = {
   tag?: string;
   text: string | number | React.ReactNode;
