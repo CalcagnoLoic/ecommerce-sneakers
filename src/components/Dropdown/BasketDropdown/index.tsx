@@ -1,11 +1,11 @@
 import { useRef } from "react";
-import { useClickOutside } from "../../hooks/useClickOutside";
-import { stateProps } from "../../types/types";
+import { useClickOutside } from "../../../hooks/useClickOutside";
+import { stateProps } from "../../../types/types";
 
-import BasketWrapper from "../../Layout/BasketModalWrapper";
-import Line from "../Line";
-import BasketContent from "../CustomText";
-import Text from "../CustomText";
+import BasketWrapper from "../../../Layout/BasketModalWrapper";
+import Line from "../../Line";
+import BasketContent from "../../CustomText";
+import Text from "../../CustomText";
 
 const Component: React.FC<stateProps> = ({ setIsOpen }) => {
   const basketRef = useRef<HTMLDivElement>(null);

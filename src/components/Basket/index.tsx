@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import BasketModal from "../BasketModal";
+import BasketModal from "../Dropdown/BasketDropdown";
 import IconBasket from "../IconContent";
 
 import CART_ICON from "/assets/img/icon-cart.svg";
