@@ -1,13 +1,13 @@
-import { useState } from "react";
 import { createPortal } from "react-dom";
 import { images } from "../../../data";
+import { useState } from "react";
 
-import CarrouselModal from "../../Carrousel/CarrouselModal";
-import CarrouselItem from "../../Carrousel/CarrouselItem";
 import ArrowLeft from "../../ButtonArrow/ButtonArrowLeft";
 import ArrowRigth from "../../ButtonArrow/ButtonArrowRight";
+import CarrouselItem from "../../Carrousel/CarrouselItem";
+import CarrouselModal from "../../Carrousel/CarrouselModal";
 
-const Component: React.FC = () => {
+const Component = () => {
   const [index, setIndex] = useState<number>(0);
   const [showModal, setShowModal] = useState<boolean>(false);
 
@@ -16,7 +16,7 @@ const Component: React.FC = () => {
     setShowModal(true);
   };
 
-  const closeModal = (e: React.MouseEvent<HTMLImageElement>) => {
+  const closeModal = (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
     e.stopPropagation();
     setShowModal(false);
   };

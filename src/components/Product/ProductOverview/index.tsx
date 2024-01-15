@@ -1,10 +1,9 @@
 import ProductCarrousel from "../ProductCarrousel";
 import ProductThumbnails from "../ProductThumbnailsContainer";
 
-const Component: React.FC = () => (
+const Component = () => (
   <>
     <ProductCarrousel />
-
     <ProductThumbnails />
   </>
 );

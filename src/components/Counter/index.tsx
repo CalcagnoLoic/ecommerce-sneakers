@@ -1,13 +1,10 @@
 import { useState } from "react";
 
 import CounterWrapper from "../../Layout/CounterWrapper";
-import IconToCart from "../IconContent";
-import CounterValue from "../CustomText";
+import Paragraph from "../../typographies/Paragraph";
+import QuantityIcons from "../../Icons/QuantityIcons";
 
-import MINUS_ICON from "/assets/img/icon-minus.svg";
-import PLUS_ICON from "/assets/img/icon-plus.svg";
-
-const Component: React.FC = () => {
+const Component = () => {
   const [counter, setCounter] = useState<number>(0);
 
   const increment: React.MouseEventHandler<HTMLButtonElement> = () => {
@@ -23,12 +20,12 @@ const Component: React.FC = () => {
   return (
     <CounterWrapper>
       <button onClick={decrement}>
-        <IconToCart img={MINUS_ICON} classname="icon-to-cart" />
+        <QuantityIcons kind="minus" />
       </button>
 
-      <CounterValue tag="p" text={counter} classname="self-center px-3" />
+      <Paragraph content={counter} css="self-center px-3" />
       <button onClick={increment}>
-        <IconToCart img={PLUS_ICON} classname="icon-to-cart" />
+        <QuantityIcons kind="plus" />
       </button>
     </CounterWrapper>
   );

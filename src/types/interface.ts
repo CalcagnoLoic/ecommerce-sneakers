@@ -1,11 +1,10 @@
-export interface useClickOutsideType {
+export interface useClickOutsideInterface {
   ref: React.RefObject<HTMLDivElement>;
-  callback: () => void;
+  callback?: (newValue: boolean) => void;
 }
 
-export interface useModalType extends useClickOutsideType {
+export interface useModalInterface extends useClickOutsideInterface {
   state: boolean;
-  callback: (newValue?: boolean) => void;
 }
 
 export interface Wrapper {

@@ -1,13 +1,11 @@
+import BasketIcons from "../../Icons/BasketIcons";
 import ButtonWrapper from "../../Layout/ButtonWrapper";
-import IconCart from "../IconContent/index.tsx";
-import ButtonText from "../CustomText/index.tsx";
-
-import CART_ICON from "/assets/img/icon-cart-button.svg";
+import Paragraph from "../../typographies/Paragraph";
 
 const Component = () => (
   <ButtonWrapper>
-    <IconCart img={CART_ICON} classname="icon-to-cart mr-5" />
-    <ButtonText tag="p" text="Add to cart" classname="button-text" />
+    <BasketIcons color="light" css="icon-to-cart mr-5" />
+    <Paragraph content="Add to cart" css="button-text" />
   </ButtonWrapper>
 );
 

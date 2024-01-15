@@ -1,19 +1,21 @@
-import { useState, useRef } from "react";
-import { modalProps } from "../../../types/types";
 import { images } from "../../../data";
 import { useModal } from "../../../hooks/useCloseModal";
-import { useModalType } from "../../../types/interface";
+import { useModalInterface } from "../../../types/interface";
+import { useState, useRef } from "react";
 
-import OpacityWrapper from "../../../Layout/OpacityWrapper";
-import CarrouselWrapper from "../../../Layout/CarrouselModalWrapper";
-
-import ArrowLeft from "../../ButtonArrow/ButtonArrowLeft";
-import ArrowRight from "../../ButtonArrow/ButtonArrowRight";
+import ButtonArrowLeft from "../../ButtonArrow/ButtonArrowLeft";
+import ButtonArrowRight from "../../ButtonArrow/ButtonArrowRight";
 import CarrouselItem from "../CarrouselItem";
-import CloseIcon from "../../IconContent";
+import CarrouselWrapper from "../../../Layout/CarrouselModalWrapper";
+import CloseIcon from "../../../Icons/CloseIcon";
+import OpacityWrapper from "../../../Layout/OpacityWrapper";
 import ProductThumbnails from "../../Product/ProductThumbnailsContainer";
 
-import CLOSE_MODAL from "/assets/img/icon-close-modal.svg";
+type modalProps = {
+  onClose: (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
+  showModal: boolean;
+  setShowModal: (newValue: boolean) => void;
+};
 
 const Component: React.FC<modalProps> = ({
   onClose,
@@ -33,7 +35,7 @@ const Component: React.FC<modalProps> = ({
     setIndex(newIndex);
   };
 
-  const modalParameters: useModalType = {
+  const modalParameters: useModalInterface = {
     ref: modalRef,
     state: showModal,
     callback: setShowModal,
@@ -48,11 +50,7 @@ const Component: React.FC<modalProps> = ({
       <OpacityWrapper></OpacityWrapper>
       <CarrouselWrapper forwardedRef={modalRef}>
         <div className="absolute left-1/2 top-20 -mt-16 -translate-x-1/2">
-          <CloseIcon
-            img={CLOSE_MODAL}
-            classname="icon-close"
-            handleClick={onClose}
-          />
+          <CloseIcon css="icon-close" handleClick={onClose} />
 
           <div className="relative flex overflow-hidden md:w-[450px]">
             {images.map((image, i: number) => (
@@ -64,13 +62,13 @@ const Component: React.FC<modalProps> = ({
               />
             ))}
 
-            <ArrowLeft
+            <ButtonArrowLeft
               index={index}
               handleClick={goToPreviousProduct}
               arrowClass="arrow-carrousel"
             />
 
-            <ArrowRight
+            <ButtonArrowRight
               index={index}
               handleClick={goToNextProduct}
               images={images}

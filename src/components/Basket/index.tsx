@@ -1,11 +1,9 @@
 import { useState } from "react";
 
-import BasketModal from "../Dropdown/BasketDropdown";
-import IconBasket from "../IconContent";
+import BasketDropdown from "../Dropdown/BasketDropdown";
+import BasketIcons from "../../Icons/BasketIcons";
 
-import CART_ICON from "/assets/img/icon-cart.svg";
-
-const Component: React.FC = () => {
+const Component = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>): void => {
@@ -16,10 +14,10 @@ const Component: React.FC = () => {
   return (
     <>
       <div onClick={handleClick}>
-        <IconBasket img={CART_ICON} classname="icon-basket" />
+        <BasketIcons color="dark" css="icon-basket" />
       </div>
 
-      {isOpen && <BasketModal isOpen={isOpen} setIsOpen={setIsOpen} />}
+      {isOpen && <BasketDropdown isOpen={isOpen} setIsOpen={setIsOpen} />}
     </>
   );
 };
