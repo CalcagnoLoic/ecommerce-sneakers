@@ -6,14 +6,14 @@ import NavBarContent from "../NavBarContent";
 
 const Component = () => (
   <HeaderWrapper>
-    <nav className="lg:my-15 my-5 flex justify-between">
-      <section className="flex gap-16 self-center">
+    <nav className="md:my-6 lg:my-0 flex justify-between">
+      <section className="flex self-center">
         <DropdownMenu />
 
         <NavBarContent />
       </section>
 
-      <section>
+      <section className="self-center">
         <div className="flex items-center justify-end">
           <Basket />
           <img

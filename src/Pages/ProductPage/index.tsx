@@ -17,7 +17,7 @@ function Page() {
     <div className="md:mx-32 lg:mx-24 xl:mx-40">
       <Header />
       <div className="main-content-wrapper">
-        <div className="product-wrapper">
+        <section className="product-wrapper">
           <div className="flex-col">
             <ProductOverview />
           </div>
@@ -52,7 +52,7 @@ function Page() {
               <Button />
             </div>
           </Wrapper>
-        </div>
+        </section>
       </div>
       <Footer />
     </div>
