@@ -1,17 +1,16 @@
 import { description } from "../../data";
 
-import ButtonAddToCart from "../../components/Button";
-import CompanyName from "../../components/CustomText";
+import Button from "../../components/Button";
 import Counter from "../../components/Counter";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import PriceReduction from "../../components/Product/PriceReduction";
+import PriceReduction from "../../components/Product/ProductReduction";
 import PriceWrapper from "../../Layout/PriceWrapper";
-import ProductDescription from "../../components/Product/ProductDescription";
 import ProductOverview from "../../components/Product/ProductOverview";
 import ProductPrice from "../../components/Product/ProductPrice";
-import ProductTitle from "../../components/Product/ProductTitle";
 import Wrapper from "../../Layout/ProductDescriptionWrapper";
+import Heading from "../../typographies/Heading";
+import Paragraph from "../../typographies/Paragraph";
 
 function Page() {
   return (
@@ -24,27 +23,33 @@ function Page() {
           </div>
 
           <Wrapper>
-            <CompanyName
-              tag="h2"
-              text="sneakers company"
-              classname="company-name-text"
+            <Heading
+              kind="h2"
+              content="sneakers company"
+              css="text-xs font-bold uppercase tracking-widest text-pumpkin"
             />
-            <ProductTitle name="fall limited edition sneakers" />
-            <ProductDescription name={description} />
+            <Heading
+              kind="h1"
+              content="fall limited edition sneakers"
+              css="mt-7 text-4xl capitalize"
+            />
+            <Paragraph
+              content={description}
+              css="mt-8 break-words text-base text-paleSky md:w-[445px]"
+            />
 
             <PriceWrapper>
               <div className="flex">
                 <ProductPrice price={"$125.00"} />
 
-                <PriceReduction name="50%" />
+                <PriceReduction content="50%" />
               </div>
               <ProductPrice isOnSale={true} price={"$250.00"} />
             </PriceWrapper>
 
             <div className="mt-8 flex flex-col lg:flex-row">
               <Counter />
-
-              <ButtonAddToCart />
+              <Button />
             </div>
           </Wrapper>
         </div>

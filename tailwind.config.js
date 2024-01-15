@@ -13,6 +13,7 @@ export default {
         white: "#FFFFFF",
         dark: "#000000",
         atomicTangerine: "#FFAB6A",
+        alto: "#D8D8D8",
       },
     },
   },

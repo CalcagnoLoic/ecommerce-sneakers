@@ -1,10 +1,10 @@
-import ProductThumbnails from "../ProductThumbnails";
-import ProductThumbnailsWrapper from "../../../Layout/ProductThumbnailsWrapper";
-
 import PRODUCT_1_THUMBNAIL from "/assets/img/product-1-thumbnail.jpg";
 import PRODUCT_2_THUMBNAIL from "/assets/img/product-2-thumbnail.jpg";
 import PRODUCT_3_THUMBNAIL from "/assets/img/product-3-thumbnail.jpg";
 import PRODUCT_4_THUMBNAIL from "/assets/img/product-4-thumbnail.jpg";
+
+import ProductThumbnails from "../ProductThumbnails";
+import ProductThumbnailsWrapper from "../../../Layout/ProductThumbnailsWrapper";
 
 const Component: React.FC = () => (
   <ProductThumbnailsWrapper>

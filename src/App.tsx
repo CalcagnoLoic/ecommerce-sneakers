@@ -1,5 +1,5 @@
 import ProductPage from "./Pages/ProductPage"
 
-export const App: React.FC = () => {
+export const App = () => {
   return <ProductPage />;
 };

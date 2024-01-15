@@ -1,13 +1,12 @@
 import FooterWrapper from "../../Layout/FooterWrapper";
-
-import FooterText from "../CustomText";
+import Paragraph from "../../typographies/Paragraph";
 import Username from "../Link";
 
-const Component: React.FC = () => (
+const Component = () => (
   <FooterWrapper>
-    <FooterText
-      tag="p"
-      text={
+    <Paragraph
+      css="mt-16 py-5 text-center md:mt-0"
+      content={
         <>
           Coded with love by{" "}
           <Username
@@ -16,7 +15,6 @@ const Component: React.FC = () => (
           />
         </>
       }
-      classname="mt-16 py-5 text-center md:mt-0"
     />
   </FooterWrapper>
 );

@@ -1,11 +1,16 @@
-import { useRef } from "react";
 import { useClickOutside } from "../../../hooks/useClickOutside";
-import { stateProps } from "../../../types/types";
+import { useRef } from "react";
 
-import BasketWrapper from "../../../Layout/BasketModalWrapper";
+import BasketWrapper from "../../../Layout/BasketDropdownWrapper";
+import Heading from "../../../typographies/Heading";
 import Line from "../../Line";
-import BasketContent from "../../CustomText";
-import Text from "../../CustomText";
+import Paragraph from "../../../typographies/Paragraph";
+
+type stateProps = {
+  isOpen: boolean;
+  setIsOpen: (newValue: boolean) => void;
+};
+
 
 const Component: React.FC<stateProps> = ({ setIsOpen }) => {
   const basketRef = useRef<HTMLDivElement>(null);
@@ -19,13 +24,9 @@ const Component: React.FC<stateProps> = ({ setIsOpen }) => {
 
   return (
     <BasketWrapper forwardedRef={basketRef}>
-      <Text tag="p" text="Cart" classname="font-bold" />
+      <Paragraph content="Cart" css="font-bold" />
       <Line />
-      <BasketContent
-        tag="h2"
-        text="Your cart is empty."
-        classname="basket-message"
-      />
+      <Heading kind="h2" content="Your cart is empty." css="basket-message" />
     </BasketWrapper>
   );
 };

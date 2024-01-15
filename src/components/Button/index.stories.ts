@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import ButtonAddToCart from "./index";
+import Button from "./index";
 
 const meta = {
-  title: "Components/ButtonAddToCart",
-  component: ButtonAddToCart,
-} satisfies Meta<typeof ButtonAddToCart>;
+  title: "Components/Button",
+  component: Button,
+} satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

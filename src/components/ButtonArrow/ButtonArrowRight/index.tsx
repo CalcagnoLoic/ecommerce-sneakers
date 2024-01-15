@@ -1,9 +1,7 @@
 import { Arrow } from "../../../types/types";
 
+import ArrowIcons from "../../../Icons/ArrowIcons";
 import ButtonWrapper from "../../../Layout/ButtonArrowWrapper";
-import ArrowIcon from "../../IconContent";
-
-import ARROW_RIGHT from "/assets/img/icon-next.svg";
 
 const Component: React.FC<Arrow> = ({
   index,
@@ -20,7 +18,7 @@ const Component: React.FC<Arrow> = ({
         additionnalClass={`right-4 ${arrowClass} ${nextConditionnal}`}
         handleClick={handleClick}
       >
-        <ArrowIcon img={ARROW_RIGHT} classname="arrow-position " />
+        <ArrowIcons kind={"right"} />
       </ButtonWrapper>
     );
   }

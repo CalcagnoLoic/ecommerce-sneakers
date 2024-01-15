@@ -1,5 +1,17 @@
-import { carrouselImage, NavBar } from "../types/types";
 import { v4 as uuidv4 } from "uuid";
+
+type carrouselImage = {
+  id: number;
+  value: string;
+  key: string;
+};
+
+type NavBar = {
+  key: string;
+  id: number;
+  content: string;
+  href: string;
+};
 
 export const images: carrouselImage[] = [
   { id: 1, value: "/assets/img/product-1.jpg", key: uuidv4() },

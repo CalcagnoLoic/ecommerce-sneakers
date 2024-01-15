@@ -1,23 +1,19 @@
-import { dropdownPropsIcon } from "../../../types/types";
-
+import DropdownIcons from "../../../Icons/DropdownIcons";
 import DropdownMenuIconWrapper from "../../../Layout/DropdownMenuIconWrapper";
-import IconLogo from "../../IconContent";
-import IconMenuDropdown from "../../IconContent";
+import LogoIcon from "../../../Icons/LogoIcon";
 
-import MENU_ICON from "/assets/img/icon-menu.svg";
-import MENU_ICON_CLOSE from "/assets/img/icon-close.svg";
-import LOGO from "/assets/img/logo.svg";
+type dropdownPropsIcon = {
+  isOpen: boolean;
+  handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+};
 
 const Component: React.FC<dropdownPropsIcon> = ({ isOpen, handleClick }) => (
   <DropdownMenuIconWrapper>
     <button onClick={handleClick}>
-      <IconMenuDropdown
-        img={`${isOpen ? MENU_ICON_CLOSE : MENU_ICON}`}
-        classname="icon-menu"
-      />
+      <DropdownIcons isOpen={isOpen} />
     </button>
 
-    <IconLogo img={LOGO} />
+    <LogoIcon />
   </DropdownMenuIconWrapper>
 );
 

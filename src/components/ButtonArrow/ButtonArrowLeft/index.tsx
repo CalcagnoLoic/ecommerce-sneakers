@@ -1,9 +1,7 @@
 import { Arrow } from "../../../types/types";
 
+import ArrowIcons from "../../../Icons/ArrowIcons";
 import ButtonWrapper from "../../../Layout/ButtonArrowWrapper";
-import ArrowIcon from "../../IconContent";
-
-import ARROW_LEFT from "/assets/img/icon-previous.svg";
 
 const Component: React.FC<Arrow> = ({ index, handleClick, arrowClass }) => {
   const previousConditionnal: string = index === 0 ? "hidden" : "";
@@ -13,7 +11,7 @@ const Component: React.FC<Arrow> = ({ index, handleClick, arrowClass }) => {
       additionnalClass={`left-4 ${arrowClass} ${previousConditionnal}`}
       handleClick={handleClick}
     >
-      <ArrowIcon img={ARROW_LEFT} classname="arrow-position " />
+      <ArrowIcons kind="left" />
     </ButtonWrapper>
   );
 };

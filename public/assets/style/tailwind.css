@@ -15,13 +15,13 @@
 
 @layer components {
   .link-nav {
-    @apply text-xl font-semibold text-shark lg:text-base lg:font-normal lg:text-paleSky;
+    @apply text-xl font-semibold text-shark duration-150 ease-in-out lg:text-base lg:font-normal lg:text-paleSky;
   }
   .link-nav:not(:last-child) {
     @apply mr-8;
   }
   .link-nav:hover {
-    @apply cursor-pointer lg:text-shark;
+    @apply cursor-pointer border-b-4 border-b-pumpkin lg:text-shark;
   }
   .nav-item--dropdown {
     @apply navbar-wrapper ml-[-24px] flex flex-col gap-5 bg-white pl-7 pr-24 pt-28 transition-all duration-700;
@@ -37,14 +37,11 @@
     @apply absolute top-[50%] flex h-10 w-10 -translate-y-[50%] cursor-pointer items-center justify-center rounded-full bg-white lg:hidden;
   }
   .arrow-carrousel {
-    @apply absolute top-[50%] hidden h-10 w-10 -translate-y-[50%] cursor-pointer items-center justify-center rounded-full bg-white lg:flex;
-  }
-  .arrow-position {
-    @apply h-4 w-2;
+    @apply arrow hidden lg:flex;
   }
 
   .thumbnail {
-    @apply h-20 w-20 cursor-pointer rounded-xl;
+    @apply h-20 w-20 cursor-pointer rounded-xl duration-700 ease-in-out;
   }
   .thumbnail:hover {
     @apply opacity-60;
@@ -65,19 +62,19 @@
   }
 
   .icon-to-cart {
-    @apply cursor-pointer self-center;
+    @apply cursor-pointer items-center;
   }
   .icon-username {
-    @apply h-[24px] w-[24px] cursor-pointer border-white md:h-[50px] md:w-[50px] lg:rounded-full lg:border-2 lg:hover:border-pumpkin;
+    @apply h-[24px] w-[24px] cursor-pointer border-white duration-300 ease-in-out md:h-[50px] md:w-[50px] lg:rounded-full lg:border-2 lg:hover:border-pumpkin;
   }
   .icon-menu {
     @apply mr-4 cursor-pointer md:mr-6 lg:hidden;
   }
   .icon-basket {
-    @apply mr-5 h-[20px] w-[20px] cursor-pointer md:mr-11;
+    @apply mr-5 cursor-pointer md:mr-11;
   }
   .icon-close {
-    @apply ml-[435px] cursor-pointer pb-6;
+    @apply ml-[435px] cursor-pointer fill-pumpkin pb-6;
   }
 
   .navbar-wrapper {
@@ -86,11 +83,11 @@
   .product-wrapper {
     @apply flex flex-col md:items-center md:justify-center lg:flex-row lg:items-start;
   }
-  .basket-modal-wrapper {
-    @apply absolute left-1/2 top-28 z-20 h-64 w-[360px] translate-x-[-50%] rounded-lg bg-white p-6 shadow-2xl md:left-auto md:top-20 md:translate-x-0 ;
+  .basket-dropdown-wrapper {
+    @apply absolute left-1/2 top-28 z-20 h-64 w-[360px] translate-x-[-50%] rounded-lg bg-white p-6 shadow-2xl duration-1000 ease-in-out md:left-auto md:top-20 md:translate-x-0;
   }
   .button-wrapper {
-    @apply mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 shadow-2xl shadow-pumpkin hover:bg-atomicTangerine md:shadow-none lg:ml-2 lg:mt-0 lg:w-full;
+    @apply mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 shadow-2xl shadow-pumpkin duration-300 ease-in-out hover:bg-atomicTangerine md:shadow-none lg:ml-2 lg:mt-0 lg:w-full;
   }
   .carrousel-modal-wrapper {
     @apply absolute left-1/2 top-20 -translate-x-1/2;
@@ -125,5 +122,9 @@
   }
   .company-name-text {
     @apply text-xs font-bold uppercase tracking-widest text-pumpkin;
+  }
+
+  .transition-class {
+    @apply duration-300 ease-in-out
   }
 }

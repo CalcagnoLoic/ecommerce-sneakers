@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useBodyOverflow } from "../../../hooks/useBodyOverflow";
 
-import DropdownMenuIcon from "../DropdownMenuIcon";
 import DropdownMenuContent from "../DropdownMenuContent";
+import DropdownMenuIcon from "../DropdownMenuIcon";
 
-const Component: React.FC = () => {
+const Component = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>): void => {

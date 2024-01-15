@@ -1,10 +1,17 @@
+import Paragraph from "../../../typographies/Paragraph";
+
 type Price = {
   isOnSale?: boolean;
   price: string;
 };
 
 const Component: React.FC<Price> = ({ isOnSale = false, price }) => (
-  <p className={`${isOnSale ? "soldout-price" : "price"}`}>{price}</p>
+  <Paragraph
+    css={`
+      ${isOnSale ? "soldout-price" : "price"}
+    `}
+    content={price}
+  />
 );
 
 export default Component;
