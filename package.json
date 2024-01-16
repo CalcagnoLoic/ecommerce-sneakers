@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "dev:format": "prettier --write .",
+    "test": "vitest",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
@@ -14,7 +15,8 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vitest": "^1.2.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.7",
@@ -25,6 +27,9 @@
     "@storybook/react": "^7.6.7",
     "@storybook/react-vite": "^7.6.7",
     "@storybook/test": "^7.6.7",
+    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/react": "^14.1.2",
+    "@types/jest": "^29.5.11",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
@@ -35,6 +40,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "eslint-plugin-storybook": "^0.6.15",
+    "jsdom": "^23.2.0",
     "postcss": "^8.4.32",
     "prettier": "^3.1.1",
     "prettier-plugin-tailwindcss": "^0.5.9",

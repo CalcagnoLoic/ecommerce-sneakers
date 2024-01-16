@@ -14,7 +14,7 @@ const Component = () => {
   return (
     <>
       <div onClick={handleClick}>
-        <BasketIcons color="dark" css="icon-basket" />
+        <BasketIcons color="dark" css="icon-basket" alt="Basket icon" />
       </div>
 
       {isOpen && <BasketDropdown isOpen={isOpen} setIsOpen={setIsOpen} />}
