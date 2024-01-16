@@ -11,7 +11,7 @@ const Component: React.FC<carrouselItem> = ({
 }) => (
   <img
     src={content}
-    alt="Product slider"
+    alt={`Product slider ${id}`}
     className={`cursor-pointer md:h-[450px] md:rounded-xl ${additionnalClass}`}
     key={id}
   />
