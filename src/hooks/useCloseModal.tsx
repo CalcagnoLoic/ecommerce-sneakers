@@ -1,11 +1,7 @@
 import { useCallback, useEffect } from "react";
 import { useModalInterface } from "../types/interface";
 
-export const useModal = ({ ref, state, callback }: useModalInterface) => {
-  const handleBodyOverflow = useCallback((shouldOverflow: boolean): void => {
-    document.body.classList.toggle("no-scroll", shouldOverflow);
-  }, []);
-
+export const useCloseModal = ({ ref, state, callback }: useModalInterface) => {
   const handleClickOutside = useCallback(
     (event: MouseEvent): void => {
       if (
@@ -22,16 +18,13 @@ export const useModal = ({ ref, state, callback }: useModalInterface) => {
 
   useEffect(() => {
     if (state) {
-      handleBodyOverflow(true);
       document.body.addEventListener("click", handleClickOutside);
     } else {
-      handleBodyOverflow(false);
       document.body.removeEventListener("click", handleClickOutside);
     }
 
     return () => {
-      handleBodyOverflow(false);
       document.body.removeEventListener("click", handleClickOutside);
     };
-  }, [handleBodyOverflow, handleClickOutside, state]);
+  }, [handleClickOutside, state]);
 };

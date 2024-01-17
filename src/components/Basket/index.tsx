@@ -15,8 +15,8 @@ const Component = () => {
   return (
     <>
       <div onClick={handleClick} className="relative">
-        <div className="absolute -top-1 left-2 flex h-3 w-5 rounded-xl bg-pumpkin text-[10px] text-white justify-center">
-          <Paragraph kind="span" content="0" css="self-center text-center" />
+        <div className="quantity-message-wrapper">
+          <Paragraph kind="span" content="3" css="self-center text-center" />
         </div>
         <BasketIcons color="dark" css="icon-basket" alt="Basket icon" />
       </div>

@@ -4,11 +4,13 @@ import { BasketItem } from "../../types/interface";
 interface BasketContext {
   basketItems: BasketItem[];
   addToBasket: (item: BasketItem) => void;
+  removeToBasket: () => void
 }
 
 export const BasketContext = createContext<BasketContext>({
   basketItems: [],
-  addToBasket: () => {}
+  addToBasket: () => {},
+  removeToBasket: () => {}
 });
 
 export const useBasket = () => {
@@ -41,9 +43,14 @@ export const BasketProvider = ({ children }: { children: JSX.Element }) => {
     }
   };
 
+  const removeToBasket = () => {
+    setBasketItems([])
+  }
+
   const contextValue: BasketContext = {
     basketItems,
     addToBasket,
+    removeToBasket
   };
 
   return (
