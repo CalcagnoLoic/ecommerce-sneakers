@@ -52,6 +52,9 @@
   .frame {
     @apply absolute h-20 w-20 rounded-xl border-2 border-pumpkin;
   }
+  .button-basket {
+    @apply ml-0 mt-8 flex w-full cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 font-bold text-white duration-300 ease-in-out hover:bg-atomicTangerine;
+  }
 
   .price {
     @apply mr-4 self-center text-3xl font-bold;
@@ -87,7 +90,7 @@
     @apply flex flex-col md:items-center md:justify-center lg:flex-row lg:items-start;
   }
   .basket-dropdown-wrapper {
-    @apply absolute left-1/2 top-28 z-20 h-64 w-[360px] translate-x-[-50%] rounded-lg bg-white p-6 shadow-2xl duration-1000 ease-in-out md:left-auto md:top-20 md:translate-x-0;
+    @apply absolute left-1/2 top-28 z-20 h-64 w-[360px] translate-x-[-50%] rounded-lg bg-white p-6 shadow-2xl duration-1000 ease-in-out md:left-auto md:top-20 lg:top-16 md:translate-x-0;
   }
   .button-wrapper {
     @apply mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 shadow-2xl shadow-pumpkin duration-300 ease-in-out hover:bg-atomicTangerine md:shadow-none lg:ml-2 lg:mt-0 lg:w-full;

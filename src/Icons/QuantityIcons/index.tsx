@@ -22,7 +22,7 @@ const Component: React.FC<QuantityIconsProps> = ({ kind }) => {
       </defs>
       <use
         fill="#FF7E1B"
-        fill-rule="nonzero"
+        fillRule="nonzero"
         xlinkHref={kind === "plus" ? "#b" : "#a"}
       />
     </svg>

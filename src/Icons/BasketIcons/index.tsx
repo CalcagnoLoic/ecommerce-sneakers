@@ -2,7 +2,7 @@ import { SVGProps } from "react";
 interface BasketIcon extends SVGProps<SVGSVGElement> {
   color: "dark" | "light";
   css: string;
-  alt: string
+  alt?: string
 }
 
 const Component: React.FC<BasketIcon> = ({ color, css, alt }) => {

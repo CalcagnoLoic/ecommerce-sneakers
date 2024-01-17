@@ -5,6 +5,7 @@ import Username from "../Link";
 const Component = () => (
   <FooterWrapper>
     <Paragraph
+      kind="p"
       css="mt-16 py-5 text-center md:mt-0"
       content={
         <>

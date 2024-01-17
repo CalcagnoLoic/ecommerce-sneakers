@@ -14,7 +14,7 @@ const Component: React.FC<ArrowType> = ({ kind }) => {
         stroke="#1D2026"
         strokeWidth="3"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       />
     </svg>
   );

@@ -23,7 +23,7 @@ const Component = () => {
         <QuantityIcons kind="minus" />
       </button>
 
-      <Paragraph content={counter} css="px-3" />
+      <Paragraph kind="span" content={counter} css="px-3" />
       
       <button onClick={increment}>
         <QuantityIcons kind="plus" />

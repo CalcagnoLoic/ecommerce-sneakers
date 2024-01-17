@@ -6,7 +6,7 @@ import NavBarContent from "../NavBarContent";
 
 const Component = () => (
   <HeaderWrapper>
-    <nav className="md:my-6 lg:my-0 flex justify-between">
+    <nav className="flex justify-between md:my-6 lg:my-0">
       <section className="flex self-center">
         <DropdownMenu />
 

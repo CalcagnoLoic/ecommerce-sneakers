@@ -10,9 +10,18 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const P: Story = {
     args: {
+        kind: "p",
         content: "un paragraphe",
+        css: "text-paleSky"
+    }
+};
+
+export const Span: Story = {
+    args: {
+        kind: "span",
+        content: "un autre paragraphe",
         css: "text-paleSky"
     }
 };
