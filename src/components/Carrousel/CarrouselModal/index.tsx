@@ -1,6 +1,5 @@
 import { images } from "../../../data";
-import { useModal } from "../../../hooks/useCloseModal";
-import { useModalInterface } from "../../../types/interface";
+import { useCloseModal } from "../../../hooks/useCloseModal";
 import { useState, useRef } from "react";
 
 import ButtonArrowLeft from "../../ButtonArrow/ButtonArrowLeft";
@@ -35,13 +34,11 @@ const Component: React.FC<modalProps> = ({
     setIndex(newIndex);
   };
 
-  const modalParameters: useModalInterface = {
+  useCloseModal({
     ref: modalRef,
     state: showModal,
     callback: setShowModal,
-  };
-
-  useModal(modalParameters);
+  });
 
   if (window.innerWidth < 1024) return null;
 
@@ -49,7 +46,7 @@ const Component: React.FC<modalProps> = ({
     <>
       <OpacityWrapper></OpacityWrapper>
       <CarrouselWrapper forwardedRef={modalRef}>
-        <div className="absolute left-1/2 top-20 -mt-16 -translate-x-1/2">
+        <div className="absolute left-1/2 top-12 -mt-16 -translate-x-1/2">
           <CloseIcon css="icon-close" handleClick={onClose} />
 
           <div className="relative flex overflow-hidden md:w-[450px]">

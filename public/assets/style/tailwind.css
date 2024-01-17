@@ -63,6 +63,9 @@
     @apply self-center text-base text-cadetBlue line-through md:self-start lg:mt-3;
   }
 
+  .quantity-message-wrapper {
+    @apply absolute -top-1 left-2 flex h-3 w-5 cursor-pointer justify-center rounded-xl bg-pumpkin text-[10px] text-white;
+  }
   .basket-message {
     @apply absolute left-1/2 top-36 translate-x-[-50%] text-center font-bold text-paleSky;
   }
@@ -90,13 +93,13 @@
     @apply flex flex-col md:items-center md:justify-center lg:flex-row lg:items-start;
   }
   .basket-dropdown-wrapper {
-    @apply absolute left-1/2 top-28 z-20 h-64 w-[360px] translate-x-[-50%] rounded-lg bg-white p-6 shadow-2xl duration-1000 ease-in-out md:left-auto md:top-20 lg:top-16 md:translate-x-0;
+    @apply absolute left-1/2 top-28 z-20 h-64 w-[360px] translate-x-[-50%] rounded-lg bg-white p-6 shadow-2xl duration-1000 ease-in-out md:left-auto md:top-20 md:translate-x-0 lg:top-16;
   }
   .button-wrapper {
     @apply mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 shadow-2xl shadow-pumpkin duration-300 ease-in-out hover:bg-atomicTangerine md:shadow-none lg:ml-2 lg:mt-0 lg:w-full;
   }
   .carrousel-modal-wrapper {
-    @apply absolute left-1/2 top-20 -translate-x-1/2;
+    @apply  fixed left-1/2 top-20 -translate-x-1/2;
   }
   .counter-wrapper {
     @apply flex justify-between rounded-xl bg-linkWater p-3 px-5 lg:w-[200px];
@@ -108,7 +111,7 @@
     @apply flex justify-center md:mx-6 md:py-20 lg:mx-auto;
   }
   .opacity-wrapper {
-    @apply absolute left-0 top-0 h-full w-full bg-black opacity-80;
+    @apply absolute left-0 top-0 w-screen bg-black opacity-80 h-[60rem];
   }
   .price-reduction-wrapper {
     @apply self-center rounded-xl bg-peachCream px-3 py-2;
