@@ -1,11 +1,11 @@
 import { Message } from "../../../types/types";
 
 import PriceReductionWrapper from "../../../Layout/PriceReductionWrapper";
-import Heading from "../../../typographies/Heading";
+import Paragraph from "../../../typographies/Paragraph";
 
 const Component: React.FC<Message> = ({ content }) => (
   <PriceReductionWrapper>
-    <Heading kind="span" content={content} css={"text-pumpkin"} />
+    <Paragraph kind="span" content={content} css={"text-pumpkin"} />
   </PriceReductionWrapper>
 );
 

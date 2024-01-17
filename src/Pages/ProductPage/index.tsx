@@ -34,6 +34,7 @@ function Page() {
               css="mt-7 text-4xl capitalize"
             />
             <Paragraph
+              kind="p"
               content={description}
               css="mt-8 break-words text-base text-paleSky md:w-[445px]"
             />

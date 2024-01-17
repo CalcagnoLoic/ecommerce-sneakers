@@ -26,11 +26,4 @@ export const H2: Story = {
     }
 };
 
-export const Span: Story = {
-    args: {
-        content: "50%",
-        kind: "span",
-        css: "text-pumpkin"
-    }
-};
 

@@ -6,11 +6,12 @@ import Heading from "../../../typographies/Heading";
 import Line from "../../Line";
 import Paragraph from "../../../typographies/Paragraph";
 
+import BasketContent from "./BasketContent";
+
 type stateProps = {
   isOpen: boolean;
   setIsOpen: (newValue: boolean) => void;
 };
-
 
 const Component: React.FC<stateProps> = ({ setIsOpen }) => {
   const basketRef = useRef<HTMLDivElement>(null);
@@ -24,9 +25,12 @@ const Component: React.FC<stateProps> = ({ setIsOpen }) => {
 
   return (
     <BasketWrapper forwardedRef={basketRef}>
-      <Paragraph content="Cart" css="font-bold" />
+      <Paragraph kind="p" content="Cart" css="font-bold" />
       <Line />
-      <Heading kind="h2" content="Your cart is empty." css="basket-message" />
+      <div className="mt-12">
+        {/*<Heading kind="h2" content="Your cart is empty." css="basket-message" />*/}
+        <BasketContent />
+      </div>
     </BasketWrapper>
   );
 };

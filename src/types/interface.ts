@@ -24,3 +24,9 @@ export interface wrapperDropdownMenu extends Wrapper {
 export interface wrapperNavItem extends Wrapper {
   isDropdown: boolean;
 }
+
+export interface BasketItem {
+  id: string;
+  name: string
+  quantity: number;
+}
