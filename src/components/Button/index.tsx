@@ -11,7 +11,7 @@ const Component = () => {
   return (
     <ButtonWrapper>
       <BasketIcons color="light" css="icon-to-cart mr-5" />
-      <button onClick={addToBasket(productItems)} className="button-text">
+      <button onClick={() => console.log(productItems)} className="button-text">
         Add to Cart
       </button>
     </ButtonWrapper>

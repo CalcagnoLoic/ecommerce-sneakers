@@ -6,6 +6,8 @@ import { BasketProvider } from "./context/Basket/Basket.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <BasketProvider>
+      <App />
+    </BasketProvider>
   </React.StrictMode>,
 );

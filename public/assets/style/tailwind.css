@@ -99,7 +99,7 @@
     @apply mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 shadow-2xl shadow-pumpkin duration-300 ease-in-out hover:bg-atomicTangerine md:shadow-none lg:ml-2 lg:mt-0 lg:w-full;
   }
   .carrousel-modal-wrapper {
-    @apply  fixed left-1/2 top-20 -translate-x-1/2;
+    @apply fixed left-1/2 top-20 -translate-x-1/2;
   }
   .counter-wrapper {
     @apply flex justify-between rounded-xl bg-linkWater p-3 px-5 lg:w-[200px];
@@ -111,7 +111,7 @@
     @apply flex justify-center md:mx-6 md:py-20 lg:mx-auto;
   }
   .opacity-wrapper {
-    @apply absolute left-0 top-0 w-screen bg-black opacity-80 h-[60rem];
+    @apply fixed left-0 top-0 h-screen w-screen bg-black opacity-80;
   }
   .price-reduction-wrapper {
     @apply self-center rounded-xl bg-peachCream px-3 py-2;
