@@ -2,9 +2,7 @@ import { namesItems } from "../../../data";
 import { useClickOutside } from "../../../hooks/useClickOutside";
 import { useRef } from "react";
 
-import DropdownMenuContentWrapper from "../../../Layout/DropdownMenuContent";
 import NavItem from "../../Link";
-import NavItemWrapper from "../../../Layout/NavItemWrapper";
 
 type stateProps = {
   isOpen: boolean;
@@ -19,7 +17,7 @@ type NavBar = {
 };
 
 const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
-  const sidebarRef = useRef<HTMLDivElement>(null);
+  const sidebarRef = useRef<HTMLUListElement>(null);
 
   useClickOutside({
     ref: sidebarRef,
@@ -27,9 +25,14 @@ const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
   });
 
   return (
-    <DropdownMenuContentWrapper isOpen={isOpen}>
+    <div className={`${isOpen ? "relative lg:hidden" : "hidden"}`}>
       <div className="navbar-wrapper w-screen bg-black opacity-80"></div>
-      <NavItemWrapper isDropdown={true} forwardedRef={sidebarRef}>
+      <ul
+        className={`${
+          isOpen ? "nav-item--dropdown" : "hidden flex-grow self-center lg:flex"
+        }`}
+        ref={sidebarRef}
+      >
         {namesItems.map((item: NavBar) => (
           <NavItem
             content={item.content}
@@ -39,8 +42,8 @@ const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
             key={item.key}
           />
         ))}
-      </NavItemWrapper>
-    </DropdownMenuContentWrapper>
+      </ul>
+    </div>
   );
 };
 

@@ -5,10 +5,8 @@ import Counter from "../../components/Counter";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import PriceReduction from "../../components/Product/ProductReduction";
-import PriceWrapper from "../../Layout/PriceWrapper";
 import ProductOverview from "../../components/Product/ProductOverview";
 import ProductPrice from "../../components/Product/ProductPrice";
-import Wrapper from "../../Layout/ProductDescriptionWrapper";
 import Heading from "../../typographies/Heading";
 import Paragraph from "../../typographies/Paragraph";
 
@@ -22,7 +20,7 @@ function Page() {
             <ProductOverview />
           </div>
 
-          <Wrapper>
+          <div className="product-description-wrapper">
             <Heading
               kind="h2"
               content="sneakers company"
@@ -39,20 +37,20 @@ function Page() {
               css="mt-8 break-words text-base text-paleSky md:w-[445px]"
             />
 
-            <PriceWrapper>
+            <div className="price-wrapper">
               <div className="flex">
                 <ProductPrice price={"$125.00"} />
 
                 <PriceReduction content="50%" />
               </div>
               <ProductPrice isOnSale={true} price={"$250.00"} />
-            </PriceWrapper>
+            </div>
 
             <div className="mt-8 flex flex-col lg:flex-row">
               <Counter />
               <Button />
             </div>
-          </Wrapper>
+          </div>
         </section>
       </div>
       <Footer />

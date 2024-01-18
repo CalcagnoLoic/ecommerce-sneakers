@@ -4,10 +4,9 @@ import PRODUCT_3_THUMBNAIL from "/assets/img/product-3-thumbnail.jpg";
 import PRODUCT_4_THUMBNAIL from "/assets/img/product-4-thumbnail.jpg";
 
 import ProductThumbnails from "../ProductThumbnails";
-import ProductThumbnailsWrapper from "../../../Layout/ProductThumbnailsWrapper";
 
 const Component: React.FC = () => (
-  <ProductThumbnailsWrapper>
+  <div className="product-thumbnails-wrapper">
     <div>
       <div className="frame"></div>
       <ProductThumbnails
@@ -19,7 +18,7 @@ const Component: React.FC = () => (
     <ProductThumbnails src={PRODUCT_2_THUMBNAIL} />
     <ProductThumbnails src={PRODUCT_3_THUMBNAIL} />
     <ProductThumbnails src={PRODUCT_4_THUMBNAIL} />
-  </ProductThumbnailsWrapper>
+  </div>
 );
 
 export default Component;

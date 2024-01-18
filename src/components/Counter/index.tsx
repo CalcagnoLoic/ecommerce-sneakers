@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import CounterWrapper from "../../Layout/CounterWrapper";
 import Paragraph from "../../typographies/Paragraph";
 import QuantityIcons from "../../Icons/QuantityIcons";
 
@@ -18,7 +17,7 @@ const Component = () => {
   };
 
   return (
-    <CounterWrapper>
+    <div className="counter-wrapper">
       <button onClick={decrement}>
         <QuantityIcons kind="minus" />
       </button>
@@ -28,7 +27,7 @@ const Component = () => {
       <button onClick={increment}>
         <QuantityIcons kind="plus" />
       </button>
-    </CounterWrapper>
+    </div>
   );
 };
 
