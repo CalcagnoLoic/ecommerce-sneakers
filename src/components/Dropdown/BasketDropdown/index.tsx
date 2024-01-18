@@ -1,8 +1,7 @@
 import { useClickOutside } from "../../../hooks/useClickOutside";
 import { useRef } from "react";
 
-import BasketWrapper from "../../../Layout/BasketDropdownWrapper";
-import Heading from "../../../typographies/Heading";
+//import Heading from "../../../typographies/Heading";
 import Line from "../../Line";
 import Paragraph from "../../../typographies/Paragraph";
 
@@ -24,14 +23,18 @@ const Component: React.FC<stateProps> = ({ setIsOpen }) => {
   });
 
   return (
-    <BasketWrapper forwardedRef={basketRef}>
+    <div
+      className="basket-dropdown-wrapper"
+      ref={basketRef}
+      data-testid="dropdown-basket"
+    >
       <Paragraph kind="p" content="Cart" css="font-bold" />
       <Line />
       <div className="mt-12">
         {/*<Heading kind="h2" content="Your cart is empty." css="basket-message" />*/}
         <BasketContent />
       </div>
-    </BasketWrapper>
+    </div>
   );
 };
 

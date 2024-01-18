@@ -14,11 +14,23 @@
 }
 
 @layer components {
+  .arrow {
+    @apply absolute top-[50%] flex h-10 w-10 -translate-y-[50%] cursor-pointer items-center justify-center rounded-full bg-white lg:hidden;
+  }
+  .arrow-carrousel {
+    @apply arrow hidden lg:flex;
+  }
+  .button-basket {
+    @apply ml-0 mt-8 flex w-full cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 font-bold text-white duration-300 ease-in-out hover:bg-atomicTangerine;
+  }
+  .frame {
+    @apply absolute h-20 w-20 rounded-xl border-2 border-pumpkin;
+  }
+  header:hover .link-nav:hover {
+    @apply lg:border-b-4 lg:border-b-pumpkin;
+  }
   .link-nav {
     @apply border-b-4 border-transparent text-xl font-semibold text-shark duration-150 ease-in-out lg:pb-6 lg:pt-6 lg:text-base lg:font-normal lg:text-paleSky;
-  }
-  .link-nav:not(:last-child) {
-    @apply mr-8;
   }
   .link-nav:first-child {
     @apply lg:ml-14;
@@ -26,36 +38,15 @@
   .link-nav:hover {
     @apply cursor-pointer border-b-pumpkin lg:text-shark;
   }
+  .link-nav:not(:last-child) {
+    @apply mr-8;
+  }
   .nav-item--dropdown {
     @apply navbar-wrapper ml-[-24px] flex flex-col gap-5 bg-white pl-7 pr-24 pt-28 transition-all duration-700;
-  }
-  header:hover .link-nav:hover {
-    @apply lg:border-b-4 lg:border-b-pumpkin;
   }
   .no-scroll {
     @apply overflow-hidden;
   }
-
-  .arrow {
-    @apply absolute top-[50%] flex h-10 w-10 -translate-y-[50%] cursor-pointer items-center justify-center rounded-full bg-white lg:hidden;
-  }
-  .arrow-carrousel {
-    @apply arrow hidden lg:flex;
-  }
-
-  .thumbnail {
-    @apply h-20 w-20 cursor-pointer rounded-xl duration-700 ease-in-out;
-  }
-  .thumbnail:hover {
-    @apply opacity-60;
-  }
-  .frame {
-    @apply absolute h-20 w-20 rounded-xl border-2 border-pumpkin;
-  }
-  .button-basket {
-    @apply ml-0 mt-8 flex w-full cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 font-bold text-white duration-300 ease-in-out hover:bg-atomicTangerine;
-  }
-
   .price {
     @apply mr-4 self-center text-3xl font-bold;
   }
@@ -63,35 +54,32 @@
     @apply self-center text-base text-cadetBlue line-through md:self-start lg:mt-3;
   }
 
-  .quantity-message-wrapper {
-    @apply absolute -top-1 left-2 flex h-3 w-5 cursor-pointer justify-center rounded-xl bg-pumpkin text-[10px] text-white;
-  }
   .basket-message {
     @apply absolute left-1/2 top-36 translate-x-[-50%] text-center font-bold text-paleSky;
   }
+  .button-text {
+    @apply self-center text-white;
+  }
+  .company-name-text {
+    @apply text-xs font-bold uppercase tracking-widest text-pumpkin;
+  }
 
-  .icon-to-cart {
-    @apply cursor-pointer items-center;
-  }
-  .icon-username {
-    @apply h-[24px] w-[24px] cursor-pointer border-white duration-300 ease-in-out md:h-[50px] md:w-[50px] lg:rounded-full lg:border-2 lg:hover:border-pumpkin;
-  }
-  .icon-menu {
-    @apply mr-4 cursor-pointer md:mr-6 lg:hidden;
-  }
   .icon-basket {
     @apply mr-5 cursor-pointer md:mr-11;
   }
   .icon-close {
     @apply ml-[435px] cursor-pointer fill-pumpkin pb-6;
   }
+  .icon-menu {
+    @apply mr-4 cursor-pointer md:mr-6 lg:hidden;
+  }
+  .icon-to-cart {
+    @apply cursor-pointer items-center;
+  }
+  .icon-username {
+    @apply h-[24px] w-[24px] cursor-pointer border-white duration-300 ease-in-out md:h-[50px] md:w-[50px] lg:rounded-full lg:border-2 lg:hover:border-pumpkin;
+  }
 
-  .navbar-wrapper {
-    @apply absolute z-20 mt-[-45px] h-[120vh];
-  }
-  .product-wrapper {
-    @apply flex flex-col md:items-center md:justify-center lg:flex-row lg:items-start;
-  }
   .basket-dropdown-wrapper {
     @apply absolute left-1/2 top-28 z-20 h-64 w-[360px] translate-x-[-50%] rounded-lg bg-white p-6 shadow-2xl duration-1000 ease-in-out md:left-auto md:top-20 md:translate-x-0 lg:top-16;
   }
@@ -99,7 +87,7 @@
     @apply mt-4 flex cursor-pointer justify-center rounded-xl bg-pumpkin p-3 px-5 shadow-2xl shadow-pumpkin duration-300 ease-in-out hover:bg-atomicTangerine md:shadow-none lg:ml-2 lg:mt-0 lg:w-full;
   }
   .carrousel-modal-wrapper {
-    @apply  fixed left-1/2 top-20 -translate-x-1/2;
+    @apply fixed left-1/2 top-20 -translate-x-1/2;
   }
   .counter-wrapper {
     @apply flex justify-between rounded-xl bg-linkWater p-3 px-5 lg:w-[200px];
@@ -107,11 +95,17 @@
   .dropdown-icon-wrapper {
     @apply z-30 flex flex-grow items-center justify-start;
   }
+  .header-wrapper {
+    @apply mx-6 mb-5 mt-5 md:border-b-[1px] lg:mt-0;
+  }
   .main-content-wrapper {
     @apply flex justify-center md:mx-6 md:py-20 lg:mx-auto;
   }
+  .navbar-wrapper {
+    @apply absolute z-20 mt-[-45px] h-[120vh];
+  }
   .opacity-wrapper {
-    @apply absolute left-0 top-0 w-screen bg-black opacity-80 h-[60rem];
+    @apply fixed left-0 top-0 h-screen w-screen bg-black opacity-80;
   }
   .price-reduction-wrapper {
     @apply self-center rounded-xl bg-peachCream px-3 py-2;
@@ -125,15 +119,17 @@
   .product-thumbnails-wrapper {
     @apply relative hidden lg:mt-8 lg:flex lg:w-[450px] lg:justify-between;
   }
-
-  .button-text {
-    @apply self-center text-white;
+  .product-wrapper {
+    @apply flex flex-col md:items-center md:justify-center lg:flex-row lg:items-start;
   }
-  .company-name-text {
-    @apply text-xs font-bold uppercase tracking-widest text-pumpkin;
+  .quantity-message-wrapper {
+    @apply absolute -top-1 left-2 flex h-3 w-5 cursor-pointer justify-center rounded-xl bg-pumpkin text-[10px] text-white;
   }
 
-  .transition-class {
-    @apply duration-300 ease-in-out;
+  .thumbnail {
+    @apply h-20 w-20 cursor-pointer rounded-xl duration-700 ease-in-out;
+  }
+  .thumbnail:hover {
+    @apply opacity-60;
   }
 }

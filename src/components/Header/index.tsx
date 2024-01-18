@@ -1,11 +1,10 @@
 import Basket from "../Basket";
 import CUSTOMER_PROFILE from "/assets/img/customer-profile.png";
 import DropdownMenu from "../Dropdown/DropdownMenu";
-import HeaderWrapper from "../../Layout/HeaderWrapper";
 import NavBarContent from "../NavBarContent";
 
 const Component = () => (
-  <HeaderWrapper>
+  <div className="header-wrapper">
     <nav className="flex justify-between md:my-6 lg:my-0">
       <section className="flex self-center">
         <DropdownMenu />
@@ -24,7 +23,7 @@ const Component = () => (
         </div>
       </section>
     </nav>
-  </HeaderWrapper>
+  </div>
 );
 
 export default Component;

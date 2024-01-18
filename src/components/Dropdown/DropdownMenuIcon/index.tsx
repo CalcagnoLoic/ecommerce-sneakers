@@ -1,5 +1,4 @@
 import DropdownIcons from "../../../Icons/DropdownIcons";
-import DropdownMenuIconWrapper from "../../../Layout/DropdownMenuIconWrapper";
 import LogoIcon from "../../../Icons/LogoIcon";
 
 type dropdownPropsIcon = {
@@ -8,13 +7,13 @@ type dropdownPropsIcon = {
 };
 
 const Component: React.FC<dropdownPropsIcon> = ({ isOpen, handleClick }) => (
-  <DropdownMenuIconWrapper>
+  <div className="dropdown-icon-wrapper">
     <button onClick={handleClick}>
       <DropdownIcons isOpen={isOpen} />
     </button>
 
     <LogoIcon />
-  </DropdownMenuIconWrapper>
+  </div>
 );
 
 export default Component;

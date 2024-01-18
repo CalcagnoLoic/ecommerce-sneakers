@@ -17,13 +17,20 @@ export const useCloseModal = ({ ref, state, callback }: useModalInterface) => {
   );
 
   useEffect(() => {
+    const handleBodyOverflow = (shouldOverflow: boolean): void => {
+      document.body.classList.toggle("no-scroll", shouldOverflow);
+    };
+
     if (state) {
+      handleBodyOverflow(true);
       document.body.addEventListener("click", handleClickOutside);
     } else {
+      handleBodyOverflow(false);
       document.body.removeEventListener("click", handleClickOutside);
     }
 
     return () => {
+      handleBodyOverflow(false);
       document.body.removeEventListener("click", handleClickOutside);
     };
   }, [handleClickOutside, state]);

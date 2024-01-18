@@ -1,5 +1,5 @@
 export interface useClickOutsideInterface {
-  ref: React.RefObject<HTMLDivElement>;
+  ref: React.RefObject<HTMLUListElement | HTMLDivElement>;
   callback?: (newValue: boolean) => void;
 }
 
@@ -9,7 +9,7 @@ export interface useModalInterface extends useClickOutsideInterface {
 
 export interface Wrapper {
   children: JSX.Element[] | JSX.Element;
-  forwardedRef?: React.RefObject<HTMLDivElement>;
+  forwardedRef?: React.RefObject<HTMLUListElement>;
 }
 
 export interface wrapperBtn extends Wrapper {
@@ -27,6 +27,6 @@ export interface wrapperNavItem extends Wrapper {
 
 export interface BasketItem {
   id: string;
-  name: string
+  name: string;
   quantity: number;
 }

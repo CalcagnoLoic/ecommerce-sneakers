@@ -2,13 +2,13 @@ export type Arrow = {
   index: number;
   handleClick: () => void;
   images?: carrouselImage[];
-  arrowClass: string;
+  direction: string;
+  css: string;
 };
 
 export type Message = {
   content: string;
 };
-
 
 export type carrouselImage = {
   id: number;

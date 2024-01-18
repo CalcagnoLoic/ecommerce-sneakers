@@ -1,13 +1,12 @@
+import { goToPreviousProduct } from "../../../utils/goToPreviousProduct";
+import { goToNextProduct } from "../../../utils/goToNextProduct";
 import { images } from "../../../data";
 import { useCloseModal } from "../../../hooks/useCloseModal";
 import { useState, useRef } from "react";
 
-import ButtonArrowLeft from "../../ButtonArrow/ButtonArrowLeft";
-import ButtonArrowRight from "../../ButtonArrow/ButtonArrowRight";
+import ButtonArrow from "../../Button/ButtonArrow";
 import CarrouselItem from "../CarrouselItem";
-import CarrouselWrapper from "../../../Layout/CarrouselModalWrapper";
 import CloseIcon from "../../../Icons/CloseIcon";
-import OpacityWrapper from "../../../Layout/OpacityWrapper";
 import ProductThumbnails from "../../Product/ProductThumbnailsContainer";
 
 type modalProps = {
@@ -24,16 +23,6 @@ const Component: React.FC<modalProps> = ({
   const [index, setIndex] = useState<number>(0);
   const modalRef = useRef<HTMLDivElement>(null);
 
-  const goToNextProduct = (): void => {
-    const newIndex = index + 1 < images.length ? index + 1 : 0;
-    setIndex(newIndex);
-  };
-
-  const goToPreviousProduct = (): void => {
-    const newIndex = index - 1 >= 0 ? index - 1 : images.length - 1;
-    setIndex(newIndex);
-  };
-
   useCloseModal({
     ref: modalRef,
     state: showModal,
@@ -44,8 +33,12 @@ const Component: React.FC<modalProps> = ({
 
   return (
     <>
-      <OpacityWrapper></OpacityWrapper>
-      <CarrouselWrapper forwardedRef={modalRef}>
+      <div className="opacity-wrapper"></div>
+      <div
+        className="carrousel-modal-wrapper"
+        ref={modalRef}
+        data-testid="carrousel-element"
+      >
         <div className="absolute left-1/2 top-12 -mt-16 -translate-x-1/2">
           <CloseIcon css="icon-close" handleClick={onClose} />
 
@@ -59,17 +52,22 @@ const Component: React.FC<modalProps> = ({
               />
             ))}
 
-            <ButtonArrowLeft
+            <ButtonArrow
               index={index}
-              handleClick={goToPreviousProduct}
-              arrowClass="arrow-carrousel"
+              direction="left"
+              handleClick={() =>
+                goToPreviousProduct({ index, images, callback: setIndex })
+              }
+              css="arrow-carrousel"
             />
-
-            <ButtonArrowRight
+            <ButtonArrow
               index={index}
-              handleClick={goToNextProduct}
+              direction="right"
+              handleClick={() =>
+                goToNextProduct({ index, images, callback: setIndex })
+              }
               images={images}
-              arrowClass="arrow-carrousel"
+              css="arrow-carrousel"
             />
           </div>
 
@@ -77,7 +75,7 @@ const Component: React.FC<modalProps> = ({
             <ProductThumbnails />
           </div>
         </div>
-      </CarrouselWrapper>
+      </div>
     </>
   );
 };
