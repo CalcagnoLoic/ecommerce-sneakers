@@ -1,17 +1,18 @@
+import { BasketContext } from "../../../context/Basket/BasketContext";
 import { useClickOutside } from "../../../hooks/useClickOutside";
-import { useRef } from "react";
-
-//import Heading from "../../../typographies/Heading";
-import Line from "../../Line";
-import Paragraph from "../../../typographies/Paragraph";
+import { useRef, useContext } from "react";
 
 import BasketContent from "./BasketContent";
+import Heading from "../../../typographies/Heading";
+import Line from "../../Line";
+import Paragraph from "../../../typographies/Paragraph";
 
 type stateProps = {
   setIsOpen: (newValue: boolean) => void;
 };
 
 const Component: React.FC<stateProps> = ({ setIsOpen }) => {
+  const { quantity } = useContext(BasketContext);
   const basketRef = useRef<HTMLDivElement>(null);
 
   useClickOutside({
@@ -30,8 +31,15 @@ const Component: React.FC<stateProps> = ({ setIsOpen }) => {
       <Paragraph kind="p" content="Cart" css="font-bold" />
       <Line />
       <div className="mt-12">
-        {/*<Heading kind="h2" content="Your cart is empty." css="basket-message" />*/}
-        <BasketContent />
+        {quantity === 0 ? (
+          <Heading
+            kind="h2"
+            content="Your cart is empty."
+            css="basket-message"
+          />
+        ) : (
+          <BasketContent />
+        )}
       </div>
     </div>
   );

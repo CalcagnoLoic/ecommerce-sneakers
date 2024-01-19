@@ -1,18 +1,16 @@
-import BasketIcons from "../../Icons/BasketIcons";
+import { BasketContext } from "../../context/Basket/BasketContext";
+import { useContext } from "react";
 
-//import { BasketContext } from "../../context/Basket/Basket";
-//import { useContext } from "react";
-import { productItems } from "../../data";
+import BasketIcons from "../../Icons/BasketIcons";
+import Paragraph from "../../typographies/Paragraph";
 
 const Component = () => {
-  //const { addToBasket } = useContext(BasketContext);
+  const { copyQuantity } = useContext(BasketContext);
 
   return (
-    <div className="button-wrapper">
+    <div className="button-wrapper" onClick={() => copyQuantity()}>
       <BasketIcons color="light" css="icon-to-cart mr-5" />
-      <button onClick={() => console.log(productItems)} className="button-text">
-        Add to Cart
-      </button>
+      <Paragraph kind="span" content="Add to Cart" css="button-text" />
     </div>
   );
 };
