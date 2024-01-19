@@ -41,8 +41,11 @@
   .link-nav:not(:last-child) {
     @apply mr-8;
   }
-  .nav-item--dropdown {
+  .nav-item-dropdown {
     @apply navbar-wrapper ml-[-24px] flex flex-col gap-5 bg-white pl-7 pr-24 pt-28 transition-all duration-700;
+  }
+  .nav-item-content {
+    @apply hidden flex-grow self-center list-none lg:flex
   }
   .no-scroll {
     @apply overflow-hidden;

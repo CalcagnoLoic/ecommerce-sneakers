@@ -21,7 +21,7 @@ const Component = () => {
         <BasketIcons color="dark" css="icon-basket" alt="Basket icon" />
       </div>
 
-      {isOpen && <BasketDropdown isOpen={isOpen} setIsOpen={setIsOpen} />}
+      {isOpen && <BasketDropdown setIsOpen={setIsOpen} />}
     </>
   );
 };

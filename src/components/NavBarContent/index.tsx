@@ -1,9 +1,10 @@
 import { namesItems } from "../../data";
 
-import NavItem from "../Link";
+import NavItem from "../NavItem";
+import NavItemLayout from "../../layouts/NavItemLayout";
 
 const Component = () => (
-  <div className="hidden flex-grow self-center list-none lg:flex">
+  <NavItemLayout css="nav-item-content">
     {namesItems.map((item) => (
       <NavItem
         content={item.content}
@@ -13,7 +14,7 @@ const Component = () => (
         id={item.id}
       />
     ))}
-  </div>
+  </NavItemLayout>
 );
 
 export default Component;
