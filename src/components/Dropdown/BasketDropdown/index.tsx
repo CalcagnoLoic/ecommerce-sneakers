@@ -8,7 +8,6 @@ import Paragraph from "../../../typographies/Paragraph";
 import BasketContent from "./BasketContent";
 
 type stateProps = {
-  isOpen: boolean;
   setIsOpen: (newValue: boolean) => void;
 };
 

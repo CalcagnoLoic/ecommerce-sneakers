@@ -2,7 +2,8 @@ import { namesItems } from "../../../data";
 import { useClickOutside } from "../../../hooks/useClickOutside";
 import { useRef } from "react";
 
-import NavItem from "../../Link";
+import NavItem from "../../NavItem";
+import NavItemLayout from "../../../layouts/NavItemLayout";
 
 type stateProps = {
   isOpen: boolean;
@@ -27,11 +28,11 @@ const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
   return (
     <div className={`${isOpen ? "relative lg:hidden" : "hidden"}`}>
       <div className="navbar-wrapper w-screen bg-black opacity-80"></div>
-      <ul
-        className={`${
-          isOpen ? "nav-item--dropdown" : "hidden flex-grow self-center lg:flex"
-        }`}
-        ref={sidebarRef}
+      <NavItemLayout
+        css={`
+          ${isOpen ? "nav-item-dropdown" : "nav-item-content"}
+        `}
+        forwardedRef={sidebarRef}
       >
         {namesItems.map((item: NavBar) => (
           <NavItem
@@ -42,7 +43,7 @@ const Component: React.FC<stateProps> = ({ isOpen, setIsOpen }) => {
             key={item.key}
           />
         ))}
-      </ul>
+      </NavItemLayout>
     </div>
   );
 };

@@ -4,18 +4,20 @@ import Button from "../../components/Button";
 import Counter from "../../components/Counter";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import MainContentLayout from "../../layouts/MainContentLayout";
 import PriceReduction from "../../components/Product/ProductReduction";
 import ProductOverview from "../../components/Product/ProductOverview";
 import ProductPrice from "../../components/Product/ProductPrice";
 import Heading from "../../typographies/Heading";
 import Paragraph from "../../typographies/Paragraph";
+import ProductLayout from "../../layouts/ProductLayout";
 
 function Page() {
   return (
     <div className="md:mx-32 lg:mx-24 xl:mx-40">
       <Header />
-      <div className="main-content-wrapper">
-        <section className="product-wrapper">
+      <MainContentLayout>
+        <ProductLayout>
           <div className="flex-col">
             <ProductOverview />
           </div>
@@ -51,8 +53,8 @@ function Page() {
               <Button />
             </div>
           </div>
-        </section>
-      </div>
+        </ProductLayout>
+      </MainContentLayout>
       <Footer />
     </div>
   );
