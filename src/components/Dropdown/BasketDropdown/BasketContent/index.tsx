@@ -1,15 +1,14 @@
+import { BasketContext } from "../../../../context/Basket/BasketContext";
+import { useContext } from "react";
+
 import DeleteIcon from "../../../../Icons/DeleteIcon";
 import Heading from "../../../../typographies/Heading";
 import Paragraph from "../../../../typographies/Paragraph";
 import PRODUCT_THUMBNAIL from "/assets/img/product-1-thumbnail.jpg";
 
 const Component = () => {
-  {
-    /*const totalAmount = basketItems.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0,
-  );*/
-  }
+  const { quantity, removeToBasket } = useContext(BasketContext);
+  const price: number = quantity * 125;
 
   return (
     <>
@@ -22,13 +21,21 @@ const Component = () => {
         <section>
           <Heading
             kind="h2"
-            css="text-paleSky"
+            css="text-paleSky capitalize"
             content="fall limited edition sneakers"
           />
-          <Paragraph kind="span" css="text-paleSky" content="$125.00 x 3" />
-          <Paragraph kind="span" css="font-bold ml-3" content="$375.00" />
+          <Paragraph
+            kind="span"
+            css="text-paleSky"
+            content={`$125.00 x ${quantity}`}
+          />
+          <Paragraph
+            kind="span"
+            css="font-bold ml-3"
+            content={`$${price}.00`}
+          />
         </section>
-        <DeleteIcon />
+        <DeleteIcon handleClick={() => removeToBasket()} />
       </div>
 
       <button className="button-basket">Checkout</button>

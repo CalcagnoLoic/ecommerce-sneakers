@@ -1,10 +1,15 @@
-const Component = () => (
+type deleteIconProps = {
+  handleClick: () => void;
+}
+
+const Component = ({handleClick}: deleteIconProps) => (
   <svg
     width="14"
     height="16"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     className="self-center cursor-pointer"
+    onClick={handleClick}
   >
     <defs>
       <path

@@ -1,5 +1,4 @@
 import { v4 as uuidv4 } from "uuid";
-import { BasketItem } from "../types/interface";
 
 type carrouselImage = {
   id: number;
@@ -31,9 +30,3 @@ export const namesItems: NavBar[] = [
 
 export const description: string =
   "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.";
-
-export const productItems: BasketItem = {
-  name: "sneakers",
-  quantity: 0,
-  id: uuidv4(),
-};
