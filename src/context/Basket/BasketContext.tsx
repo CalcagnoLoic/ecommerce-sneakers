@@ -5,7 +5,7 @@ interface BasketContext {
   counter: number;
   addItemToBasket: () => void;
   removeItemToBasket: () => void;
-  copyQuantity: () => void
+  copyQuantity: () => void;
   removeToBasket: () => void;
 }
 
@@ -33,9 +33,9 @@ export const BasketProvider = ({ children }: { children: JSX.Element }) => {
   };
 
   const copyQuantity = () => {
-    setQuantity(counter)
-    setCounter(0)
-  }
+    setQuantity(counter);
+    setCounter(0);
+  };
 
   const removeToBasket = () => {
     setQuantity(0);

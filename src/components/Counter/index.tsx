@@ -1,12 +1,10 @@
-import { BasketContext } from "../../context/Basket/BasketContext";
-import { useContext } from "react";
+import { useBasketContext } from "../../hooks/useBasketContext";
 
 import Paragraph from "../../typographies/Paragraph";
 import QuantityIcons from "../../Icons/QuantityIcons";
 
 const Component = () => {
-  const { counter, addItemToBasket, removeItemToBasket } =
-    useContext(BasketContext);
+  const { counter, addItemToBasket, removeItemToBasket } = useBasketContext();
 
   return (
     <div className="counter-wrapper">

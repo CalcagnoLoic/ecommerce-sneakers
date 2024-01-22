@@ -1,5 +1,5 @@
-import { useState, useContext } from "react";
-import { BasketContext } from "../../context/Basket/BasketContext";
+import { useState } from "react";
+import { useBasketContext } from "../../hooks/useBasketContext";
 
 import BasketDropdown from "../Dropdown/BasketDropdown";
 import BasketIcons from "../../Icons/BasketIcons";
@@ -7,7 +7,7 @@ import Paragraph from "../../typographies/Paragraph";
 
 const Component = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const { quantity } = useContext(BasketContext);
+  const { quantity } = useBasketContext();
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>): void => {
     e.stopPropagation();
