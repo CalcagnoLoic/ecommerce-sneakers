@@ -1,11 +1,10 @@
-import { BasketContext } from "../../context/Basket/BasketContext";
-import { useContext } from "react";
+import { useBasketContext } from "../../hooks/useBasketContext";
 
 import BasketIcons from "../../Icons/BasketIcons";
 import Paragraph from "../../typographies/Paragraph";
 
 const Component = () => {
-  const { copyQuantity } = useContext(BasketContext);
+  const { copyQuantity } = useBasketContext();
 
   return (
     <div className="button-wrapper" onClick={() => copyQuantity()}>

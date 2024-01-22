@@ -1,6 +1,6 @@
-import { BasketContext } from "../../../context/Basket/BasketContext";
+import { useBasketContext } from "../../../hooks/useBasketContext";
 import { useClickOutside } from "../../../hooks/useClickOutside";
-import { useRef, useContext } from "react";
+import { useRef } from "react";
 
 import BasketContent from "./BasketContent";
 import Heading from "../../../typographies/Heading";
@@ -12,7 +12,7 @@ type stateProps = {
 };
 
 const Component: React.FC<stateProps> = ({ setIsOpen }) => {
-  const { quantity } = useContext(BasketContext);
+  const { quantity } = useBasketContext();
   const basketRef = useRef<HTMLDivElement>(null);
 
   useClickOutside({

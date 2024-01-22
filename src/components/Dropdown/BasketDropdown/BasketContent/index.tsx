@@ -1,5 +1,4 @@
-import { BasketContext } from "../../../../context/Basket/BasketContext";
-import { useContext } from "react";
+import { useBasketContext } from "../../../../hooks/useBasketContext";
 
 import DeleteIcon from "../../../../Icons/DeleteIcon";
 import Heading from "../../../../typographies/Heading";
@@ -7,7 +6,7 @@ import Paragraph from "../../../../typographies/Paragraph";
 import PRODUCT_THUMBNAIL from "/assets/img/product-1-thumbnail.jpg";
 
 const Component = () => {
-  const { quantity, removeToBasket } = useContext(BasketContext);
+  const { quantity, removeToBasket } = useBasketContext();
   const price: number = quantity * 125;
 
   return (
