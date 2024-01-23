@@ -11,7 +11,11 @@ const Paragraph: React.FC<Paragraph> = ({ kind, content, css }) => {
       break;
 
     case "span":
-      return <span className={css}> {content}</span>;
+      return (
+        <span className={css} data-testid="span-content">
+          {content}
+        </span>
+      );
       break;
   }
 };

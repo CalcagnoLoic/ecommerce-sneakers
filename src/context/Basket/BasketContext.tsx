@@ -18,17 +18,21 @@ export const BasketContext: Context<BasketContext> = createContext({
   removeToBasket: () => {},
 });
 
-export const BasketProvider = ({ children }: { children: JSX.Element }) => {
+export const BasketProvider = ({
+  children,
+}: {
+  children: JSX.Element | JSX.Element[];
+}) => {
   const [quantity, setQuantity] = useState<number>(0);
   const [counter, setCounter] = useState<number>(0);
 
   const addItemToBasket = () => {
-    setCounter(counter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
   };
 
   const removeItemToBasket = () => {
     if (counter > 0) {
-      setCounter(counter - 1);
+      setCounter((prevCounter) => prevCounter - 1);
     }
   };
 

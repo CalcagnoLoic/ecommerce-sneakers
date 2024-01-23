@@ -14,7 +14,7 @@ type stateProps = {
 const Component: React.FC<stateProps> = ({ setIsOpen }) => {
   const { quantity } = useBasketContext();
   const basketRef = useRef<HTMLDivElement>(null);
-
+  
   useClickOutside({
     ref: basketRef,
     callback: () => {

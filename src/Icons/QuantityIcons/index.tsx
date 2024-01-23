@@ -9,6 +9,7 @@ const Component: React.FC<QuantityIconsProps> = ({ kind }) => {
       height={kind === "plus" ? "12" : "4"}
       xmlns="http://www.w3.org/2000/svg"
       className="icon-to-cart"
+      data-testid={kind === "plus" ? "plus-icon" : "minus-icon"}
     >
       <defs>
         <path
