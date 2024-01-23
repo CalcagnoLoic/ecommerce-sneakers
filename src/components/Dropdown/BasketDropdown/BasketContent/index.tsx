@@ -11,7 +11,7 @@ const Component = () => {
 
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex justify-between" data-testid="basket-items-content">
         <img
           src={PRODUCT_THUMBNAIL}
           alt="PRODUCT_THUMBNAIL"
