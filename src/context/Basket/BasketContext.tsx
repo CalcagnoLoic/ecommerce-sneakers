@@ -2,19 +2,15 @@ import { createContext, Context, useState } from "react";
 
 interface BasketContext {
   quantity: number;
-  counter: number;
-  addItemToBasket: () => void;
-  removeItemToBasket: () => void;
-  copyQuantity: () => void;
+  addToCart: (quantity: number) => void;
   removeToBasket: () => void;
 }
 
 export const BasketContext: Context<BasketContext> = createContext({
   quantity: 0,
-  counter: 0,
-  addItemToBasket: () => {},
-  removeItemToBasket: () => {},
-  copyQuantity: () => {},
+  addToCart: (quantity) => {
+    console.log(quantity);
+  },
   removeToBasket: () => {},
 });
 
@@ -24,21 +20,9 @@ export const BasketProvider = ({
   children: JSX.Element | JSX.Element[];
 }) => {
   const [quantity, setQuantity] = useState<number>(0);
-  const [counter, setCounter] = useState<number>(0);
 
-  const addItemToBasket = () => {
-    setCounter((prevCounter) => prevCounter + 1);
-  };
-
-  const removeItemToBasket = () => {
-    if (counter > 0) {
-      setCounter((prevCounter) => prevCounter - 1);
-    }
-  };
-
-  const copyQuantity = () => {
-    setQuantity(counter);
-    setCounter(0);
+  const addToCart = (quantity: number) => {
+    setQuantity(quantity);
   };
 
   const removeToBasket = () => {
@@ -47,10 +31,7 @@ export const BasketProvider = ({
 
   const ContextValue: BasketContext = {
     quantity,
-    counter,
-    addItemToBasket,
-    removeItemToBasket,
-    copyQuantity,
+    addToCart,
     removeToBasket,
   };
 

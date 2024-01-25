@@ -13,7 +13,7 @@ const Component = () => (
             target="_blank"
             className="ml-1"
           >
-            @CalcagnoLoic
+            @CalcagnoLoic 🎉
           </a>
         </>
       }

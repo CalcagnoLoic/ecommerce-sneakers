@@ -1,7 +1,7 @@
 type Paragraph = {
   kind: "p" | "span";
   content: string | number | React.ReactNode;
-  css: string;
+  css?: string;
 };
 
 const Paragraph: React.FC<Paragraph> = ({ kind, content, css }) => {

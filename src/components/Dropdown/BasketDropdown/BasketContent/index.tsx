@@ -4,6 +4,7 @@ import DeleteIcon from "../../../../Icons/DeleteIcon";
 import Heading from "../../../../typographies/Heading";
 import Paragraph from "../../../../typographies/Paragraph";
 import PRODUCT_THUMBNAIL from "/assets/img/product-1-thumbnail.jpg";
+import Button from "../../../Button";
 
 const Component = () => {
   const { quantity, removeToBasket } = useBasketContext();
@@ -37,7 +38,7 @@ const Component = () => {
         <DeleteIcon handleClick={() => removeToBasket()} />
       </div>
 
-      <button className="button-basket">Checkout</button>
+      <Button content="Checkout" css="button-basket" />
     </>
   );
 };
