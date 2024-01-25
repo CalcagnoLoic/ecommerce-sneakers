@@ -1,15 +1,26 @@
-import { useBasketContext } from "../../hooks/useBasketContext";
-
-import BasketIcons from "../../Icons/BasketIcons";
 import Paragraph from "../../typographies/Paragraph";
 
-const Component = () => {
-  const { copyQuantity } = useBasketContext();
+interface ButtonType {
+  onClick?: () => void;
+  content: string;
+  icon?: React.ReactNode;
+  css: string;
+}
+
+const Component = ({ onClick, content, icon, css }: ButtonType) => {
+  if (onClick) {
+    return (
+      <div className={css} onClick={() => onClick()}>
+        {icon}
+        <Paragraph kind="span" content={content} css="button-text" />
+      </div>
+    );
+  }
 
   return (
-    <div className="button-wrapper" onClick={() => copyQuantity()}>
-      <BasketIcons color="light" css="icon-to-cart mr-5" />
-      <Paragraph kind="span" content="Add to Cart" css="button-text" />
+    <div className={css}>
+      {icon}
+      <Paragraph kind="span" content={content} css="button-text" />
     </div>
   );
 };

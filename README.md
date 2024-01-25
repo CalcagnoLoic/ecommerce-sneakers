@@ -1,3 +1,3 @@
-# e-commerce
+# Sneakers Company E-Commerce
 
-![](public/assets/img/readme.jpg)
+![](public/assets/img/readme.png)

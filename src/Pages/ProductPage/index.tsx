@@ -1,7 +1,6 @@
 import { description } from "../../data";
 
-import Button from "../../components/Button";
-import Counter from "../../components/Counter";
+import AddToCart from "../../container/AddToCart";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MainContentLayout from "../../layouts/MainContentLayout";
@@ -12,7 +11,7 @@ import Heading from "../../typographies/Heading";
 import Paragraph from "../../typographies/Paragraph";
 import ProductLayout from "../../layouts/ProductLayout";
 
-function Page() {
+const Page = () => {
   return (
     <div className="md:mx-32 lg:mx-24 xl:mx-40">
       <Header />
@@ -48,10 +47,7 @@ function Page() {
               <ProductPrice isOnSale={true} price={"$250.00"} />
             </div>
 
-            <div className="mt-8 flex flex-col lg:flex-row">
-              <Counter />
-              <Button />
-            </div>
+            <AddToCart />
           </div>
         </ProductLayout>
       </MainContentLayout>

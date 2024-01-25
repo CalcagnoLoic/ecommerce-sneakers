@@ -1,10 +1,10 @@
 import { BasketProvider } from "../../../context/Basket/BasketContext";
-import { render, screen, waitFor } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { vi } from "vitest";
 
 import BasketDropdown from "./index";
 import "@testing-library/jest-dom";
-import Counter from "../../../components/Counter";
+//import Counter from "../../../components/Counter";
 import userEvent from "@testing-library/user-event";
 
 describe("Basket Dropdown Suite Test", () => {
