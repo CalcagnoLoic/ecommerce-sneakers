@@ -13,6 +13,7 @@ const Component = ({ onClick, quantity }: CounterType) => {
         onClick={() => {
           onClick("sub");
         }}
+        aria-label="Decrease quantity"
       >
         <QuantityIcons kind="minus" />
       </button>
@@ -23,6 +24,7 @@ const Component = ({ onClick, quantity }: CounterType) => {
         onClick={() => {
           onClick("add");
         }}
+        aria-label="Increase quantity"
       >
         <QuantityIcons kind="plus" />
       </button>
