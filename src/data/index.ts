@@ -14,10 +14,10 @@ type NavBar = {
 };
 
 export const images: carrouselImage[] = [
-  { id: 1, value: "/assets/img/product-1.jpg", key: uuidv4() },
-  { id: 2, value: "/assets/img/product-2.jpg", key: uuidv4() },
-  { id: 3, value: "/assets/img/product-3.jpg", key: uuidv4() },
-  { id: 4, value: "/assets/img/product-4.jpg", key: uuidv4() },
+  { id: 1, value: "/ecommerce-sneakers/assets/img/product-1.jpg", key: uuidv4() },
+  { id: 2, value: "/ecommerce-sneakers/assets/img/product-2.jpg", key: uuidv4() },
+  { id: 3, value: "/ecommerce-sneakers/assets/img/product-3.jpg", key: uuidv4() },
+  { id: 4, value: "/ecommerce-sneakers/assets/img/product-4.jpg", key: uuidv4() },
 ];
 
 export const namesItems: NavBar[] = [

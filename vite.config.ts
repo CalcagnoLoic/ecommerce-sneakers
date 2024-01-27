@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react()],
   test: {
     globals: true,
-    environment: 'jsdom',
-    setupFiles: './src/setup.ts',
+    environment: "jsdom",
+    setupFiles: "./src/setup.ts",
   },
+  base: "/ecommerce-sneakers/",
 });
