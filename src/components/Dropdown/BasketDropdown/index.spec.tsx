@@ -14,22 +14,6 @@ describe("Basket Dropdown Suite Test", () => {
     expect(getByText("Your cart is empty.")).toBeInTheDocument();
   });
 
-  /* it("should be display the basket content with items", async () => {
-    const { getByTestId } = render(
-      <BasketProvider>
-        <Counter />
-        <BasketDropdown setIsOpen={() => {}} />
-      </BasketProvider>,
-    );
-
-    const quantityIconsPlus = getByTestId("plus-icon");
-    userEvent.click(quantityIconsPlus);
-
-    await waitFor(() => {
-      expect(screen.queryByText("Your cart is empty.")).toBeNull();
-    });
-  }); */
-
   it("should close the dropdown basket if user clicks outside", () => {
     const setIsOpenMock = vi.fn();
 
