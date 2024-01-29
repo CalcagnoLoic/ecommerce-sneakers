@@ -5,6 +5,7 @@ import PriceReduction from "./index";
 const meta = {
   title: "Components/PriceReduction",
   component: PriceReduction,
+  tags: ["autodocs"],
 } satisfies Meta<typeof PriceReduction>;
 
 export default meta;

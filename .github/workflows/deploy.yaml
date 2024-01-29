@@ -1,9 +1,8 @@
 name: "Deploy to Github Pages"
 
 on:
-  push:
+  pull_request:
     branches:
-      - develop
       - main
 
 permissions:

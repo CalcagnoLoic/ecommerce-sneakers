@@ -5,6 +5,7 @@ import ProductCarrousel from "./index";
 const meta = {
   title: "Components/ProductCarrousel",
   component: ProductCarrousel,
+  tags: ["autodocs"],
 } satisfies Meta<typeof ProductCarrousel>;
 
 export default meta;
