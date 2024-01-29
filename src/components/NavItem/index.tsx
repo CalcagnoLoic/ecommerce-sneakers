@@ -7,9 +7,7 @@ type NavItem = {
 
 const Component: React.FC<NavItem> = ({ content, classname, href, id }) => (
   <li className={classname} key={id}>
-    <a href={href} target="_blank">
-      {content}
-    </a>
+    <a href={href}>{content}</a>
   </li>
 );
 

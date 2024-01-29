@@ -5,6 +5,7 @@ import NavBarContent from "./index";
 const meta = {
   title: "Components/NavBarContent",
   component: NavBarContent,
+  tags: ["autodocs"],
 } satisfies Meta<typeof NavBarContent>;
 
 export default meta;

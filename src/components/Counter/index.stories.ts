@@ -5,6 +5,7 @@ import Counter from "./index";
 const meta = {
   title: "Components/Counter",
   component: Counter,
+  tags: ["autodocs"],
 } satisfies Meta<typeof Counter>;
 
 export default meta;

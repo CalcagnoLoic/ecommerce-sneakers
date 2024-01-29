@@ -5,6 +5,7 @@ import ProductOverview from "./index";
 const meta = {
   title: "Components/ProductOverview",
   component: ProductOverview,
+  tags: ["autodocs"],
 } satisfies Meta<typeof ProductOverview>;
 
 export default meta;

@@ -10,11 +10,9 @@ const Component = () => {
   const { addToCart } = useBasketContext();
 
   const handleCounter = (kind: string) => {
-    if (kind === "add") {
-      setQuantity(quantity + 1);
-    } else {
-      setQuantity(quantity - 1);
-    }
+    kind === "add"
+      ? setQuantity(quantity + 1)
+      : quantity > 0 && setQuantity(quantity - 1);
   };
 
   const handleSubmit = () => {
