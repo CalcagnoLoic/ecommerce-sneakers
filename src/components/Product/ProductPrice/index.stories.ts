@@ -5,7 +5,6 @@ import ProductPrice from "./index";
 const meta = {
   title: "Components/ProductPrice",
   component: ProductPrice,
-  tags: ["autodocs"],
 } satisfies Meta<typeof ProductPrice>;
 
 export default meta;

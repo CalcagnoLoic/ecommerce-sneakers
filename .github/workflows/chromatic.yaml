@@ -3,7 +3,7 @@ name: "Chromatic"
 on:
   push:
     branches:
-      - develop
+      - feature/storybook
 
 jobs:
   chromatic:

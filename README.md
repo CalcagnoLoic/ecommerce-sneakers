@@ -2,6 +2,8 @@
 
 Building an e-commerce site with ReactTS. The principle of Component Drivent Design with the creation of Storybook stories.
 
+The stories are hosted on Chromatic at this [URL](https://65b3f7c0ccbf56939b38309a-gyhhowhxyz.chromatic.com/) 
+
 <p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=ts,react,tailwind,vite" />
@@ -34,6 +36,7 @@ Users should be able to:
 - TailwindCSS
 - React
 - Storybook
+- Chromatic
 
 ## Author
 

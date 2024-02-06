@@ -5,7 +5,6 @@ import ProductThumbnailsWrapper from "./index";
 const meta = {
   title: "Components/ProductThumbnailsWrapper",
   component: ProductThumbnailsWrapper,
-  tags: ["autodocs"],
 } satisfies Meta<typeof ProductThumbnailsWrapper>;
 
 export default meta;

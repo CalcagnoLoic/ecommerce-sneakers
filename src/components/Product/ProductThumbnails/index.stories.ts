@@ -9,7 +9,6 @@ import PRODUCT_4_THUMBNAIL from "../../../../public/assets/img/product-4-thumbna
 const meta = {
   title: "Components/ProductThumbnails",
   component: ProductThumbnails,
-  tags: ["autodocs"],
 } satisfies Meta<typeof ProductThumbnails>;
 
 export default meta;
