@@ -1,11 +1,14 @@
 import type { Preview } from "@storybook/react";
 import "../public/assets/style/tailwind.css";
-import autodocTemplate from "./autodocTemplate.mdx"
 
 const preview: Preview = {
   parameters: {
-    docs: {
-      page: autodocTemplate,
+    actions: { argTypesRegex: "^on[A-Z].*" },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i,
+      },
     },
   },
 };
