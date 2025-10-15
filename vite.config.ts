@@ -9,5 +9,5 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "./src/setup.ts",
   },
-  base: "./",
+  base: "./ecommerce-sneakers/",
 });
