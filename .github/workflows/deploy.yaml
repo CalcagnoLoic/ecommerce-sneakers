@@ -41,9 +41,9 @@ jobs:
       - run: npm ci
       - uses: actions/configure-pages@v3
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v2
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist/
       - name: Deploy to GH pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
