@@ -1,4 +1,4 @@
-import { BasketProvider } from "../../../context/Basket/BasketContext";
+
 import { render } from "@testing-library/react";
 import { vi } from "vitest";
 
@@ -6,6 +6,7 @@ import BasketDropdown from "./index";
 import "@testing-library/jest-dom";
 //import Counter from "../../../components/Counter";
 import userEvent from "@testing-library/user-event";
+import { BasketProvider } from "../../../context/Basket/BasketProvider";
 
 describe("Basket Dropdown Suite Test", () => {
   it("should be display the basket content with none", () => {
